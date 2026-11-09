@@ -1,0 +1,6 @@
+INTEGRATION_DOMAIN=movie_showtimes
+INTEGRATION_NAME=Movie Showtimes
+CLIENT_PACKAGE=client
+CLIENT_TESTS_PATH=tests/movie_showtimes/client
+PYTHON_VERSION=3.14
+COVERAGE_FAIL_UNDER=95
