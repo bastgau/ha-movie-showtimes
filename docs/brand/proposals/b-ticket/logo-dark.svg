@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712 240"><g transform="scale(0.46875)"><defs><linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF9A3C"/><stop offset="1" stop-color="#E5484D"/></linearGradient></defs>
+<rect width="512" height="512" rx="112" fill="url(#gb)"/><defs><mask id="n"><rect width="512" height="512" fill="#fff"/><circle cx="52" cy="256" r="34" fill="#000"/><circle cx="460" cy="256" r="34" fill="#000"/></mask></defs>
+<g transform="rotate(-10 256 256)"><rect x="52" y="146" width="408" height="220" rx="34" fill="#fff" mask="url(#n)"/>
+<line x1="338" y1="174" x2="338" y2="338" stroke="#F0A070" stroke-width="8" stroke-linecap="round" stroke-dasharray="4 20"/>
+<path d="M140 200 L140 312 L236 256 Z" fill="#E5484D" stroke="#E5484D" stroke-width="22" stroke-linejoin="round"/>
+<circle cx="390" cy="256" r="26" fill="none" stroke="#E5484D" stroke-width="10"/>
+<path d="M390 240 V256 L402 263" fill="none" stroke="#E5484D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+<g font-family="Inter, sans-serif" fill="#FFFFFF"><text x="272" y="108" font-size="80" font-weight="500">Movie</text><text x="270" y="190" font-size="80" font-weight="800">Showtimes</text></g></svg>
