@@ -1,0 +1,61 @@
+{
+  "pagination": {
+    "page": 1,
+    "totalPages": 1,
+    "count": 15,
+    "itemsPerPage": 15
+  },
+  "results": [
+    {
+      "movie": {
+        "title": "Le Voyage de Chihiro"
+      },
+      "showtimes": {
+        "dubbed": [
+          {
+            "internalId": "1002",
+            "startsAt": "2026-11-12T20:30:00",
+            "diffusionVersion": "DUBBED"
+          },
+          {
+            "internalId": "1001",
+            "startsAt": "2026-11-12T14:00:00",
+            "diffusionVersion": "DUBBED"
+          }
+        ],
+        "local": [
+          {
+            "internalId": "1003",
+            "startsAt": "2026-11-12T17:15:00",
+            "diffusionVersion": "LOCAL"
+          },
+          {
+            "internalId": "1001",
+            "startsAt": "2026-11-12T14:00:00",
+            "diffusionVersion": "DUBBED"
+          }
+        ]
+      }
+    },
+    {
+      "movie": {
+        "title": "amélie"
+      },
+      "showtimes": {
+        "local": [
+          {
+            "internalId": "2001",
+            "startsAt": "2026-11-12T21:00:00",
+            "diffusionVersion": "LOCAL"
+          }
+        ]
+      }
+    },
+    {
+      "movie": {
+        "title": "Zorro"
+      },
+      "showtimes": {}
+    }
+  ]
+}

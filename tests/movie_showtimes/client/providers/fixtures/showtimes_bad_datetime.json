@@ -1,0 +1,24 @@
+{
+  "pagination": {
+    "page": 1,
+    "totalPages": 1,
+    "count": 15,
+    "itemsPerPage": 15
+  },
+  "results": [
+    {
+      "movie": {
+        "title": "Film D"
+      },
+      "showtimes": {
+        "local": [
+          {
+            "internalId": "8001",
+            "startsAt": "tomorrow evening",
+            "diffusionVersion": "LOCAL"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "error": true,
+  "message": "no.showtime.error",
+  "results": [],
+  "pagination": {
+    "page": 1,
+    "totalPages": 0,
+    "count": 0,
+    "itemsPerPage": 15
+  }
+}
