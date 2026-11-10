@@ -197,6 +197,18 @@ wheels = [
 ]
 
 [[package]]
+name = "allocine-seances"
+version = "0.0.14"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "beautifulsoup4" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/56/8b/7f1c62f6327e79626fab1387f4570386e888a2e1fe03f4d81e14b4256aa8/allocine_seances-0.0.14.tar.gz", hash = "sha256:5f575695f3e4fd02e8c8b9c7b0ff6694b12d62d5e0942397d42769755b8abc41", size = 6945, upload-time = "2025-10-27T19:42:49.765Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ad/fb/811895e08307b77a31305b0928cdfc05093d8f4b5c9d885c3d271dbdfd86/allocine_seances-0.0.14-py3-none-any.whl", hash = "sha256:ca777fd1d5d414e924b7760c02b9a84ea5eb44c96b41ffc089905dfb2e684c1c", size = 7048, upload-time = "2025-10-27T19:42:43.11Z" },
+]
+
+[[package]]
 name = "annotated-types"
 version = "0.8.0"
 source = { registry = "https://pypi.org/simple" }
@@ -399,6 +411,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/c0/f6/688d2cd64bfd0b14d805ddb8a565e11ca1fb0fd6817175d58b10052b6d88/bcrypt-5.0.0-cp39-abi3-win32.whl", hash = "sha256:64d7ce196203e468c457c37ec22390f1a61c85c6f0b8160fd752940ccfb3a683", size = 153725, upload-time = "2025-09-25T19:50:34.384Z" },
     { url = "https://files.pythonhosted.org/packages/9f/b9/9d9a641194a730bda138b3dfe53f584d61c58cd5230e37566e83ec2ffa0d/bcrypt-5.0.0-cp39-abi3-win_amd64.whl", hash = "sha256:64ee8434b0da054d830fa8e89e1c8bf30061d539044a39524ff7dec90481e5c2", size = 150912, upload-time = "2025-09-25T19:50:35.69Z" },
     { url = "https://files.pythonhosted.org/packages/27/44/d2ef5e87509158ad2187f4dd0852df80695bb1ee0cfe0a684727b01a69e0/bcrypt-5.0.0-cp39-abi3-win_arm64.whl", hash = "sha256:f2347d3534e76bf50bca5500989d6c1d05ed64b440408057a37673282c654927", size = 144953, upload-time = "2025-09-25T19:50:37.32Z" },
+]
+
+[[package]]
+name = "beautifulsoup4"
+version = "4.15.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "soupsieve" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/43/65/318323f98dbee45d42dff61d8f047181bc6f2268a9068cfad035a46be5af/beautifulsoup4-4.15.0.tar.gz", hash = "sha256:288e3ca7d54b06f2ac191970bc275c1939cb46d450b255bf6718b04aa37ab4f7", size = 632571, upload-time = "2026-06-07T16:44:20.453Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/c6/92fcd42f1ba33e1184263f25bfabf3d27c383410470f169e4b8163bf9c17/beautifulsoup4-4.15.0-py3-none-any.whl", hash = "sha256:d6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9", size = 109924, upload-time = "2026-06-07T16:44:21.566Z" },
 ]
 
 [[package]]
@@ -1036,6 +1061,9 @@ name = "ha-movie-showtimes"
 version = "0.0.0"
 source = { virtual = "." }
 default-groups = ["homeassistant", "lint", "test", "test-client"]
+dependencies = [
+    { name = "allocine-seances" },
+]
 
 [package.dev-dependencies]
 homeassistant = [
@@ -1060,6 +1088,7 @@ test-client = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "allocine-seances", specifier = "==0.0.14" }]
 
 [package.metadata.requires-dev]
 homeassistant = [{ name = "homeassistant", specifier = "==2026.10.1" }]
@@ -2689,6 +2718,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/45/8c/1ad04f715ee3cb75d4d1236f4f1b8ac63ee245959847220aa484445d7301/snitun-0.47.0.tar.gz", hash = "sha256:264975472011b7a211e44880c614d5534f6fe953c125e0cec365bae3a169c578", size = 64346, upload-time = "2026-06-29T08:12:49.395Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/bf/69/c7ba5437d10ae7a6446169a1528c50ec38936455fed23480dde36902a6fe/snitun-0.47.0-py3-none-any.whl", hash = "sha256:57eb4710f13a03360c07527c8e2d442b8c90e8ff7b94c71228cde5da8dbb755a", size = 72315, upload-time = "2026-06-29T08:12:48.231Z" },
+]
+
+[[package]]
+name = "soupsieve"
+version = "4.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/01/7c/a64eedae0b7776cb9602d2da9cb8f8caae8e1b4c1da5e8e87bf1e68121ec/soupsieve-4.0.1.tar.gz", hash = "sha256:7621e3c5f6b371ed2c5eabaac5de300ac3d66d05e6d7f34783e31b63c4f90c75", size = 153302, upload-time = "2026-11-04T16:36:27.749Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2c/5c/4f68370847b561a389dd9a2d7eb3d19fd8cbb8acbae543a0c6b8d0d9700b/soupsieve-4.0.1-py3-none-any.whl", hash = "sha256:2e68cf7dd5a0f29d81f9d485275ccf294e6475f615e211895d91cb81f8614f04", size = 50688, upload-time = "2026-11-04T16:36:26.158Z" },
 ]
 
 [[package]]
