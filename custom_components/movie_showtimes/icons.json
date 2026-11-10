@@ -1,0 +1,13 @@
+{
+  "entity": {
+    "sensor": {
+      "today": { "default": "mdi:movie-open" },
+      "tomorrow": { "default": "mdi:movie-open" },
+      "day_2": { "default": "mdi:movie-open" },
+      "day_3": { "default": "mdi:movie-open" },
+      "day_4": { "default": "mdi:movie-open" },
+      "day_5": { "default": "mdi:movie-open" },
+      "day_6": { "default": "mdi:movie-open" }
+    }
+  }
+}

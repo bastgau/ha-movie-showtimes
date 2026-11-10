@@ -1,0 +1,86 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Choose a source",
+        "description": "Where the showtimes come from.",
+        "data": {
+          "source": "Source"
+        },
+        "data_description": {
+          "source": "The service that provides the showtimes of the cinema."
+        }
+      },
+      "cinema": {
+        "title": "Add a cinema",
+        "description": "Showtimes come from {source_name}. Enter the cinema's reference, such as `{ref_example}`, or the address of its page, such as `{url_example}`.",
+        "data": {
+          "cinema_id": "Cinema reference or page URL",
+          "name": "[%key:common::config_flow::data::name%]"
+        },
+        "data_description": {
+          "cinema_id": "The cinema's reference at the source, or the address of its page.",
+          "name": "Optional. The name shown for this cinema in Home Assistant. Defaults to the source name followed by the cinema reference."
+        }
+      }
+    },
+    "error": {
+      "invalid_cinema_id": "Invalid or unknown cinema. Check the reference you entered.",
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "access_denied": "The site refused the request. Try again later.",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "abort": {
+      "already_configured": "This cinema is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "today": {
+        "name": "Today"
+      },
+      "tomorrow": {
+        "name": "Tomorrow"
+      },
+      "day_2": {
+        "name": "In 2 days"
+      },
+      "day_3": {
+        "name": "In 3 days"
+      },
+      "day_4": {
+        "name": "In 4 days"
+      },
+      "day_5": {
+        "name": "In 5 days"
+      },
+      "day_6": {
+        "name": "In 6 days"
+      }
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "Could not reach {source} to fetch the showtimes."
+    },
+    "access_denied": {
+      "message": "{source} refused the request (HTTP {status}). The showtimes will be fetched again later."
+    },
+    "cinema_not_found": {
+      "message": "{source} no longer knows this cinema."
+    },
+    "invalid_response": {
+      "message": "{source} returned showtimes in an unexpected format. The site may have changed."
+    },
+    "unknown_source": {
+      "message": "This entry uses the source {source}, which this version of the integration does not provide."
+    }
+  },
+  "selector": {
+    "source": {
+      "options": {
+        "allocine": "AlloCiné"
+      }
+    }
+  }
+}

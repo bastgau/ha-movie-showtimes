@@ -2,11 +2,11 @@
   "domain": "movie_showtimes",
   "name": "Movie Showtimes",
   "codeowners": ["@bastgau"],
-  "config_flow": false,
+  "config_flow": true,
   "documentation": "https://github.com/bastgau/ha-movie-showtimes",
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/bastgau/ha-movie-showtimes/issues",
-  "requirements": [],
+  "requirements": ["allocine-seances==0.0.14"],
   "version": "0.0.0"
 }
