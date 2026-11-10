@@ -1,0 +1,24 @@
+{
+  "pagination": {
+    "page": 1,
+    "totalPages": 2,
+    "count": 15,
+    "itemsPerPage": 15
+  },
+  "results": [
+    {
+      "movie": {
+        "title": "Film B"
+      },
+      "showtimes": {
+        "local": [
+          {
+            "internalId": "4001",
+            "startsAt": "2026-11-12T18:00:00",
+            "diffusionVersion": "LOCAL"
+          }
+        ]
+      }
+    }
+  ]
+}

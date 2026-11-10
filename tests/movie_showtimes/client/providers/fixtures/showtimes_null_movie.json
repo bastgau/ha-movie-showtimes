@@ -1,0 +1,36 @@
+{
+  "pagination": {
+    "page": 1,
+    "totalPages": 1,
+    "count": 15,
+    "itemsPerPage": 15
+  },
+  "results": [
+    {
+      "movie": null,
+      "showtimes": {
+        "local": [
+          {
+            "internalId": "5001",
+            "startsAt": "2026-11-12T19:00:00",
+            "diffusionVersion": "LOCAL"
+          }
+        ]
+      }
+    },
+    {
+      "movie": {
+        "title": "Film C"
+      },
+      "showtimes": {
+        "local": [
+          {
+            "internalId": "5002",
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "LOCAL"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "pagination": {
+    "page": 1,
+    "totalPages": 1,
+    "count": 15,
+    "itemsPerPage": 15
+  },
+  "results": [
+    {
+      "movie": {
+        "title": "Été 85"
+      },
+      "showtimes": {
+        "local": [
+          {
+            "internalId": "3001",
+            "startsAt": "2026-07-14T21:45:00",
+            "diffusionVersion": "LOCAL"
+          }
+        ]
+      }
+    }
+  ]
+}

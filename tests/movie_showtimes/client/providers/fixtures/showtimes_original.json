@@ -1,0 +1,38 @@
+{
+  "pagination": {
+    "page": 1,
+    "totalPages": 1,
+    "count": 15,
+    "itemsPerPage": 15
+  },
+  "results": [
+    {
+      "movie": {
+        "title": "Lost in Translation"
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": "6001",
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL"
+          }
+        ],
+        "other": [
+          {
+            "internalId": "6002",
+            "startsAt": "2026-11-12T22:00:00",
+            "diffusionVersion": "SIGNED"
+          }
+        ],
+        "odd": [
+          {
+            "internalId": "6003",
+            "startsAt": "2026-11-12T22:30:00",
+            "diffusionVersion": null
+          }
+        ]
+      }
+    }
+  ]
+}

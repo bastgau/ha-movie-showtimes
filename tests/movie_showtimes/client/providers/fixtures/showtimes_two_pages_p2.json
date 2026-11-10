@@ -1,0 +1,24 @@
+{
+  "pagination": {
+    "page": 2,
+    "totalPages": 2,
+    "count": 15,
+    "itemsPerPage": 15
+  },
+  "results": [
+    {
+      "movie": {
+        "title": "Film A"
+      },
+      "showtimes": {
+        "local": [
+          {
+            "internalId": "4002",
+            "startsAt": "2026-11-12T19:00:00",
+            "diffusionVersion": "LOCAL"
+          }
+        ]
+      }
+    }
+  ]
+}
