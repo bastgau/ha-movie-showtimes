@@ -6,6 +6,5 @@ of the chosen design live in `docs/brand/source/`.
 
 - `render.cjs` — SVG → PNG set (`NODE_PATH=$(npm root -g) node render.cjs <dir>`).
 - `preview.py` — light/dark comparison sheet of several proposals.
-- `proposals/` — design proposals awaiting a choice (delete once one is installed).
 
 Produced by the `ha-webdesigner` agent (`.claude/agents/ha-webdesigner.md`).
