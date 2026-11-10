@@ -1,0 +1,86 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Choisir une source",
+        "description": "D'où viennent les séances.",
+        "data": {
+          "source": "Source"
+        },
+        "data_description": {
+          "source": "Le service qui fournit les séances du cinéma."
+        }
+      },
+      "cinema": {
+        "title": "Ajouter un cinéma",
+        "description": "Les séances viennent de {source_name}. Saisissez la référence du cinéma, par exemple `{ref_example}`, ou l'adresse de sa page, par exemple `{url_example}`.",
+        "data": {
+          "cinema_id": "Référence ou adresse de la page du cinéma",
+          "name": "Nom"
+        },
+        "data_description": {
+          "cinema_id": "La référence du cinéma chez la source, ou l'adresse de sa page.",
+          "name": "Facultatif. Le nom affiché pour ce cinéma dans Home Assistant. Par défaut, le nom de la source suivi de la référence du cinéma."
+        }
+      }
+    },
+    "error": {
+      "invalid_cinema_id": "Cinéma invalide ou inconnu. Vérifiez la référence saisie.",
+      "cannot_connect": "Échec de connexion",
+      "access_denied": "Le site a refusé la requête. Réessayez plus tard.",
+      "unknown": "Erreur inattendue"
+    },
+    "abort": {
+      "already_configured": "Ce cinéma est déjà configuré."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "today": {
+        "name": "Aujourd'hui"
+      },
+      "tomorrow": {
+        "name": "Demain"
+      },
+      "day_2": {
+        "name": "Dans 2 jours"
+      },
+      "day_3": {
+        "name": "Dans 3 jours"
+      },
+      "day_4": {
+        "name": "Dans 4 jours"
+      },
+      "day_5": {
+        "name": "Dans 5 jours"
+      },
+      "day_6": {
+        "name": "Dans 6 jours"
+      }
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "Impossible de joindre {source} pour récupérer les séances."
+    },
+    "access_denied": {
+      "message": "{source} a refusé la requête (HTTP {status}). Les séances seront récupérées de nouveau plus tard."
+    },
+    "cinema_not_found": {
+      "message": "{source} ne connaît plus ce cinéma."
+    },
+    "invalid_response": {
+      "message": "{source} a renvoyé les séances dans un format inattendu. Le site a peut-être changé."
+    },
+    "unknown_source": {
+      "message": "Cette entrée utilise la source {source}, que cette version de l'intégration ne fournit pas."
+    }
+  },
+  "selector": {
+    "source": {
+      "options": {
+        "allocine": "AlloCiné"
+      }
+    }
+  }
+}
