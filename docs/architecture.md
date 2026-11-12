@@ -1,7 +1,11 @@
 # Movie Showtimes — architecture (v1)
 
-Status: design for v1, nothing implemented yet. Pinned Home Assistant: `2026.10.1`
+Status: implemented (v1 + film enrichment D24–D31; client 403 tests, integration 212, 99 % each). Pinned Home Assistant: `2026.10.1`
 (`pyproject.toml`). Data source: `allocine-seances==0.0.14`.
+
+**Film enrichment, VO / VOST and accessibility (D2 revised, D24–D31)** is designed in
+[`docs/design/film-enrichment.md`](design/film-enrichment.md). The sections it changes (§1, §2, §3.2, §3.3,
+§3.5, §5.3, §7, §8, §10, §11, §12, §13.3, Appendix A) carry a short note that points there instead of repeating it.
 
 ## 1. Goal and scope
 
@@ -14,7 +18,11 @@ Show, in Home Assistant, what is on at one AlloCiné cinema over the next seven 
 - One config entry per cinema, the cinema id is the unique id. One entry = one device (a service device).
 - Seven sensors per device, one per day from today to today + 6. State = number of films that still have a
   showtime to come that day. Attribute = those films, each with its title and its remaining showtimes
-  split by VF / VO, as `HH:MM` in Home Assistant's time zone.
+  split by VF / VO / VOST (D2 revised), as `HH:MM` in Home Assistant's time zone.
+- (D24) Each film also carries what the showtimes document already holds about it and its showtimes (runtime,
+  genres, certificate, ratings, poster, synopsis, cast, formats, booking links, accessibility: PMR, SME subtitles,
+  audio description …), **with no extra request**.
+  Design: `docs/design/film-enrichment.md`.
 - "Today" is today in Home Assistant's time zone. The sensors move to the next day at local midnight, and
   showtimes drop out 15 min after they start, all without waiting for a refresh (§4.4).
 - A refresh twice a day (every 12 h).
@@ -26,17 +34,18 @@ Show, in Home Assistant, what is on at one AlloCiné cinema over the next seven 
 
 ### Out of scope (v1)
 
-| Left out                                                         | Why                                                                                                                                               |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Browsing or searching cinemas (by ville / département / circuit) | User decision. `get_cinema()` and the location calls stay unused. The client can add them later without touching the entities.                    |
-| Filters (VF / VO only, favourite films)                          | User decision. Templates can do it from the attributes.                                                                                           |
-| Duration, poster, synopsis, genres (`get_movies`)                | User decision. Keeps the attributes small. `get_movies` would also cost one more request per day.                                                 |
-| Lovelace card, calendar entity                                   | User decision.                                                                                                                                    |
-| Options flow, reconfigure flow                                   | Nothing to configure after setup. The name can be changed in the UI (entry title / device name). To change the cinema, the user adds a new entry. |
-| Reauthentication                                                 | The source has no authentication. `ConfigEntryAuthFailed` is never raised.                                                                        |
-| Repair issues (e.g. a cinema removed from AlloCiné)              | Rare. v1 shows the failure as unavailable entities plus a logged, translated `UpdateFailed`. Could be added later.                                |
-| Discovery, dynamic devices, stale devices                        | Not applicable: one fixed device per entry, removed with the entry.                                                                               |
-| Platinum `async-dependency` / `inject-websession`                | The library is synchronous `requests`. The client runs it in an executor (see §3.4).                                                              |
+| Left out                                                         | Why                                                                                                                                                                                                                                                                                                                                |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Browsing or searching cinemas (by ville / département / circuit) | User decision. `get_cinema()` and the location calls stay unused. The client can add them later without touching the entities.                                                                                                                                                                                                     |
+| Filters (VF / VO only, favourite films)                          | User decision. Templates can do it from the attributes.                                                                                                                                                                                                                                                                            |
+| Calling `get_movies` (film metadata)                             | Not needed: the film data is read from the document our pagination already receives, at no extra request (D24, D25). Calling `get_movies` as well would double the load (≈ +16 requests a day), and it is fragile: `UnboundLocalError` when `releases` is empty, `KeyError` when `poster` or `flags` is missing, a bare `except:`. |
+| `timeBeforeStart`, `nextDate`, `editorialReviews`                | `timeBeforeStart` is unreliable; `nextDate`'s role is unverified; editorial reviews dropped by the user (design doc §1.3).                                                                                                                                                                                                         |
+| Lovelace card, calendar entity                                   | User decision.                                                                                                                                                                                                                                                                                                                     |
+| Options flow, reconfigure flow                                   | Nothing to configure after setup. The name can be changed in the UI (entry title / device name). To change the cinema, the user adds a new entry.                                                                                                                                                                                  |
+| Reauthentication                                                 | The source has no authentication. `ConfigEntryAuthFailed` is never raised.                                                                                                                                                                                                                                                         |
+| Repair issues (e.g. a cinema removed from AlloCiné)              | Rare. v1 shows the failure as unavailable entities plus a logged, translated `UpdateFailed`. Could be added later.                                                                                                                                                                                                                 |
+| Discovery, dynamic devices, stale devices                        | Not applicable: one fixed device per entry, removed with the entry.                                                                                                                                                                                                                                                                |
+| Platinum `async-dependency` / `inject-websession`                | The library is synchronous `requests`. The client runs it in an executor (see §3.4).                                                                                                                                                                                                                                               |
 
 ## 2. The data source, as observed (not as documented)
 
@@ -55,15 +64,21 @@ and the live endpoint.
   ```
 
   The showtimes are deduplicated by `internalId` across the JSON buckets (`original`, `original_st`,
-  `multiple`, …). The version is only in `diffusionVersion`. Values seen: `ORIGINAL`, `DUBBED`, `LOCAL`
-  (`LOCAL` = a film shot in French).
+  `multiple`, …). The version is only in `diffusionVersion`. Values seen: `ORIGINAL`, `DUBBED`, `LOCAL`.
+  The labels depend on the cinema (three real captures, design doc §0): French films are `LOCAL` at W7520,
+  `DUBBED` at C0159, and `ORIGINAL` in `original_st` for _La Gradiva_ at W0124 (D2 revised).
+
+  **(D25) The provider no longer calls `get_showtime`.** It pages through the same URLs itself
+  (`URLs.showtime_url` + our `_get_json_request` override), with the same request count, and parses the full
+  documents (design doc §2, §4). The library's loop also sets `page` from the response, so a server repeating
+  page 1 would make it loop for ever; ours iterates a bounded range.
 
 - It reads `element["movie"]["title"]` **without a `None` check** (`get_movies` has one). A result
   with `"movie": null` (a non-film event) makes the whole call fail with a `TypeError`.
 - Responses seen on the live endpoint:
   - Unknown cinema id (`ZZ9999`): **HTTP 404**, so the library raises `Exception("Error 404")`.
   - Known cinema, a date with nothing on (`W0124`, `2027-03-01`): **HTTP 200**,
-    `{"error": true, "message": "no.showtime.error", "pagination": {"totalPages": 0, …}, "results": []}`.
+    `{"error": true, "message": "no.showtime.error", "messageParam": {"day": …, "page": …}, "pagination": {"totalPages": 0, …}, "results": []}`.
     The library returns `[]` for it.
   - Known cinema with showtimes: HTTP 200, `"error": false`, `results` filled.
   - **(D17)** With the library's default `User-Agent: python-requests/x.y`, allocine.fr (Cloudflare) answers
@@ -92,7 +107,8 @@ and the live endpoint.
 - **The site's Terms of Use have not been reviewed.** Whether automated access is allowed is unknown. The
   README should say so, and users run the integration at their own risk.
 - The library is unofficial and pinned exactly (`0.0.14`). We depend on its private `_get_json_request`
-  (D8), and the signature guard (§8.1) catches a change.
+  (D8) and, since D25, on its public `URLs.showtime_url`; the signature guards (§8.1, design doc §4.2) catch a
+  change of either.
 - **"Today" is Home Assistant's date; the days are AlloCiné (Paris) dates.** The sensors request the HA
   local date (`dt_util.now().date() + offset`) and AlloCiné answers for that Paris date. With Home
   Assistant far from Paris, the HA "today" can be a different calendar day from the one in Paris. "Today"
@@ -164,11 +180,17 @@ the rename table in §13.3. All of them carry a plain message, and the original 
 
 ### 3.2 `client/models.py`
 
+> **(D24–D31)** `Showtime` gains optional `subtitled` (classic subtitles), `hard_of_hearing_subtitles`,
+> `disabled_access`, `audio_description`, `formats`, `preview`, `weekly_outing`, `ticket_url`;
+> `Film` gains optional `ref` and `details: FilmDetails | None`; new `ShowtimeFormats`, `Rating`, `Credit`,
+> `FilmDetails`. All have defaults, so other sources and the fake provider are unchanged. Signatures:
+> design doc §3. The block below shows the v1 core fields only.
+
 ```python
 class ShowtimeVersion(StrEnum):
-    ORIGINAL = "original"   # diffusionVersion "ORIGINAL"  -> VO (incl. subtitled)
+    ORIGINAL = "original"   # "ORIGINAL" of a film not exactly ["FRENCH"] -> VO, or VOST if subtitled (D2)
     DUBBED = "dubbed"       # "DUBBED"                     -> VF
-    LOCAL = "local"         # "LOCAL" (French film)        -> VF   (decision D2)
+    LOCAL = "local"         # "LOCAL", or "ORIGINAL" of a film whose languages are exactly ["FRENCH"] -> VF (D2)
     UNKNOWN = "unknown"     # any other value; kept, not dropped
 
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -262,8 +284,8 @@ Internals (private, but the developer must follow them):
   - status 404 → `CinemaNotFoundError`. **(D17) 403 or 429 → `SourceAccessDeniedError(f"HTTP {status}")`**
     (§13.3). Any other non-200 → `SourceConnectionError(f"HTTP {status}")`;
   - body not JSON (`ValueError`) → `AllocineParseError`;
-  - **removes the `results` items whose `"movie"` is `None`** (non-film events) before returning, which
-    avoids the library's `TypeError`. Logged at debug level with their count.
+  - ~~removes the `results` items whose `"movie"` is `None`~~ **(D25) moved to our parser**, which skips them
+    with a debug line; the library no longer walks the results, so its `TypeError` cannot happen.
 
   This is the only way to get a real timeout inside the worker thread: an `asyncio` timeout alone would
   leave the thread blocked forever. It also gives a typed 404 instead of parsing `"Error 404"`. The
@@ -271,7 +293,9 @@ Internals (private, but the developer must follow them):
   override's signature against the installed library (§8.1).
 
 - `def _fetch_day_sync(self, cinema_id: str, day: date) -> DayShowtimes` runs **in the executor**. It
-  fetches with `get_showtime(cinema_id, day.isoformat())` and converts to models. The conversion runs in
+  fetches with ~~`get_showtime(cinema_id, day.isoformat())`~~ **(D25) `self._api.fetch_showtime_pages(cinema_id, day.isoformat())`**,
+  our own bounded loop over `URLs.showtime_url(…, n)` that keeps no state on the instance (design doc §4.2), and
+  converts the documents to models (design doc §4.3–§4.8). The conversion runs in
   the thread as well, because building the `ZoneInfo` may read tzdata. Errors are mapped like this:
   - `requests.Timeout` → `AllocineTimeoutError`; other `requests.RequestException` → `AllocineConnectionError`;
   - `KeyError`, `TypeError`, `ValueError` while the library walks the JSON, or while we convert → `AllocineParseError`;
@@ -284,11 +308,15 @@ Internals (private, but the developer must follow them):
   default, so this is the same pool that `hass.async_add_executor_job` uses, and the client still does
   not import Home Assistant.
 - One `_AllocineAPIWithTimeout` instance per client. The library keeps no state, so the instance is safe
-  to use from the executor.
-- Conversion rules:
+  to use from the executor. **(D25) Our pagination keeps none either** (local variables only): a thread
+  abandoned by the 60 s backstop can still be running when a manual refresh starts another day call on the same
+  instance.
+- Conversion rules (the required fields; the optional enrichment and the VO / VOST rules are in the design doc
+  §4, and **never raise**, D28):
   - `startsAt`: `datetime.fromisoformat`. If it is naive → `.replace(tzinfo=ZoneInfo("Europe/Paris"))`; if
     it is aware → `.astimezone(ZoneInfo("Europe/Paris"))`. A missing or unparsable value → `AllocineParseError`.
-  - `diffusionVersion` → `ShowtimeVersion`. An unknown value → `UNKNOWN`, logged once per value at warning
+  - `diffusionVersion` → `ShowtimeVersion`, with **(D2) `ORIGINAL` of a film whose `languages` are exactly
+    `["FRENCH"]` → `LOCAL`** (design doc §4.4). An unknown value → `UNKNOWN`, logged once per value at warning
     level (stdlib `logging`, logger `custom_components.movie_showtimes.client`).
   - A film with an empty or non-string title → `AllocineParseError`. A film with no showtimes is dropped.
   - Sorting: films by `title.casefold()`, showtimes by `starts_at`.
@@ -316,11 +344,12 @@ DAYS_FETCHED: Final = 8                   # today .. today+7 (one buffer day, se
 SHOWTIME_GRACE_PERIOD: Final = timedelta(minutes=15)   # a showtime stays visible until starts_at + this (D11)
 MAX_DATA_AGE: Final = timedelta(hours=48)   # (D12) a day's data is shown at most this long after it was fetched
 RETRY_AFTER_CONNECTION_ERROR: Final = timedelta(minutes=30)   # (D19) early retry after a transient connection error
-STORAGE_VERSION: Final = 1                  # (D12) §12.2
+STORAGE_VERSION: Final = 1                  # (D12) §12.2; unchanged by D27 (nothing released)
 STORAGE_MINOR_VERSION: Final = 1            # (D12)
 ATTR_DATE: Final = "date"
 ATTR_FILMS: Final = "films"
 ATTR_FETCHED_AT: Final = "fetched_at"       # (D12)
+ATTR_VOST: Final = "vost"                   # (D26) plus ATTR_DETAILS and the other film keys, design doc §6
 ```
 
 `coordinator.py`:
@@ -392,8 +421,13 @@ directly:
 def remaining_films(day: DayShowtimes, now: datetime) -> tuple[Film, ...]:
     """Films of day with only their showtimes whose starts_at + SHOWTIME_GRACE_PERIOD > now. A film left with none is dropped."""
 
-def film_attributes(film: Film) -> dict[str, list[str] | str]:
-    """{"title", "vf", "vo"[, "other"]}: times as dt_util.as_local(starts_at).strftime("%H:%M")."""
+def attribute_version(showtime: Showtime) -> str:              # (D26)
+    """"vf" (DUBBED, LOCAL), "vost" (ORIGINAL, subtitled is True), "vo" (ORIGINAL otherwise), "other" (UNKNOWN)."""
+
+def film_attributes(film: Film) -> dict[str, Any]:             # (D24, D29) shape: design doc §6
+    """{"title", "vf", "vo", "vost"[, "other"], "accessibility": {"pmr", "sme", "audio_description"},
+    <light film keys>, "details": {…, "showtimes": [...]}}:
+    times as dt_util.as_local(starts_at).strftime("%H:%M")."""
 
 def day_data_expiry(cached: CachedDay) -> datetime:          # (D18)
     """cached.fetched_at + MAX_DATA_AGE: the instant a day's data stops being shown."""
@@ -706,21 +740,26 @@ writes the state. It sets:
     "date": "2026-11-11",
     "fetched_at": "2026-11-11T07:00:12+01:00",
     "films": [
-      { "title": "Film A", "vf": ["15:00", "20:30"], "vo": [] },
-      { "title": "Film B", "vf": [], "vo": ["18:00"] }
+      { "title": "Film A", "vf": ["15:00", "20:30"], "vo": [], "vost": [], "accessibility": { "pmr": ["20:30"], "sme": [], "audio_description": [] }, "runtime": 105, "details": { "showtimes": […] } },
+      { "title": "Film B", "vf": [], "vo": [], "vost": ["18:00"], "accessibility": { "pmr": [], "sme": [], "audio_description": [] }, "details": { "showtimes": […] } }
     ]
   }
   ```
 
+  (Abridged. **(D24, D29)** The complete per-film shape, with every enrichment key, the rule "omitted when
+  `None` / empty" and four real examples from C0159 and W7520, is in the design doc §6.)
   - `films` holds only the films and showtimes **not yet expired**, i.e. `starts_at + 15 min > now`
-    (§4.4), built with `film_attributes`.
+    (§4.4), built with `film_attributes`. That applies to `details.showtimes` too.
   - Times are `"HH:MM"` strings **in Home Assistant's configured time zone**:
     `dt_util.as_local(starts_at).strftime("%H:%M")`. The client gives aware `Europe/Paris` datetimes, and
     the conversion happens here, on the Home Assistant side (decision D6). They are sorted by instant.
     For a French installation (`Europe/Paris`) they are exactly the times on allocine.fr.
-  - `vf` = `DUBBED` + `LOCAL`, `vo` = `ORIGINAL` (decision D2). Both keys are always present, possibly
-    empty. If a film has `UNKNOWN` showtimes, a third key, `other`, is added to that film only. No version
-    is silently lost.
+  - `vf` = `DUBBED` + `LOCAL` (subtitled or not), `vost` = `ORIGINAL` with `subtitled is True`, `vo` =
+    `ORIGINAL` otherwise (decision D2, revised; D26). The provider maps an `ORIGINAL` showtime of a film whose
+    `languages` are exactly `["FRENCH"]` to `LOCAL`, so it is in `vf`. `subtitled` means classic subtitles: a
+    `*_st` list, the tag `Showtime.Accessibility.Subtitled` or a `Localization.Subtitle.*` tag (both conventions
+    are real). **(D30, D31)** `accessibility` lists the `pmr`, `sme` and `audio_description` showtimes. The three keys are always present, possibly empty. If a film has `UNKNOWN`
+    showtimes, `other` is added to that film only. No version is silently lost.
   - Films in the client's order (by title).
   - `date` is the sensor's date (ISO), always present when available.
   - **(D12) `fetched_at`**: when this day's data was fetched from allocine.fr, as an ISO datetime in Home
@@ -733,6 +772,10 @@ writes the state. It sets:
   every change. Home Assistant drops recorded attributes over 16 KiB (`MAX_STATE_ATTRS_BYTES`) and logs a
   warning. **So `_unrecorded_attributes = frozenset({ATTR_FILMS})`**: the history keeps the count, the
   `date` and `fetched_at`, not the list.
+- **(D29)** With the enrichment, `films` is much larger (measured: ≈ 127 KB per sensor for C0159, 36 films, ≈ 73 KB for W7520, 26 films; no cap, user
+  decision). The recorder excludes unrecorded attributes by top-level key before its 16 KiB check, and every new
+  key is nested inside `films`, so **the recorder is not affected**. No new top-level attribute may be added.
+  Heavy keys sit under each film's `details`. Cost on the frontend side: design doc §7.
 
 ## 6. Errors — where raised, what the user sees
 
@@ -781,7 +824,9 @@ The same keys go in `translations/en.json` and `translations/fr.json`.
 - `coordinator`: `last_update_success`, `last_exception` (`repr`), `update_interval`, **(D12)**
   `last_refresh` (ISO), `restored_from_store` (bool), `data_age_seconds` (now − `last_refresh`);
 - `days`: `{iso_date: {"fetched_at": iso, "film_count": n, "films": [{"title", "showtimes": [{"starts_at": iso, "version"}]}]}}`
-  (`fetched_at` added by D12).
+  (`fetched_at` added by D12). **(D24)** Each film adds `ref`, each showtime its four flags (`subtitled`,
+  `hard_of_hearing_subtitles`, `disabled_access`, `audio_description`), and a top-level `films`
+  holds the film catalogue as the store writes it (design doc §5.2, §10 step 7).
 
 There are no secrets: no credentials, and the cinema id and name are public. It still goes through
 `async_redact_data(…, TO_REDACT)` with `TO_REDACT: Final = set()`, so there is one obvious place to add
@@ -796,6 +841,12 @@ Tests never touch the network. Each coverage scope must reach 95 % on its own.
 > §8.2 runs against a **fake provider**, never against AlloCiné. Exception names follow §13.3.
 
 ### 8.1 Client — `tests/movie_showtimes/client/` (no Home Assistant)
+
+> **(D24–D31)** The enrichment, pagination, VO / VOST and store tests, and the fixture plan, are in the design
+> doc §9. **The fixtures listed below are synthetic** (they use `dubbed` / `local` lists that AlloCiné does not
+> send, and an int `page`); the real captures are W0124 (`/tmp/lib/r.json`, one film), C0159 (a full day, 3 pages) and
+> W7520 (a full day, 2 pages), from which trimmed real fixtures are derived by removing keys only (design doc §9.1). Since D25, "pagination" and "the library walks the JSON" mean our own
+> loop and parser; add the `URLs.showtime_url` guard next to the `_get_json_request` one (design doc §4.2).
 
 Fixtures in `tests/movie_showtimes/client/fixtures/`, recorded from
 `https://www.allocine.fr/_/showtimes/theater-<id>/d-<date>/p-<n>` and trimmed to the keys the library
@@ -966,11 +1017,13 @@ and set `hass.config.set_time_zone(...)` explicitly.
   `film_attributes` renders in Home Assistant's zone: the same aware 20:00 Paris showtime is `"20:00"` with
   `Europe/Paris`, `"19:00"` with `Europe/London` and `"14:00"` with `America/New_York` (winter dates);
   order follows the instant.
-- **Sensor state and attributes:** the count (remaining films only); `date`; `vf` / `vo` split (`LOCAL` +
-  `DUBBED` in `vf`); `other` only when `UNKNOWN` is present; an empty day → state `0` and available;
-  consistency: the state always equals `len(films)`.
+- **Sensor state and attributes:** the count (remaining films only); `date`; `vf` / `vo` / `vost` split
+  (`LOCAL` + `DUBBED` in `vf`, subtitled `ORIGINAL` in `vost`, D2), `accessibility` lists (D30, D31); `other` only when `UNKNOWN` is present; an
+  empty day → state `0` and available; consistency: the state always equals `len(films)`. Enrichment keys:
+  design doc §9.3.
 - **Recorder:** with the `recorder_mock` fixture, `films` is absent from the recorded state attributes,
-  and `date` and `fetched_at` are present.
+  and `date` and `fetched_at` are present. **(D29)** Also with a C0159-sized day (≈ 127 KB of `films`): no "exceed maximum size"
+  warning.
 - **Diagnostics:** a snapshot (syrupy) of `get_diagnostics_for_config_entry`, both after a refresh and
   after a restore from the store (`restored_from_store`, `last_refresh`, per-day `fetched_at`).
 - **Persistence and restarts (D12):** §12.8.
@@ -993,7 +1046,13 @@ repair-issues (deferred), entity-category / device-class / disabled-by-default (
 ## 10. Decisions (confirmed by the user)
 
 - **D1 — Cinema name:** typed by the user in the config flow. No scraping of the cinema page's `<h1>`.
-- **D2 — VF / VO:** `vf` = `DUBBED` + `LOCAL`, `vo` = `ORIGINAL`.
+- **D2 — VF / VO / VOST (revised):** `vf` = `DUBBED` + `LOCAL`; `vost` = `ORIGINAL` with classic subtitles; `vo` =
+  `ORIGINAL` without (or unknown); `other` = `UNKNOWN`. The labels depend on the cinema: French films are `LOCAL`
+  (W7520), `DUBBED` (C0159) or `ORIGINAL` (_La Gradiva_, W0124, in `original_st`). So the AlloCiné provider maps
+  **`ORIGINAL` of a film whose `languages` are exactly `["FRENCH"]` to `LOCAL`** (user decision: co-productions
+  such as `["FRENCH","ITALIAN"]` are not reclassified), hence `vf`. Classic subtitles = a `*_st` list, or the tag
+  `Showtime.Accessibility.Subtitled` (W7520, W0124), or a `Localization.Subtitle.*` tag (C0159: VOST in `original`);
+  never an `*_sme` list (SME is separate, D30). Design doc §4.4. (Was: `vo` = every `ORIGINAL`.)
 - **D3 — 8 days fetched** for 7 sensors (one buffer day, 16 requests a day per cinema).
 - **D4 — Pasted URL:** the id field also accepts an allocine.fr cinema page URL, parsed as in §3.3.
 - **D5 — Past showtimes are dropped:** a showtime is no longer shown once its grace period after the start
@@ -1023,8 +1082,8 @@ repair-issues (deferred), entity-category / device-class / disabled-by-default (
   ids, device identifiers and the store are namespaced by source from v1 (`allocine_W0124`). With a single
   source, the config flow skips the source choice. Design and refactoring delta: §13.
 - **D14 — Data age:** `MAX_DATA_AGE = timedelta(hours=48)` per day, as designed in §12.5.
-- **D15 — Attribute names:** `vf`, `vo` and `other` are kept for every source. A future source maps its own
-  notions onto `ShowtimeVersion` (§13.3), which maps onto these keys.
+- **D15 — Attribute names:** `vf`, `vo`, `vost` (D26), `other` and `accessibility.{pmr, sme, audio_description}` (D30, D31) are kept for every source. A future source maps
+  its own notions onto `ShowtimeVersion` and `Showtime.subtitled` (§13.3), which map onto these keys.
 - **D16 — Global refresh settings:** `UPDATE_INTERVAL` (12 h) and `DAYS_FETCHED` (8) stay global constants
   in `const.py`. `SourceInfo` does not carry an interval or a horizon.
 - **D17 — Honest identity, canonical URL, refusals reported:**
@@ -1062,9 +1121,60 @@ repair-issues (deferred), entity-category / device-class / disabled-by-default (
   `showtimes.day_data_expiry` / `showtimes.is_day_usable` (D18), shared by the sensor, the restore, the
   stale-day merge and the timer.
 
+Film enrichment (design: `docs/design/film-enrichment.md`, revision 4; evidence: three real captures, W0124,
+C0159 and W7520, design doc §0; D24–D31 are user decisions except where noted):
+
+- **D24 — Enrichment from the same document, no extra request:** each film and showtime carries what the
+  showtimes JSON already holds, every free field included (release date, visa, `type`, all true boolean `flags`,
+  `userReview.count`, `stats.metric`, `synopsisFull` as is, `comfort` …; list in design doc §1.2), except
+  `timeBeforeStart` (unreliable) and `editorialReviews` (dropped). Formats are the source's codes verbatim
+  (`DIGITAL`, `IMAX`, `F_3D`, `SCREEN_X`, `PLF`, `E_4DX`), never translated. One booking link per showtime: a
+  DESKTOP entry, provider `default` first, then `relay`, then any other (design doc §4.6). Raw `tags` are never
+  exposed; accessibility is derived (D30, D31). No `get_movies`, `get_cinema`, film page or `nextDate`: the
+  request count is unchanged.
+- **D25 — Our own pagination instead of `get_showtime`:** the provider requests
+  `URLs.showtime_url(id, date, n)` through our `_get_json_request` override for `n` in `1 … totalPages`
+  (`pagination.page` is a string), checks each page number, caps at 20 pages, keeps no state on the instance, and
+  parses `results[].movie` and the six showtime lists itself, de-duplicated by `internalId`. Same canonical URL,
+  same honest `User-Agent` (D17), no evasion. `URLs.showtime_url` gets a signature guard (design doc §4.2).
+  Verified on 3-page (C0159) and 2-page (W7520) real days. A `monotonic()` deadline (`call_timeout`) is checked
+  before every page, the first included (`SourceTimeoutError`), because the executor thread outlives the `asyncio`
+  timeout.
+- **D26 — `vost` key and a separate classic-subtitles axis** (D2 revised): `ShowtimeVersion` keeps its four values;
+  `Showtime.subtitled` (classic subtitles only) is independent; the mapping to `vf` / `vo` / `vost` / `other` is on
+  the HA side (design doc §4.4, §6.2). _(Architect's choice of structure, on the user's VO / VOST decision.)_
+- **D27 — Store: film catalogue, purge by construction, no migration:** film details are stored once in a
+  catalogue keyed by film id, shared by the days, which reference the id only. At every save the catalogue is
+  rebuilt from the films of the kept days (past and too-old days removed first), so it never grows; refetched
+  details replace older ones; a failed day keeps its copy and its films. At load, a reference without an entry
+  gives a film without details (debug), an unreferenced entry is ignored. Nothing is released, so the schema
+  changes with **no version bump and no migration code**: an older dev store is rejected as malformed and
+  refetched (design doc §5.2).
+- **D28 — Enrichment is optional and never fails a day:** every new model field has a default (the fake provider
+  and other sources change nothing); an unreadable enrichment or accessibility field becomes `None` / `()` with a
+  debug line and **never** raises `SourceParseError`. Only the v1 required fields (title, showtimes, `startsAt`,
+  pagination) can fail a day. Unexpected type → one DEBUG line; `null` / absent → silent; per-showtime keys logged
+  once per day (design doc, implementation notes).
+- **D29 — Attribute size:** no cap (user decision). Every new key lives inside `films` (already unrecorded); heavy
+  keys (`synopsis`, `synopsis_full`, `cast`, `credits`, `related_tags`, the per-showtime list with booking links)
+  sit under each film's `details`; nothing new at the sensor's top level. The recorder is not affected (§5.3,
+  design doc §7; measured up to ≈ 127 KB of `films` per sensor).
+- **D30 — Accessibility: PMR and SME** (user decision, reversing the first exclusion). Per film,
+  `accessibility.pmr` and `accessibility.sme` list the `HH:MM` of the matching showtimes (always present, possibly
+  empty), per showtime `pmr` / `sme` flags. PMR = `service` contains `DISABLED_ACCESS` or the tag
+  `Theater.Service.DisabledAccess` (they agree on all 434 showtimes seen); `Showtime.Accessibility.Accessible` is
+  not PMR and is not used. SME = the `*_sme` lists only: never seen filled, so tested on invented data only.
+- **D31 — Audio description** (user decision): a third list `accessibility.audio_description` (per showtime
+  `audio_description`) from the tag `Showtime.Accessibility.Greta` (W7520: 16 showtimes, 6 films). "Greta = audio
+  description" is an **assumption**, not confirmed by AlloCiné. The `relay` URL's `code=` (`AUDIO`, `SME`,
+  `GRETA`) is not used: redundant at W7520, unreliable at C0159 (design doc §4.7).
+
 ## 11. Open questions for the user
 
-None. Every question raised during the design has been answered (D1–D23).
+D1–D23: none left. Film enrichment: the remaining questions (Q2, Q8–Q11, Q13–Q16, Q18) are in
+`docs/design/film-enrichment.md` §11. Answered by the user: Q1 (editorial reviews dropped), Q3 (every free field),
+Q4 (codes), Q5 (exactly `["FRENCH"]`), Q6 (one DESKTOP link), Q7 (accessibility in scope, SME apart from `vost`),
+Greta (D31), Q17 (fixtures indented).
 
 ## 12. Persistence and restarts (D12) — implementation delta
 
@@ -1111,6 +1221,11 @@ def snapshot_from_dict(
   away with the entry and never collides. Atomic writes, so a power cut cannot leave a half-written file.
   The store is not private: it holds no secrets.
 - **Version:** `STORAGE_VERSION = 1`, `STORAGE_MINOR_VERSION = 1`.
+- **(D27) The format below is the v1 core. It changes directly, with no version bump and no migration
+  (nothing released):** a required top-level `films` catalogue keyed by film id, and per film `ref`, per
+  showtime the optional enrichment and accessibility keys. Rebuilt from the kept days at every save (purge), tolerant of a
+  reference without an entry. Full format, purge order and load rules: design doc §5.2. Function
+  `unify_film_details` (same module) is called by the coordinator before saving (design doc §5.1).
 - **Format, version 1** (inside Store's own `{"version", "minor_version", "key", "data"}` envelope):
 
   ```json
@@ -1161,7 +1276,8 @@ def snapshot_from_dict(
   on the loop may read tzdata. The store never names AlloCiné (D13). **Any error rejects the whole snapshot.** It is a cache, and refetching costs 8
   requests, so partial recovery is not worth its code.
 
-- **Migration (`_async_migrate_func`):**
+- **Migration (`_async_migrate_func`):** (unchanged; D27 deliberately does not use it, since nothing is released.
+  After the first release, a schema change follows these rules.)
   - same major, older minor → return `old_data` unchanged. Rule for future minors: only add optional keys,
     and the reader ignores unknown keys;
   - older major → return `{}`, which the loader treats as nothing stored. Store then saves the migrated
@@ -1240,7 +1356,9 @@ async def async_initialize(self) -> None:
   parse keeps its previous `CachedDay` from `self.data` (from memory, which equals the store), **with its
   old `fetched_at`**, if it is in range and `is_day_usable(cached, now)` (D18). Otherwise it is absent. So
   a partial result never removes a good day from the store, and never makes an old day look fresh. The
-  saved snapshot is exactly the in-memory result.
+  saved snapshot is exactly the in-memory result. **(D27)** The merged result then goes through
+  `unify_film_details`, so a kept day's films take the freshly fetched details of the same film; memory and
+  store still hold the same data.
 - **Failed refresh** (`UpdateFailed`: connection, timeout, not found, every day unparsable): nothing is
   written. Memory and store keep the last good snapshot, and the sensors keep showing it (§12.5).
 - The only data ever written is data that is also served. The store and the memory never diverge.
@@ -1348,6 +1466,10 @@ and read it back from `hass_storage` after writes. Use `freezer` with `Europe/Pa
 - **Clock skew:** `last_refresh` in the future → treated as stale → refresh at setup.
 - **`snapshot_to_dict` / `snapshot_from_dict`** (plain unit tests): a round trip, and each rejection
   above raising `ValueError`.
+- **(D27) Film catalogue:** film gone from every day removed; film on two days kept while one day remains; a
+  failed day keeps its films' details; refetched details replace the old; orphan reference tolerated; unreferenced
+  entry ignored; a store without `films` rejected; the store does not grow over 10 refreshes. Details: design doc
+  §9.3.
 
 ## 13. Source abstraction (D13) — refactoring delta
 
@@ -1447,8 +1569,12 @@ confirmation step pre-filled with it (§13.5). The v1 flow ignores it: the name 
 before validation (D1), and AlloCiné returns `None`. It is in the contract now so that adding such a source
 does not change the ABC.
 
-**Models (neutral).** `Showtime`, `Film` and `DayShowtimes` keep their fields and invariants. Only the
-docstrings change:
+**Models (neutral).** `Showtime`, `Film` and `DayShowtimes` keep their fields and invariants. **(D24, D28)**
+They gain optional, defaulted fields (`Film.ref`, `Film.details: FilmDetails | None`, `Showtime.subtitled`,
+`hard_of_hearing_subtitles`, `disabled_access`, `audio_description`,
+`formats`, `preview`, `weekly_outing`, `ticket_url`), so a source that knows none of them, and the fake provider,
+change nothing; an unreadable enrichment field is `None` and never a `SourceParseError` (design doc §3, §4.8).
+Only the docstrings of the existing fields change:
 
 - `starts_at`: aware, in `source.time_zone`;
 - `DayShowtimes.cinema_id`: the provider's canonical id;
@@ -1456,12 +1582,15 @@ docstrings change:
 
 `ShowtimeVersion` stays `ORIGINAL`, `DUBBED`, `LOCAL`, `UNKNOWN`, redefined neutrally:
 
-| Value      | Meaning (any source)                                     | AlloCiné `diffusionVersion` | Attribute (§5.3) |
-| ---------- | -------------------------------------------------------- | --------------------------- | ---------------- |
-| `ORIGINAL` | shown in the film's original language (subtitled or not) | `ORIGINAL`                  | `vo`             |
-| `DUBBED`   | dubbed into the source country's language                | `DUBBED`                    | `vf`             |
-| `LOCAL`    | the film's original language is the source country's     | `LOCAL`                     | `vf`             |
-| `UNKNOWN`  | anything the provider cannot map; kept, never dropped    | anything else               | `other`          |
+| Value      | Meaning (any source)                                                      | AlloCiné `diffusionVersion` (D2)                      | Attribute (§5.3)                               |
+| ---------- | ------------------------------------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------- |
+| `ORIGINAL` | the film's original language, not the source country's (subtitled or not) | `ORIGINAL`, unless `languages == ["FRENCH"]`          | `vost` if `subtitled is True`, else `vo` (D26) |
+| `DUBBED`   | dubbed into the source country's language                                 | `DUBBED`                                              | `vf`                                           |
+| `LOCAL`    | the film's original language is the source country's                      | `LOCAL`, or `ORIGINAL` with `languages == ["FRENCH"]` | `vf`                                           |
+| `UNKNOWN`  | anything the provider cannot map; kept, never dropped                     | anything else                                         | `other`                                        |
+
+`Showtime.subtitled` (`bool | None`) is a separate axis (D26): a source that does not know leaves it `None`, and
+an `ORIGINAL` showtime then goes to `vo`.
 
 This is neutral enough. Any cinema listing distinguishes "original language" from "local language". A
 source that cannot tell `DUBBED` from `LOCAL` maps both to `DUBBED`, and a source with no version
@@ -1665,68 +1794,93 @@ provider whose library does log would add its logger name there.
   (and none when `cinema_url` is `None`); exception messages carry the source name; the store records and
   checks `source`; diagnostics include the `source` block.
 
-## Appendix A. Source data available (AlloCiné) — candidates for later versions
+## Appendix A. Source data available (AlloCiné)
 
-This is based on a real response the user captured for cinema `W0124`. The structure is verified. It is the
-same JSON endpoint `get_showtime` and `get_movies` use (`…/_/showtimes/theater-<id>/d-<date>/p-<n>/`): one
-JSON document per page, 15 films per page, and no HTML involved. **Enriching v1 with any of these fields
-therefore costs no extra request.** The override (§3.3) already receives the full document; today the
-library keeps only the title and the showtimes. Nothing here is in scope for v1.
+This is based on a real response the user captured for cinema `W0124` (`/tmp/lib/r.json`, 2026-11-12, **one
+film**, _La Gradiva_). The structure is verified for that one film only. It is the same JSON endpoint
+`get_showtime` and `get_movies` use (`…/_/showtimes/theater-<id>/d-<date>/p-<n>/`): one JSON document per
+page, 15 films per page, and no HTML involved. Reading more of it therefore costs no extra request.
+
+The override (§3.3) does receive the full document. Exploiting it without hidden state, however, means
+replacing `get_showtime` with our own pagination (D25): stashing documents on the instance while the library's
+loop runs would be shared between threads, since a call abandoned by the 60 s `asyncio` backstop keeps its
+thread running and a manual refresh can start another call on the same instance. **What is now used (D24) and
+how:** `docs/design/film-enrichment.md`. This appendix records what the document holds.
 
 **Response level**
 
-- `results`: one item per film, `{movie, showtimes, …}`;
-- `pagination`: `{page, totalPages, itemsPerPage (= 15), totalItems}`;
-- `error`, `message`, `messageParam`, `nextDate`: all `null` in the sample. Their role is unverified,
-  except `error: true` / `message: "no.showtime.error"` on an empty day (§2);
-- `facets`, `params`, `data`;
+- `results`: one item per film, `{movie, showtimes}`;
+- `pagination`: `{page, totalPages, itemsPerPage (= 15), totalItems}`. **`page` is a string (`"1"`)**,
+  `totalPages` an int;
+- `error`: **`false`** in the sample (`true` with `message: "no.showtime.error"` on an empty day, §2);
+- `message`, `messageParam`, `nextDate`: `null` in the sample. On an empty day `messageParam` is
+  `{"day", "page"}`. `nextDate` was `null` in all 3 responses seen; its role is unverified and it is not used
+  (design doc Q2);
+- `params` (the filters of the request, all `null` but `page: 1`), `data` (`null`), `facets` (the filter values
+  available, e.g. `showtimes.projection` → `DIGITAL` / "Numérique", `showtimes.version_detail` → `LOCAL`,
+  `DUBBED`, `ORIGINAL_ST`, `ORIGINAL`, `showtimes.service` → `DISABLED_ACCESS`);
 - **no cinema name or address anywhere**, which confirms D1.
 
-**Per film (`results[].movie`)**
+**Per film (`results[].movie`)** — the whole object weighs **11.6 KB** for one film (13.6 KB for the document).
 
-| Field                                                                                   | Notes                                         |
-| --------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `title`, `originalTitle`                                                                |                                               |
-| `type`, `internalId`, `id`                                                              | identifiers                                   |
-| `runtime`                                                                               | a **string**, e.g. `"2h 22min"`, to be parsed |
-| `synopsis`, `synopsisFull`                                                              | long text                                     |
-| `genres[].translate`                                                                    | e.g. genre labels in French                   |
-| `languages`                                                                             | e.g. `FRENCH`                                 |
-| `countries`                                                                             |                                               |
-| `data.productionYear`                                                                   |                                               |
-| `poster.url`                                                                            | image URL                                     |
-| `stats.userRating`, `stats.pressReview` (`{score, count}`), `stats.wantToSeeCount`      | ratings                                       |
-| `releases[].certificate` (`{code, label}`)                                              | age rating                                    |
-| `credits`, `cast`                                                                       | can be long                                   |
-| `flags` (`hasTrailer`, `isPlayingNow`, …), `customFlags` (`isPremiere`, `weeklyOuting`) |                                               |
-| `relatedTags`, `editorialReviews`                                                       |                                               |
+| Field                                                                                   | Notes                                                                                                            |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `title`, `originalTitle`                                                                |                                                                                                                  |
+| `type`, `internalId`, `id`                                                              | `type: "FEATURE_FILM"`; `internalId` an int (`318225`, the film page id); `id` an opaque base64 id               |
+| `runtime`                                                                               | a **string**, e.g. `"2h 25min"`, to be parsed                                                                    |
+| `synopsis`, `synopsisFull`, `synopsis_json`                                             | the same text: plain, HTML (`<p class="bo-p">`), and a JSON body                                                 |
+| `genres[]`                                                                              | `{id, translate, tag}`, e.g. `translate: "Drame"`, `tag: "DRAMA"`                                                |
+| `languages`                                                                             | codes, e.g. `["FRENCH"]`                                                                                         |
+| `countries[]`                                                                           | `{id, name, localizedName}`, e.g. `name: "Italy"`, `localizedName: "Italie"`                                     |
+| `data.productionYear`                                                                   | under **`data`** (with `seo`, `rules`)                                                                           |
+| `poster`                                                                                | `{id, internalId, url, path}`                                                                                    |
+| `stats`                                                                                 | `userRating` and `pressReview` `{score, count}`, `userReview.count`, `wantToSeeCount`, `metric.{hits, sessions}` |
+| `releases[]`                                                                            | `{releaseDate.{date, precision}, name, certificate.{code, label}, visaNumber, …}`: **`certificate` is here**     |
+| `credits[]`                                                                             | `{person.{firstName, lastName, internalId}, position.{name, department}, rank}`; only the director in the sample |
+| `cast`                                                                                  | `{edges[].node.actor, nodes[]}` (`nodes` duplicates `edges`); **truncated to 3 actors by AlloCiné**              |
+| `flags` (`hasTrailer`, `isPlayingNow`, …), `customFlags` (`isPremiere`, `weeklyOuting`) |                                                                                                                  |
+| `relatedTags[]`                                                                         | 10 tags, **~7 KB**: each `{name, scope, data.seo{…}, tags.list}`, the `seo` blob being most of it                |
+| `editorialReviews`                                                                      | `[]` in the sample: shape unknown                                                                                |
 
 **Per showtime.** Showtimes are grouped in six lists under `results[].showtimes`: `original`,
 `original_st`, `original_sme`, `multiple`, `multiple_st`, `multiple_sme`. The library merges them and
-de-duplicates them by `internalId`.
+de-duplicates them by `internalId`; since D25 our parser does, keeping which list each came from. In the sample
+only `original_st` is non-empty.
 
-| Field                                       | Notes                                                                                                  |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `startsAt`                                  | naive local (Paris) time, which is what v1 uses                                                        |
-| `diffusionVersion`                          | `ORIGINAL` / `DUBBED` / `LOCAL`, which is what v1 uses                                                 |
-| `tags`                                      | e.g. `Showtime.Accessibility.Subtitled`, `Format.Projection.Digital`, `Theater.Service.DisabledAccess` |
-| `projection`, `service`                     |                                                                                                        |
-| `experience`, `comfort`, `picture`, `sound` | empty in the sample                                                                                    |
-| `data.ticketing[]`                          | `{provider, type, urls}`: booking links                                                                |
-| `isPreview`, `isWeeklyMovieOuting`          |                                                                                                        |
-| `timeBeforeStart`                           | **not reliable** (`PT0H0M0S` for a showtime hours away). Do not use it                                 |
+| Field                                       | Notes                                                                                                                                   |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `internalId`                                | int                                                                                                                                     |
+| `startsAt`                                  | naive local (Paris) time                                                                                                                |
+| `diffusionVersion`                          | `ORIGINAL` / `DUBBED` / `LOCAL`. **A French film can be `ORIGINAL`** (_La Gradiva_, in `original_st`): D2 revised                       |
+| `tags`                                      | e.g. `Showtime.Accessibility.Subtitled`, `Localization.Version.Original`, `Format.Projection.Digital`, `Theater.Service.DisabledAccess` |
+| `projection`, `service`                     | lists of codes: `["DIGITAL"]`, `["DISABLED_ACCESS"]`                                                                                    |
+| `experience`, `comfort`, `picture`, `sound` | **`null`** in the sample (W7520 has `experience`: `SCREEN_X`, `PLF`, `E_4DX`)                                                           |
+| `data.ticketing[]`                          | `{provider, type, urls[]}`: booking links (`provider: "relay"`, `type: "DESKTOP"`; the URL contains a raw space)                        |
+| `isPreview`, `isWeeklyMovieOuting`          | booleans                                                                                                                                |
+| `timeBeforeStart`                           | **not reliable** (`PT0H0M0S` for a showtime hours away). Not used                                                                       |
 
-**Observations for v2**
+**Two full real days (C0159 2026-11-14, W7520 2026-11-11)** — captured later, outside the repository; details,
+counts and examples in the design doc §0, §4.4–§4.7, §6.1:
 
-- The v1 `vo` group mixes original-version showtimes with and without subtitles. The subtitle
-  information is only in `tags` (`Showtime.Accessibility.Subtitled`) or in which list the showtime came
-  from (`original_st`), and the library's merge loses the latter. Splitting VO / VOST would need our own
-  reading of the lists or tags, i.e. replacing `get_showtime`'s flattening.
-- The most useful additions would be runtime, genres, certificate, poster, rating, a ticketing link and
-  accessibility tags.
-- **Watch the size.** `synopsisFull`, `cast` and `credits` would inflate the sensor attributes (already
-  kept out of the recorder, §5.3, but still sent to the frontend) and the store (§12). Prefer short
-  fields, put them on a film-level structure shared across days rather than repeated per day, and add
-  only what a user-facing feature needs.
-- Any addition goes into the neutral models (§13.3) as optional fields, so other sources can leave them
-  empty, and bumps the store's minor version (§12.2).
+- C0159 (UGC): 3 pages (`"1"`…`"3"`), 36 films, 161 showtimes. VOST in `original` with tag
+  `Localization.Subtitle.French`; every VF (French films included) `DUBBED` in `multiple`; ticketing `relay` +
+  `default` (ugc.fr); formats `DIGITAL` only; PMR on 145.
+- W7520 (Pathé): 2 pages, 26 films, 66 showtimes. VOST in `original_st` with tag `Showtime.Accessibility.Subtitled`;
+  VF `DUBBED` (34) and `LOCAL` (13, French films) in `multiple`; ticketing `en` + `relay` + `default` (pathe.fr);
+  formats `IMAX`, `F_3D`, experience `SCREEN_X`, `PLF`, `E_4DX`; PMR on 48; tag `Showtime.Accessibility.Greta` on 16.
+- Both: `service` and `Theater.Service.DisabledAccess` always agree; `Showtime.Accessibility.Accessible` does not
+  match PMR; `*_sme` always empty; no `movie: null`; `"0h 00min"` runtimes; `releases[]` of up to 54 items
+  (_Dune_); `editorialReviews` always `[]`; a movie object of 4–35 KB.
+
+**Observations (taken up by D24–D31)**
+
+- The v1 `vo` group mixed original-version showtimes with and without subtitles. The subtitle information is in
+  `tags` (`Showtime.Accessibility.Subtitled`) and in the list the showtime came from (`original_st`), which the
+  library's merge lost. D25 / D26 read both.
+- **Size.** Raw, the heavy parts are `relatedTags` (~7 KB, mostly `seo`), `cast` (1.3 KB), `releases`, `flags`,
+  the synopsis variants, and `ticketing`. Once parsed into our models (names only for tags and people, plain
+  synopsis only), a film is about 1.5 KB. The sensor attribute keeps them inside `films` (unrecorded) and under
+  each film's `details` (D29); the store keeps each film once, in a catalogue shared across days (D27).
+- Additions go into the neutral models (§13.3) as optional fields (D28). Because nothing is released, the store
+  schema changes without a version bump (D27); after a release, an addition would follow the minor-version rule
+  of §12.2.

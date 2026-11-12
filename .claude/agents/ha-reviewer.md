@@ -16,7 +16,7 @@ Look for, in order of importance:
 3. **Error handling** — library or HTTP errors that escape the client unmapped; `ConfigEntryNotReady` / `UpdateFailed` / `ConfigEntryAuthFailed` where they belong; logs that would repeat on every refresh.
 4. **Boundaries** — `homeassistant` imported in the client package; the external service reached from outside the client.
 5. **Restarts** — a restart that calls the external service although fresh data was persisted; data not saved after a successful refresh, or not removed with the entry; no fallback to the stored data when the first refresh fails; time-dependent state held only in a timer.
-6. **Home Assistant conventions** — config flow and unique id, `runtime_data`, entity naming and translations, manifest (exact requirement pins, `iot_class`, `config_flow`, `integration_type`), state size limits, diagnostics redacting secrets.
+6. **Home Assistant conventions** — attribute keys in English `snake_case` (values from the source keep their language), config flow and unique id, `runtime_data`, entity naming and translations, manifest (exact requirement pins, `iot_class`, `config_flow`, `integration_type`), state size limits, diagnostics redacting secrets.
 7. **Tests** — the change is tested, tests assert behaviour, no network access, each coverage scope self-sufficient.
 8. **Simplifications** — only after the above, and only when clearly worth it.
 
