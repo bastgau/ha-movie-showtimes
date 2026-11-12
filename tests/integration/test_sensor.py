@@ -17,6 +17,11 @@ from .helpers import TODAY, TODAY_ID, TOMORROW_ID, at, program_week, setup_entry
 NOW = "2026-11-12T10:00:00+01:00"
 
 
+def _versions(film: dict[str, Any]) -> dict[str, Any]:
+    """Keep the title and the version lists of a ``films`` item."""
+    return {key: film[key] for key in ("title", "vf", "vo", "vost", "other") if key in film}
+
+
 async def test_state_and_attributes(hass: HomeAssistant, freezer: FrozenDateTimeFactory) -> None:
     """The state counts the films still to come; the attributes list them split by version."""
     freezer.move_to(NOW)
@@ -29,9 +34,9 @@ async def test_state_and_attributes(hass: HomeAssistant, freezer: FrozenDateTime
     assert state.state == "2"
     assert state.attributes["date"] == "2026-11-12"
     assert state.attributes["fetched_at"] == "2026-11-12T10:00:00+01:00"
-    assert state.attributes["films"] == [
-        {"title": "Film A", "vf": ["14:00", "20:00"], "vo": []},
-        {"title": "Film B", "vf": [], "vo": ["14:00"]},
+    assert [_versions(film) for film in state.attributes["films"]] == [
+        {"title": "Film A", "vf": ["14:00", "20:00"], "vo": [], "vost": []},
+        {"title": "Film B", "vf": [], "vo": ["14:00"], "vost": []},
     ]
     assert hass.states.get(TOMORROW_ID).attributes["date"] == "2026-11-13"
     assert hass.states.get("sensor.cinema_test_in_6_days").attributes["date"] == "2026-11-18"
@@ -65,7 +70,7 @@ async def test_unknown_version_goes_to_other(hass: HomeAssistant, freezer: Froze
     await setup_entry(hass)
 
     films = hass.states.get(TODAY_ID).attributes["films"]
-    assert films[0] == {"title": "Odd", "vf": ["16:00"], "vo": [], "other": ["15:00"]}
+    assert _versions(films[0]) == {"title": "Odd", "vf": ["16:00"], "vo": [], "vost": [], "other": ["15:00"]}
     assert "other" not in films[1]
 
 

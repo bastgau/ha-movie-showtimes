@@ -1,0 +1,5393 @@
+{
+  "error": false,
+  "message": null,
+  "messageParam": null,
+  "nextDate": null,
+  "results": [
+    {
+      "movie": {
+        "synopsis": "C’est Halloween, et Ducobu revient pour une aventure pleine de rires et de mystères ! Le professeur Latouche et Mademoiselle Rateau emménagent dans une maison… hantée par le ​ fantôme d'Anatole, le plus grand cancre de l’histoire de l’école Saint-Potache.",
+        "internalId": 1000019249,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/54/16/54167f9b523fff67b07b2e80f5f9dd71.jpg"
+        },
+        "title": "Ducobu et le fantôme de Saint-Potache",
+        "originalTitle": "Ducobu et le fantôme de Saint-Potache",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Comédie"
+          },
+          {
+            "translate": "Famille"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 2.27,
+            "count": 304
+          },
+          "userReview": {
+            "count": 74
+          },
+          "pressReview": {
+            "score": 2.45,
+            "count": 11
+          },
+          "metric": {
+            "hits": 426019,
+            "sessions": 239638
+          },
+          "wantToSeeCount": 397
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-07",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "165348"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Semoun",
+              "firstName": "Elie"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Naslin",
+                  "firstName": "Charlie Garnier"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Semoun",
+                  "firstName": "Elie"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Caen",
+                  "firstName": "Émilie"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          },
+          {
+            "name": "Belgium",
+            "localizedName": "Belgique"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Ducobu"
+          },
+          {
+            "name": "Halloween"
+          },
+          {
+            "name": "Maison hantée"
+          },
+          {
+            "name": "Fantômes / Esprits"
+          },
+          {
+            "name": "Frissons en famille"
+          },
+          {
+            "name": "Rire en famille"
+          },
+          {
+            "name": "Suite / Sequel"
+          },
+          {
+            "name": "À partir de 6 ans"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">C’est Halloween, et Ducobu revient pour une aventure pleine de rires et de mystères ! Le professeur Latouche et Mademoiselle Rateau emménagent dans une maison… hantée par le ​ fantôme d'Anatole, le plus grand cancre de l’histoire de l’école Saint-Potache. Ce fantôme farceur va entraîner Ducobu, Léonie, leurs parents et Kitrish dans une série de péripéties ​ aussi drôles qu’inattendues. Mais attention : à Halloween, tout peut arriver…</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359921908,
+            "startsAt": "2026-11-14T09:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000019249&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=09:15&code=SME; AUDIO; GRETA; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855620&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922895,
+            "startsAt": "2026-11-14T11:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000019249&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=11:15&code=SME; AUDIO; GRETA; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855609&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922001,
+            "startsAt": "2026-11-14T13:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000019249&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=13:15&code=SME; AUDIO; GRETA; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855612&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923875,
+            "startsAt": "2026-11-14T15:25:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000019249&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=15:25&code=SME; AUDIO; GRETA; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855614&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923044,
+            "startsAt": "2026-11-14T17:35:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000019249&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=17:35&code=SME; AUDIO; GRETA; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855617&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Dans un village au nord de l’Espagne, Jeanne tente de reconstruire sa vie avec Daniel, qui ne connaît rien de son passé trouble. Un jour, Mateo, le filleul de Jeanne âgé de six ans, disparaît mystérieusement… Afin d’échapper à la police qui la soupçonne rapidement, Jeanne se réfugie en France dans la communauté où elle est née et qu’elle a fuie quelques années auparavant. Daniel ne croit pas à la culpabilité de la femme qu’il aime et va tout faire pour la retrouver avant la police.",
+        "internalId": 1000018384,
+        "poster": {
+          "url": "https://fr.web.img2.acsta.net/img/94/0a/940afff3ed3b09677bf94e2bc7c3009b.jpg"
+        },
+        "title": "Karma",
+        "originalTitle": "Karma",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 20min",
+        "genres": [
+          {
+            "translate": "Thriller"
+          },
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.11,
+            "count": 2716
+          },
+          "userReview": {
+            "count": 609
+          },
+          "pressReview": {
+            "score": 3.03,
+            "count": 34
+          },
+          "metric": {
+            "hits": 1698638,
+            "sessions": 963733
+          },
+          "wantToSeeCount": 2760
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-21",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "-12",
+              "label": "Interdit - 12 ans"
+            },
+            "visaNumber": "163322"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Canet",
+              "firstName": "Guillaume"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Cotillard",
+                  "firstName": "Marion"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Ménochet",
+                  "firstName": "Denis"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Sbaraglia",
+                  "firstName": "Leonardo"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Secte"
+          },
+          {
+            "name": "Traumatisme"
+          },
+          {
+            "name": "Espagne / Espagnoles"
+          },
+          {
+            "name": "Accusé à tort"
+          },
+          {
+            "name": "Manipulation"
+          },
+          {
+            "name": "Disparition"
+          },
+          {
+            "name": "Cavale / Fuite / Fuir"
+          },
+          {
+            "name": "Enquête"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Dans un village au nord de l’Espagne, Jeanne tente de reconstruire sa vie avec Daniel, qui ne connaît rien de son passé trouble. Un jour, Mateo, le filleul de Jeanne âgé de six ans, disparaît mystérieusement… Afin d’échapper à la police qui la soupçonne rapidement, Jeanne se réfugie en France dans la communauté où elle est née et qu’elle a fuie quelques années auparavant. Daniel ne croit pas à la culpabilité de la femme qu’il aime et va tout faire pour la retrouver avant la police.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359922490,
+            "startsAt": "2026-11-14T09:25:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000018384&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=09:25&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855262&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922069,
+            "startsAt": "2026-11-14T12:25:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000018384&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=12:25&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855255&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359921900,
+            "startsAt": "2026-11-14T15:25:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000018384&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=15:25&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855263&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359921925,
+            "startsAt": "2026-11-14T18:25:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000018384&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=18:25&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855333&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922282,
+            "startsAt": "2026-11-14T21:25:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000018384&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=21:25&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855340&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Juin 1943, Jean Moulin, chef de la Résistance, est arrêté alors qu'il tente de réunifier les forces de l’Armée Secrète. Interrogé par Klaus Barbie, le chef de la Gestapo de Lyon, Moulin est entraîné dans une confrontation implacable.",
+        "internalId": 1000020311,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/0f/7f/0f7fb216155bf7bcf7bb69d9e2f65310.jpg"
+        },
+        "title": "Moulin",
+        "originalTitle": "Moulin",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 14min",
+        "genres": [
+          {
+            "translate": "Drame"
+          },
+          {
+            "translate": "Historique"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.53,
+            "count": 1780
+          },
+          "userReview": {
+            "count": 369
+          },
+          "pressReview": {
+            "score": 3.27,
+            "count": 37
+          },
+          "metric": {
+            "hits": 940513,
+            "sessions": 527361
+          },
+          "wantToSeeCount": 3358
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "UA",
+              "label": "Tout public avec avertissement"
+            },
+            "visaNumber": "165214"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Nemes",
+              "firstName": "László"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Lellouche",
+                  "firstName": "Gilles"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Eidinger",
+                  "firstName": "Lars"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Bourgoin",
+                  "firstName": "Louise"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Histoire vraie pendant la guerre"
+          },
+          {
+            "name": "Interrogatoire / Garde à vue"
+          },
+          {
+            "name": "Occupation allemande"
+          },
+          {
+            "name": "Torture"
+          },
+          {
+            "name": "Collaboration et résistance"
+          },
+          {
+            "name": "Personnage historique"
+          },
+          {
+            "name": "Nazisme / Fascisme"
+          },
+          {
+            "name": "Ambiance 40's - années 40"
+          },
+          {
+            "name": "Seconde Guerre mondiale"
+          },
+          {
+            "name": "Biopic / Biographie / Biographie romancée"
+          },
+          {
+            "name": "France"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Juin 1943, Jean Moulin, chef de la Résistance, est arrêté alors qu'il tente de réunifier les forces de l’Armée Secrète. Interrogé par Klaus Barbie, le chef de la Gestapo de Lyon, Moulin est entraîné dans une confrontation implacable. Son ultime combat face à la manipulation et la brutalité commence.  Le destin de la France libre en dépend.  </p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359923546,
+            "startsAt": "2026-11-14T09:30:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000020311&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=09:30&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855114&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923471,
+            "startsAt": "2026-11-14T12:25:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000020311&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=12:25&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855121&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923204,
+            "startsAt": "2026-11-14T15:20:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000020311&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=15:20&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855128&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923919,
+            "startsAt": "2026-11-14T18:15:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000020311&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=18:15&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855199&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922900,
+            "startsAt": "2026-11-14T21:10:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000020311&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=21:10&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855206&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "La guerre a détruit le Japon. Godzilla a réduit ses ultimes espoirs à zéro. Deux ans ont passé. Alors que l’humanité commence enfin à renouer avec une paix difficilement acquise, une nouvelle menace surgit et anéantit tout espoir en un instant.",
+        "internalId": 1000014492,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/62/57/625799426a89e53445b5fb0b842cd241.jpg"
+        },
+        "title": "Godzilla Minus Zero",
+        "originalTitle": "Godzilla Minus Zero",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 15min",
+        "genres": [
+          {
+            "translate": "Science Fiction"
+          }
+        ],
+        "languages": ["JAPANESE"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.82,
+            "count": 671
+          },
+          "userReview": {
+            "count": 114
+          },
+          "pressReview": {
+            "score": 3.76,
+            "count": 25
+          },
+          "metric": {
+            "hits": 201645,
+            "sessions": 103314
+          },
+          "wantToSeeCount": 915
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-04",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "-12",
+              "label": "Interdit - 12 ans"
+            },
+            "visaNumber": "168778"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Yamazaki",
+              "firstName": "Takashi"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Kamiki",
+                  "firstName": "Ryûnosuke"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Hamabe",
+                  "firstName": "Minami"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Yuki",
+                  "firstName": "Yamada"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "Japan",
+            "localizedName": "Japon"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Démolition / Effondrement"
+          },
+          {
+            "name": "Godzilla"
+          },
+          {
+            "name": "Kaijû Eiga / Films de monstres japonais"
+          },
+          {
+            "name": "Ruines / Décombres / Débris"
+          },
+          {
+            "name": "Après-guerre"
+          },
+          {
+            "name": "Monstre et monstre marin"
+          },
+          {
+            "name": "Ambiance 40's - années 40"
+          },
+          {
+            "name": "Japon / Japonais"
+          },
+          {
+            "name": "Suite / Sequel"
+          },
+          {
+            "name": "Adrénaline"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">La guerre a détruit le Japon. Godzilla a réduit ses ultimes espoirs à zéro. Deux ans ont passé. Depuis, le pays se bat sans relâche pour se relever et retrouver peu à peu une vie quotidienne.</p><p class=\"bo-p\">Alors que l’humanité commence enfin à renouer avec une paix difficilement acquise, une nouvelle menace surgit et anéantit tout espoir en un instant.</p><p class=\"bo-p\">Il n’y aura pas de troisième fois. Tout s’achève ici.</p>"
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 84359923512,
+            "startsAt": "2026-11-14T09:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000014492&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=09:30&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854759&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922220,
+            "startsAt": "2026-11-14T12:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000014492&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=12:30&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854766&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923383,
+            "startsAt": "2026-11-14T15:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000014492&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=15:30&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854703&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923241,
+            "startsAt": "2026-11-14T18:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000014492&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=18:30&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854638&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923974,
+            "startsAt": "2026-11-14T21:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000014492&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=21:30&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854645&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Star hollywoodienne en pleine ascension, Matt Hagen se retrouve atrocement défiguré par un baron du crime. Il se tourne vers un traitement expérimental qui lui rend miraculeusement son apparence… mais altère profondément sa perception de la réalité.",
+        "internalId": 1000016901,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/98/f1/98f14da258dd56c0ff1bcb12a4929e85.jpg"
+        },
+        "title": "Clayface",
+        "originalTitle": "Clayface",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 49min",
+        "genres": [
+          {
+            "translate": "Epouvante-horreur"
+          },
+          {
+            "translate": "Thriller"
+          },
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.8,
+            "count": 1265
+          },
+          "userReview": {
+            "count": 169
+          },
+          "pressReview": {
+            "score": 3.06,
+            "count": 17
+          },
+          "metric": {
+            "hits": 402344,
+            "sessions": 229976
+          },
+          "wantToSeeCount": 1286
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-21",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "-12A",
+              "label": "Interdit - 12 ans avec avertissement"
+            },
+            "visaNumber": "168558"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Watkins",
+              "firstName": "James"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Harries",
+                  "firstName": "Tom Rhys"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Ackie",
+                  "firstName": "Naomi"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Marsan",
+                  "firstName": "Eddie"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Gotham City"
+          },
+          {
+            "name": "Univers DC Warner"
+          },
+          {
+            "name": "Défiguré(e)"
+          },
+          {
+            "name": "Adaptation de comic-book DC Comics"
+          },
+          {
+            "name": "Transformation"
+          },
+          {
+            "name": "Méchant emblématique"
+          },
+          {
+            "name": "Vengeance"
+          },
+          {
+            "name": "Acteur / Actrice"
+          },
+          {
+            "name": "Expérience scientifique / Chercheur scientifique"
+          },
+          {
+            "name": "Jeunes adultes"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">L'ascension fulgurante de Matt Hagen, de gamin des rues de Gotham à star hollywoodienne, est brutalement interrompue lorsqu'un baron du crime le laisse atrocement défiguré. Abandonné de tous et n'ayant plus rien à perdre, Matt se tourne vers un traitement expérimental qui lui rend miraculeusement son apparence… mais altère profondément sa perception de la réalité. Il sombre alors dans une spirale destructrice, consumé par un irrépressible désir de vengeance.</p>"
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 84359922342,
+            "startsAt": "2026-11-14T09:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000016901&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=09:30&code=SME; AUDIO; GRETA; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854906&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922523,
+            "startsAt": "2026-11-14T12:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000016901&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=12:00&code=SME; AUDIO; GRETA; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854913&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359921936,
+            "startsAt": "2026-11-14T14:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000016901&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=14:30&code=SME; AUDIO; GRETA; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854920&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923107,
+            "startsAt": "2026-11-14T17:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000016901&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=17:00&code=SME; AUDIO; GRETA; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854902&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923673,
+            "startsAt": "2026-11-14T19:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000016901&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=19:30&code=SME; AUDIO; GRETA; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854887&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922506,
+            "startsAt": "2026-11-14T22:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000016901&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=22:00&code=SME; AUDIO; GRETA; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854894&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "A Halloween, les habitants de la ferme de Mossy Bottom se réjouissent des festivités, jusqu’à ce que le Fermier maladroit saccage les citrouilles bien-aimées du troupeau. Lorsque Shaun se transforme en scientifique fou pour résoudre le problème, les choses dérapent : le Fermier disparaît et une bête sauvage rôde dans les bois.",
+        "internalId": 1000024131,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/4f/da/4fda4090f417ac9b0e78ccc48f43ea2c.jpg"
+        },
+        "title": "Shaun le Mouton : La Bêêête d'Halloween",
+        "originalTitle": "Shaun The Sheep: The Beast Of Mossy Bottom",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 20min",
+        "genres": [
+          {
+            "translate": "Animation"
+          },
+          {
+            "translate": "Famille"
+          },
+          {
+            "translate": "Aventure"
+          },
+          {
+            "translate": "Comédie"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.91,
+            "count": 307
+          },
+          "userReview": {
+            "count": 30
+          },
+          "pressReview": {
+            "score": 3.94,
+            "count": 18
+          },
+          "metric": {
+            "hits": 283993,
+            "sessions": 161384
+          },
+          "wantToSeeCount": 414
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-21",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "168429"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Cox",
+              "firstName": "Steve"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          },
+          {
+            "person": {
+              "lastName": "Walker",
+              "firstName": "Matthew"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 2
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Fletcher",
+                  "firstName": "Justin"
+                },
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Sparkes",
+                  "firstName": "John"
+                },
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Harbour",
+                  "firstName": "Kate"
+                },
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "United Kingdom",
+            "localizedName": "Grande-Bretagne"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Shaun le mouton"
+          },
+          {
+            "name": "Halloween"
+          },
+          {
+            "name": "Pâte à modeler"
+          },
+          {
+            "name": "Stop-Motion"
+          },
+          {
+            "name": "Aventures animalières"
+          },
+          {
+            "name": "C'est beau"
+          },
+          {
+            "name": "Agriculture / Agriculteur / Ferme / Basse cour"
+          },
+          {
+            "name": "Animaux"
+          },
+          {
+            "name": "Enfants"
+          },
+          {
+            "name": "Rire"
+          },
+          {
+            "name": "Situation comique / Gag"
+          },
+          {
+            "name": "À partir de 6 ans"
+          },
+          {
+            "name": "Famille"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">A Halloween, les habitants de la ferme de Mossy Bottom se réjouissent des festivités, jusqu’à ce que le Fermier maladroit saccage les citrouilles bien-aimées du troupeau. Lorsque Shaun se transforme en scientifique fou pour résoudre le problème, les choses dérapent : le Fermier disparaît et une bête sauvage rôde dans les bois.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359923219,
+            "startsAt": "2026-11-14T09:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000024131&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=09:30&code=SME; AUDIO; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855605&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922951,
+            "startsAt": "2026-11-14T11:25:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000024131&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=11:25&code=SME; AUDIO; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855586&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923549,
+            "startsAt": "2026-11-14T13:20:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000024131&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=13:20&code=SME; AUDIO; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855589&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922349,
+            "startsAt": "2026-11-14T15:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000024131&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=15:15&code=SME; AUDIO; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855592&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "En quelques jours seulement, tout semble virer à la catastrophe pour Antoine Blanchet, héritier de l’ancestrale fabrique familiale de balances.",
+        "internalId": 1000031925,
+        "poster": {
+          "url": "https://fr.web.img5.acsta.net/img/e0/fa/e0fa1b691ed74bcdc54a9761aa33dbb4.jpg"
+        },
+        "title": "Un bon patron",
+        "originalTitle": "Un bon patron",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 27min",
+        "genres": [
+          {
+            "translate": "Comédie"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 2.55,
+            "count": 237
+          },
+          "userReview": {
+            "count": 49
+          },
+          "pressReview": {
+            "score": 2.67,
+            "count": 3
+          },
+          "metric": {
+            "hits": 239630,
+            "sessions": 157723
+          },
+          "wantToSeeCount": 283
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-04",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "166849"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "de Chauveron",
+              "firstName": "Philippe"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Bourdon",
+                  "firstName": "Didier"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Frot",
+                  "firstName": "Catherine"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Cayrey",
+                  "firstName": "Jean-François"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Remake de film espagnol"
+          },
+          {
+            "name": "Syndicats / Syndicalistes"
+          },
+          {
+            "name": "Grève"
+          },
+          {
+            "name": "Usine"
+          },
+          {
+            "name": "Ouvrier"
+          },
+          {
+            "name": "Monde du travail"
+          },
+          {
+            "name": "Relation patron / employé"
+          },
+          {
+            "name": "Rire"
+          },
+          {
+            "name": "Situation comique / Gag"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">En quelques jours seulement, tout semble virer à la catastrophe pour Antoine Blanchet, héritier de l’ancestrale fabrique familiale de balances. Un ex-employé viré qui proteste bruyamment et campe devant l’usine ; Un contremaître qui met en péril la production, parce que sa femme le trompe ; Une stagiaire irrésistible qui fait tourner les têtes… À la veille de recevoir un prix d’excellence censé honorer son usine, il doit, en urgence, sauver l’entreprise et maintenir le calme dans son petit univers bien organisé. Il s’y attelle, à sa manière, paternaliste et autoritaire : en bon patron ?</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359923398,
+            "startsAt": "2026-11-14T09:45:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000031925&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=09:45&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855410&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922232,
+            "startsAt": "2026-11-14T11:50:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000031925&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=11:50&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855403&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922100,
+            "startsAt": "2026-11-14T13:55:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000031925&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=13:55&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855412&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922348,
+            "startsAt": "2026-11-14T16:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000031925&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=16:00&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855427&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923465,
+            "startsAt": "2026-11-14T18:05:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000031925&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=18:05&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855420&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923185,
+            "startsAt": "2026-11-14T20:10:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000031925&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=20:10&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855394&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Mise au ban de son village, une pêcheuse solitaire commande au vannier local un mari en osier. Cet époux improbable se révèle doté d’une sensibilité et de talents qui dépassent toutes ses attentes. À son contact, elle découvre un désir insoupçonné et s’éprend véritablement de lui.",
+        "internalId": 322884,
+        "poster": {
+          "url": "https://fr.web.img5.acsta.net/img/ab/60/ab608b1c170d26c4f05010e93cdcb0ac.jpg"
+        },
+        "title": "Wicker",
+        "originalTitle": "Wicker",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 45min",
+        "genres": [
+          {
+            "translate": "Romance"
+          },
+          {
+            "translate": "Drame"
+          },
+          {
+            "translate": "Fantastique"
+          },
+          {
+            "translate": "Comédie"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.79,
+            "count": 248
+          },
+          "userReview": {
+            "count": 30
+          },
+          "pressReview": {
+            "score": 2.95,
+            "count": 19
+          },
+          "metric": {
+            "hits": 186995,
+            "sessions": 101681
+          },
+          "wantToSeeCount": 597
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-21",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "168707"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Fischer",
+              "firstName": "Alex Huston"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          },
+          {
+            "person": {
+              "lastName": "Wilson",
+              "firstName": "Eleanor"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 2
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Colman",
+                  "firstName": "Olivia"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Skarsgård",
+                  "firstName": "Alexander"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Dinklage",
+                  "firstName": "Peter"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Satire"
+          },
+          {
+            "name": "Chasseur / Pêcheur / Pêche / Canne à pêche / Hameçon / Filet"
+          },
+          {
+            "name": "Adaptation d'une nouvelle"
+          },
+          {
+            "name": "Amour contrarié / Amour impossible"
+          },
+          {
+            "name": "Ville / Village"
+          },
+          {
+            "name": "Romance"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Mise au ban de son village, une pêcheuse solitaire commande au vannier local un mari en osier. Cet époux improbable se révèle doté d’une sensibilité et de talents qui dépassent toutes ses attentes. À son contact, elle découvre un désir insoupçonné et, peu à peu, s’éprend véritablement de lui. Mais bientôt, son étrange mari attise les convoitises, la jalousie et les fantasmes des villageois, faisant vaciller les certitudes d’une communauté jusque-là bien ordonnée. </p>"
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 84359922715,
+            "startsAt": "2026-11-14T09:50:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.322884&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=09:50&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855690&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922027,
+            "startsAt": "2026-11-14T12:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.322884&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=12:15&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855683&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922495,
+            "startsAt": "2026-11-14T14:40:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.322884&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=14:40&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855676&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923769,
+            "startsAt": "2026-11-14T17:05:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.322884&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=17:05&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855669&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923756,
+            "startsAt": "2026-11-14T19:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.322884&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=19:30&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855694&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923773,
+            "startsAt": "2026-11-14T21:50:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.322884&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=21:50&code=PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855700&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Novembre 1972. Au tribunal de Bobigny, un procès hors norme secoue la France entière. Marie-Claire Chevalier, 16 ans, est accusée d’avoir avorté illégalement. À la barre, sa mère et toutes les femmes qui l’ont aidée. Leur avocate, Gisèle Halimi, fait un pari fou, insensé : elle leur demande de ne pas plaider coupable. Gisèle va faire ce qui n’a jamais été fait auparavant, elle va accuser et attaquer la loi, au risque de tout perdre.",
+        "internalId": 323550,
+        "poster": {
+          "url": "https://fr.web.img2.acsta.net/img/4a/3c/4a3cf95bb345d5d71bdc7acf3430323b.jpg"
+        },
+        "title": "L'Affaire Marie-Claire",
+        "originalTitle": "L'Affaire Marie-Claire",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 42min",
+        "genres": [
+          {
+            "translate": "Thriller"
+          },
+          {
+            "translate": "Judiciaire"
+          },
+          {
+            "translate": "Historique"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.15,
+            "count": 967
+          },
+          "userReview": {
+            "count": 288
+          },
+          "pressReview": {
+            "score": 3.26,
+            "count": 34
+          },
+          "metric": {
+            "hits": 438218,
+            "sessions": 246876
+          },
+          "wantToSeeCount": 1494
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-04",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "164611"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Escaffre",
+              "firstName": "Lauriane"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          },
+          {
+            "person": {
+              "lastName": "Muller",
+              "firstName": "Yvo"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 2
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Gainsbourg",
+                  "firstName": "Charlotte"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "de France",
+                  "firstName": "Cécile"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Gadebois",
+                  "firstName": "Grégory"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Avortement"
+          },
+          {
+            "name": "Droits des femmes"
+          },
+          {
+            "name": "Féminisme"
+          },
+          {
+            "name": "Inspiré d'une histoire vraie"
+          },
+          {
+            "name": "Avocat / Juge / Procès / Tribunal / Justice"
+          },
+          {
+            "name": "Ambiance 70's - années 70"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Novembre 1972. Au tribunal de Bobigny, un procès hors norme secoue la France entière. Marie-Claire Chevalier, 16 ans, est accusée d’avoir avorté illégalement. À la barre, sa mère et toutes les femmes qui l’ont aidée. Leur avocate, Gisèle Halimi, fait un pari fou, insensé : elle leur demande de ne pas plaider coupable. Gisèle va faire ce qui n’a jamais été fait auparavant, elle va accuser et attaquer la loi, au risque de tout perdre.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359923085,
+            "startsAt": "2026-11-14T10:00:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.323550&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=10:00&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855040&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922148,
+            "startsAt": "2026-11-14T12:25:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.323550&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=12:25&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855047&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923067,
+            "startsAt": "2026-11-14T14:50:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.323550&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=14:50&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855054&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359921958,
+            "startsAt": "2026-11-14T17:10:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.323550&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=17:10&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855061&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359921378,
+            "startsAt": "2026-11-14T19:30:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.323550&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=19:30&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855229&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922276,
+            "startsAt": "2026-11-14T21:50:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.French",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.323550&tags=Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=21:50&code=SME; AUDIO; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855270&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Au poste de police de Hope, Bum-seok et Sung-ae se démènent pour défendre leur village à la population vieillissante. Pendant ce temps, Sung-ki et ses amis partent à la poursuite de la bête dans la montagne mais se retrouvent eux-mêmes pris pour cible.",
+        "internalId": 314882,
+        "poster": {
+          "url": "https://fr.web.img2.acsta.net/img/37/eb/37eb88a0ce51e0295cac6fca4884a609.jpg"
+        },
+        "title": "Hope",
+        "originalTitle": "Hopeu",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 37min",
+        "genres": [
+          {
+            "translate": "Thriller"
+          },
+          {
+            "translate": "Science Fiction"
+          },
+          {
+            "translate": "Action"
+          }
+        ],
+        "languages": ["ENGLISH", "KOREAN"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.44,
+            "count": 1857
+          },
+          "userReview": {
+            "count": 364
+          },
+          "pressReview": {
+            "score": 4.06,
+            "count": 36
+          },
+          "metric": {
+            "hits": 763690,
+            "sessions": 413369
+          },
+          "wantToSeeCount": 2744
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "-12A",
+              "label": "Interdit - 12 ans avec avertissement"
+            },
+            "visaNumber": "168619"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Hong-jin",
+              "firstName": "Na"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Hwang",
+                  "firstName": "Jung-Min"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Zo",
+                  "firstName": "In-sung"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Ho-Yeon",
+                  "firstName": "Jung"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "South Korea",
+            "localizedName": "Corée du Sud"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Attaque / Invasion alien"
+          },
+          {
+            "name": "Corée / Coréen"
+          },
+          {
+            "name": "Course poursuite"
+          },
+          {
+            "name": "Alien / Extraterrestre"
+          },
+          {
+            "name": "Mystère"
+          },
+          {
+            "name": "Ville / Village"
+          },
+          {
+            "name": "Mystère"
+          },
+          {
+            "name": "Adrénaline"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": false
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Les renforts sont partis maîtriser des feux de forêt et toutes les communications sont coupées.</p><p class=\"bo-p\">Au poste de police de Hope, Bum-seok et Sung-ae se démènent pour défendre leur village à la population vieillissante.</p><p class=\"bo-p\">Pendant ce temps, Sung-ki et ses amis partent à la poursuite de la bête dans la montagne mais se retrouvent eux-mêmes pris pour cible. Le malheur émane de l’ignorance. Après des avis divergents, il se transforme en une catastrophe qui touche l’univers entier.</p>"
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 84359923533,
+            "startsAt": "2026-11-14T10:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.314882&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=10:00&code=SME; AUDIO; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854779&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922914,
+            "startsAt": "2026-11-14T13:20:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.314882&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=13:20&code=SME; AUDIO; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854796&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922063,
+            "startsAt": "2026-11-14T16:40:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.314882&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=16:40&code=SME; AUDIO; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854793&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922478,
+            "startsAt": "2026-11-14T20:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.314882&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=20:00&code=SME; AUDIO; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854752&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Sarcelles, 1995. Erika élève seule ses deux enfants. Sa fille Abigaëlle se persuade que son père, qu’elle n’a jamais connu, l’aime en silence quelque part. Lorsqu’elle se met en tête de le retrouver, Erika se sent obligée de l’aider, tout en cherchant à la protéger. En grandissant, la quête d’Abigaëlle se transforme en obsession, entraînant avec elle sa mère, sa meilleure amie, et tous ceux qui comptent.",
+        "internalId": 1000036515,
+        "poster": {
+          "url": "https://fr.web.img4.acsta.net/img/d2/e4/d2e423fe953024eca9f0ebb7b2552db2.jpg"
+        },
+        "title": "Quelques mots d'amour",
+        "originalTitle": "Quelques mots d'amour",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 37min",
+        "genres": [
+          {
+            "translate": "Comédie dramatique"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.03,
+            "count": 899
+          },
+          "userReview": {
+            "count": 136
+          },
+          "pressReview": {
+            "score": 3.81,
+            "count": 36
+          },
+          "metric": {
+            "hits": 334542,
+            "sessions": 175570
+          },
+          "wantToSeeCount": 1250
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "165528"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Rosenberg",
+              "firstName": "Rudi"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Herzi",
+                  "firstName": "Hafsia"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Salam",
+                  "firstName": "Nour"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Bedoucha",
+                  "firstName": "Ella"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Cité / Banlieue"
+          },
+          {
+            "name": "Mère célibataire"
+          },
+          {
+            "name": "Chien"
+          },
+          {
+            "name": "Relation mère / fille"
+          },
+          {
+            "name": "Secret et confidences"
+          },
+          {
+            "name": "Ambiance 90's - années 90"
+          },
+          {
+            "name": "Enfance / Enfant"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Sarcelles, 1995. Erika élève seule ses deux enfants. Sa fille Abigaëlle se persuade que son père, qu’elle n’a jamais connu, l’aime en silence quelque part. Lorsqu’elle se met en tête de le retrouver, Erika se sent obligée de l’aider, tout en cherchant à la protéger. En grandissant, la quête d’Abigaëlle se transforme en obsession, entraînant avec elle sa mère, sa meilleure amie, et tous ceux qui comptent.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359923305,
+            "startsAt": "2026-11-14T10:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000036515&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=10:00&code=SME; AUDIO; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855651&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923228,
+            "startsAt": "2026-11-14T12:20:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000036515&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=12:20&code=SME; AUDIO; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855644&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923221,
+            "startsAt": "2026-11-14T14:40:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000036515&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=14:40&code=SME; AUDIO; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855637&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922157,
+            "startsAt": "2026-11-14T17:10:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000036515&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=17:10&code=SME; AUDIO; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855623&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Lucy vit avec sa famille dans un village sur une petite île isolée. Ses dons extraordinaires suscitent le rejet des habitants. Lorsqu'elle rencontre Milly - une petite fille qu'elle seule peut voir - Lucy embarque dans une grande aventure pour percer le secret de ses mystérieux pouvoirs.",
+        "internalId": 1000012316,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/37/8b/378b27edb6f6e4af9118a32aa23bce23.jpg"
+        },
+        "title": "Le Mystère Lucy Lost",
+        "originalTitle": "Le Mystère Lucy Lost",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 29min",
+        "genres": [
+          {
+            "translate": "Animation"
+          },
+          {
+            "translate": "Famille"
+          },
+          {
+            "translate": "Aventure"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.47,
+            "count": 270
+          },
+          "userReview": {
+            "count": 73
+          },
+          "pressReview": {
+            "score": 3.85,
+            "count": 26
+          },
+          "metric": {
+            "hits": 192787,
+            "sessions": 106134
+          },
+          "wantToSeeCount": 756
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "163517"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Clert",
+              "firstName": "Olivier"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Rosenzweig",
+                  "firstName": "Charlie"
+                },
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Valentin-Dattas",
+                  "firstName": "Zach"
+                },
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Monceau",
+                  "firstName": "Jessica"
+                },
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Pouvoirs surnaturels"
+          },
+          {
+            "name": "AFCAE : Label Jeune Public"
+          },
+          {
+            "name": "Île / Île déserte / Île paradisiaque"
+          },
+          {
+            "name": "Enfants"
+          },
+          {
+            "name": "Ville / Village"
+          },
+          {
+            "name": "À partir de 6 ans"
+          },
+          {
+            "name": "Dessin animé et animation"
+          },
+          {
+            "name": "Amitié"
+          },
+          {
+            "name": "Adaptation de roman"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Lucy vit avec sa famille dans un village sur une petite île isolée. Ses dons extraordinaires suscitent le rejet des habitants. Lorsqu'elle rencontre Milly - une petite fille qu'elle seule peut voir - Lucy embarque dans une grande aventure pour percer le secret de ses mystérieux pouvoirs.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359922114,
+            "startsAt": "2026-11-14T10:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000012316&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=10:00&code=SME; AUDIO; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855571&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922562,
+            "startsAt": "2026-11-14T12:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000012316&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=12:15&code=SME; AUDIO; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855552&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922285,
+            "startsAt": "2026-11-14T14:20:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000012316&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=14:20&code=SME; AUDIO; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855549&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922425,
+            "startsAt": "2026-11-14T16:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000012316&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=16:30&code=SME; AUDIO; apd06a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855546&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Tandis qu’elles fêtent leur dernière soirée ensemble, deux meilleures amies tombent sur un portail mystérieux qui les emmène sur l’île fantastique de Nakali, peuplée de créatures féeriques et mythologiques, tout droit sorties des contes philippins de leur enfance.",
+        "internalId": 296642,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/56/7e/567e74d867a1c88b20897c5d7f92d4dd.jpg"
+        },
+        "title": "L'île des souvenirs",
+        "originalTitle": "Forgotten Island",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 48min",
+        "genres": [
+          {
+            "translate": "Animation"
+          },
+          {
+            "translate": "Comédie"
+          },
+          {
+            "translate": "Aventure"
+          },
+          {
+            "translate": "Famille"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.9,
+            "count": 452
+          },
+          "userReview": {
+            "count": 91
+          },
+          "pressReview": {
+            "score": 3.55,
+            "count": 11
+          },
+          "metric": {
+            "hits": 322013,
+            "sessions": 190370
+          },
+          "wantToSeeCount": 621
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-21",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "UA",
+              "label": "Tout public avec avertissement"
+            },
+            "visaNumber": "168430"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Crawford",
+              "firstName": "Joel"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          },
+          {
+            "person": {
+              "lastName": "Mercado",
+              "firstName": "Januel P."
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 2
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": {
+                  "lastName": "Bresch",
+                  "firstName": "Manon"
+                },
+                "originalVoiceActor": {
+                  "lastName": "H.E.R.",
+                  "firstName": null
+                },
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": {
+                  "lastName": "Rozam",
+                  "firstName": "Anaïde"
+                },
+                "originalVoiceActor": {
+                  "lastName": "Soberano",
+                  "firstName": "Liza"
+                },
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": {
+                  "lastName": "Lacaille",
+                  "firstName": "Xavier"
+                },
+                "originalVoiceActor": {
+                  "lastName": "Franco",
+                  "firstName": "Dave"
+                },
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Philippines / Philippin"
+          },
+          {
+            "name": "Passage à l'âge adulte"
+          },
+          {
+            "name": "Souvenirs"
+          },
+          {
+            "name": "Créatures fantastiques"
+          },
+          {
+            "name": "Île / Île déserte / Île paradisiaque"
+          },
+          {
+            "name": "À partir de 8 ans"
+          },
+          {
+            "name": "Ambiance 90's - années 90"
+          },
+          {
+            "name": "Duo / Tandem"
+          },
+          {
+            "name": "Evasion"
+          },
+          {
+            "name": "Adolescent / Adolescence"
+          },
+          {
+            "name": "Dessin animé et animation"
+          },
+          {
+            "name": "Amitié"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Jo et Raissa, deux meilleures amies depuis la primaire, viennent d'obtenir le baccalauréat. Elles s’apprêtent désormais à s’engager dans des voies différentes. Tandis qu’elles fêtent leur dernière soirée ensemble, elles tombent sur un portail mystérieux qui les emmène sur l’île fantastique de Nakali, peuplée de créatures féeriques et mythologiques, tout droit sorties des contes philippins de leur enfance. Si certaines de ces créatures sont bienveillantes, d’autres, au contraire, se révèlent de terribles ennemies. Avec l’aide de Raww, chien-garou aussi bien intentionné que malchanceux, et d’une bande de petits compagnons dotés de pouvoirs extraordinaires, Jo et Raissa doivent affronter la Redoutable Manananggal, la créature la plus terrifiante de l’île. Quand les deux jeunes filles comprennent qu’elles doivent renoncer à leurs souvenirs communs pour pouvoir rentrer chez elles, Jo et Raissa se lancent dans une course contre la montre pour quitter l’île avant qu’elles ne puissent même plus se rappeler s’être connues un jour…</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359923748,
+            "startsAt": "2026-11-14T10:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.296642&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=10:30&code=SME; AUDIO; GRETA; apd08a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855723&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922559,
+            "startsAt": "2026-11-14T13:10:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.296642&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=13:10&code=SME; AUDIO; GRETA; apd08a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855719&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922531,
+            "startsAt": "2026-11-14T15:35:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.296642&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=15:35&code=SME; AUDIO; GRETA; apd08a; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855716&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "L’homme le plus puissant au monde se lance dans une mission effrénée pour s'ériger en sauveur de l’humanité avant que la catastrophe, qu’il a lui-même déclenchée, n’anéantisse la planète.",
+        "internalId": 327174,
+        "poster": {
+          "url": "https://fr.web.img3.acsta.net/img/ca/46/ca467fa6a145bb9d8fda93417d4374cf.jpg"
+        },
+        "title": "Digger",
+        "originalTitle": "Digger",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 09min",
+        "genres": [
+          {
+            "translate": "Action"
+          },
+          {
+            "translate": "Comédie"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.82,
+            "count": 3151
+          },
+          "userReview": {
+            "count": 541
+          },
+          "pressReview": {
+            "score": 3.11,
+            "count": 35
+          },
+          "metric": {
+            "hits": 1105524,
+            "sessions": 592325
+          },
+          "wantToSeeCount": 2956
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-09-30",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "168488"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "González Iñárritu",
+              "firstName": "Alejandro"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Cruise",
+                  "firstName": "Tom"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Hüller",
+                  "firstName": "Sandra"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Ahmed",
+                  "firstName": "Riz"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          },
+          {
+            "name": "Mexico",
+            "localizedName": "Mexique"
+          },
+          {
+            "name": "United Kingdom",
+            "localizedName": "Grande-Bretagne"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Répétition"
+          },
+          {
+            "name": "Vestiaires et coulisses"
+          },
+          {
+            "name": "Dérèglement climatique"
+          },
+          {
+            "name": "Catastrophe écologique"
+          },
+          {
+            "name": "Absurde"
+          },
+          {
+            "name": "Satire"
+          },
+          {
+            "name": "Millionnaire / Milliardaire"
+          },
+          {
+            "name": "Sauver la terre"
+          },
+          {
+            "name": "Humour noir"
+          },
+          {
+            "name": "Théâtre et salle de spectacle"
+          },
+          {
+            "name": "Soldat / Militaire"
+          },
+          {
+            "name": "Acteur / Actrice"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">L’homme le plus puissant au monde se lance dans une mission effrénée pour s'ériger en sauveur de l’humanité avant que la catastrophe, qu’il a lui-même déclenchée, n’anéantisse la planète.</p>"
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 84359923492,
+            "startsAt": "2026-11-14T10:30:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.327174&tags=Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=10:30&code=SME; AUDIO; GRETA; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854652&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359923065,
+            "startsAt": "2026-11-14T13:20:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.327174&tags=Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=13:20&code=SME; AUDIO; GRETA; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854612&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922945,
+            "startsAt": "2026-11-14T16:10:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.327174&tags=Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=16:10&code=SME; AUDIO; GRETA; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854619&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922318,
+            "startsAt": "2026-11-14T19:00:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.327174&tags=Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=19:00&code=SME; AUDIO; GRETA; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854626&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922696,
+            "startsAt": "2026-11-14T21:45:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.327174&tags=Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=21:45&code=SME; AUDIO; GRETA; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171854657&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Libéré après 19 ans de bagne pour le vol d’un pain, Jean Valjean décide de changer de vie et de faire le bien autour de lui. Sous une fausse identité, il devient avec le temps un notable respecté de tous. Mais son passé le rattrape...",
+        "internalId": 326160,
+        "poster": {
+          "url": "https://fr.web.img4.acsta.net/img/5a/41/5a4186d62d534f2da65c2e9e8e822a34.jpg"
+        },
+        "title": "Les Misérables",
+        "originalTitle": "Les Misérables",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 56min",
+        "genres": [
+          {
+            "translate": "Drame"
+          },
+          {
+            "translate": "Historique"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.08,
+            "count": 3545
+          },
+          "userReview": {
+            "count": 724
+          },
+          "pressReview": {
+            "score": 3.13,
+            "count": 38
+          },
+          "metric": {
+            "hits": 1771998,
+            "sessions": 927818
+          },
+          "wantToSeeCount": 3651
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-14",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "167231"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Cavayé",
+              "firstName": "Fred"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Lindon",
+                  "firstName": "Vincent"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Rahim",
+                  "firstName": "Tahar"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Cottin",
+                  "firstName": "Camille"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Fantine"
+          },
+          {
+            "name": "Inspecteur Javert"
+          },
+          {
+            "name": "Jean Valjean"
+          },
+          {
+            "name": "Les Thénardier"
+          },
+          {
+            "name": "Cosette"
+          },
+          {
+            "name": "Révolution"
+          },
+          {
+            "name": "Héros"
+          },
+          {
+            "name": "Fresque historique"
+          },
+          {
+            "name": "Rédemption"
+          },
+          {
+            "name": "Ex-détenu / Sortie de prison"
+          },
+          {
+            "name": "Destins croisés"
+          },
+          {
+            "name": "France"
+          },
+          {
+            "name": "19e siècle"
+          },
+          {
+            "name": "Adaptation de roman"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": {
+            "club300": true
+          },
+          "hasClubNews": {
+            "club300": true
+          },
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Libéré après 19 ans de bagne pour le vol d’un pain, Jean Valjean décide de changer de vie et de faire le bien autour de lui. Sous une fausse identité, il devient avec le temps un notable respecté de tous. Venant en aide à Fantine, une ouvrière mourante, il promet de sauver sa fille, Cosette, des griffes des cruels Thénardier. Mais son passé le rattrape : l’inspecteur Javert, un policier implacable au passé lui aussi tourmenté, le traque sans relâche afin de le renvoyer au bagne. Dans un Paris en pleine révolution, Valjean doit lutter pour protéger Cosette et achever sa rédemption, entre sacrifices et quête de justice.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359923943,
+            "startsAt": "2026-11-14T17:10:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.326160&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=17:10&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855593&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922249,
+            "startsAt": "2026-11-14T20:45:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.326160&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=20:45&code=SME; AUDIO; GRETA; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855577&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    }
+  ],
+  "pagination": {
+    "page": "2",
+    "totalPages": 3,
+    "itemsPerPage": 15,
+    "totalItems": 36
+  }
+}

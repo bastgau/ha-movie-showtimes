@@ -1,0 +1,239 @@
+{
+  "error": false,
+  "message": null,
+  "messageParam": null,
+  "nextDate": null,
+  "results": [
+    {
+      "movie": {
+        "internalId": 900001,
+        "title": "Invented Lists",
+        "languages": ["ENGLISH"]
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 1,
+            "startsAt": "2026-11-12T10:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": []
+          },
+          {
+            "internalId": 5,
+            "startsAt": "2026-11-12T11:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": [],
+            "projection": ["DIGITAL"],
+            "tags": []
+          }
+        ],
+        "original_st": [
+          {
+            "internalId": 1,
+            "startsAt": "2026-11-12T10:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": ["Showtime.Accessibility.Subtitled"]
+          },
+          {
+            "internalId": 4,
+            "startsAt": "2026-11-12T12:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": ["Showtime.Accessibility.Subtitled"]
+          }
+        ],
+        "original_sme": [
+          {
+            "internalId": 2,
+            "startsAt": "2026-11-12T13:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": ["Showtime.Accessibility.Subtitled"]
+          },
+          {
+            "internalId": 4,
+            "startsAt": "2026-11-12T12:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": []
+          }
+        ],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": [
+          {
+            "internalId": 3,
+            "startsAt": "2026-11-12T14:00:00",
+            "diffusionVersion": "DUBBED",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900002,
+        "title": "Invented Co-production",
+        "languages": ["FRENCH", "ITALIAN"]
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 10,
+            "startsAt": "2026-11-12T15:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": []
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900003,
+        "title": "Invented Unknown Version",
+        "languages": ["ENGLISH"]
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 20,
+            "startsAt": "2026-11-12T16:00:00",
+            "diffusionVersion": "SIGNED",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": []
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900004,
+        "title": "Invented Unknown Lists",
+        "languages": ["ENGLISH"]
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": null,
+        "multiple_st": [],
+        "multiple_sme": [],
+        "imax_st": [
+          {
+            "internalId": 30,
+            "startsAt": "2026-11-12T17:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": ["Showtime.Accessibility.Subtitled"]
+          }
+        ],
+        "imax": [
+          {
+            "internalId": 31,
+            "startsAt": "2026-11-12T18:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": []
+          }
+        ],
+        "notes": "not a list"
+      }
+    },
+    {
+      "movie": null,
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 40,
+            "startsAt": "2026-11-12T19:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": []
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900006,
+        "title": "Invented Empty Lists",
+        "languages": ["ENGLISH"]
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900007,
+        "title": "Invented Service Shapes",
+        "languages": ["ENGLISH"]
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 50,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "projection": ["DIGITAL"],
+            "tags": []
+          },
+          {
+            "internalId": 51,
+            "startsAt": "2026-11-12T21:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": "DISABLED_ACCESS",
+            "projection": ["DIGITAL"],
+            "tags": []
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    }
+  ],
+  "pagination": {
+    "page": "1",
+    "totalPages": 1,
+    "itemsPerPage": 15,
+    "totalItems": 7
+  }
+}

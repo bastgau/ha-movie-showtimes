@@ -1,6 +1,9 @@
 """The AlloCiné provider: conversion, error mapping, reference parsing and the library override.
 
-``requests.get`` is replaced everywhere: nothing here reaches allocine.fr.
+``requests.get`` is replaced everywhere: nothing here reaches allocine.fr. The ``showtimes_*`` fixtures used here are
+synthetic (invented, with list keys such as ``dubbed`` / ``local`` that AlloCiné does not have), except
+``showtimes_empty_real_shape.json``, reconstructed from the empty day AlloCiné really answers. The contract's ``ok``
+day is the real C0159 capture of 2026-11-14 (three pages, trimmed by removing keys only).
 """
 
 # pylint: disable=protected-access,unidiomatic-typecheck,arguments-differ
@@ -72,15 +75,16 @@ class TestAllocineContract(ProviderContract):
         """Return the function programming ``requests.get``."""
 
         def _arrange(kind: str) -> None:
-            outcomes: dict[str, FakeResponse | BaseException] = {
-                "ok": _page("showtimes_W0124.json"),
-                "empty": _page("showtimes_empty.json"),
+            outcomes: dict[str, FakeResponse | BaseException | list[FakeResponse]] = {
+                "ok": [_page(f"allocine_C0159_2026-11-14_p{number}.json") for number in (1, 2, 3)],
+                "empty": _page("showtimes_empty_real_shape.json"),
                 "not_found": FakeResponse(404),
                 "connection": requests.ConnectionError("down"),
                 "timeout": requests.Timeout("slow"),
                 "malformed": FakeResponse(200, "<html>changed</html>"),
             }
-            install_requests(monkeypatch, outcomes[kind])
+            outcome = outcomes[kind]
+            install_requests(monkeypatch, *(outcome if isinstance(outcome, list) else [outcome]))
 
         return _arrange
 
@@ -88,9 +92,9 @@ class TestAllocineContract(ProviderContract):
 class TestConversion:
     """What the library returns becomes the client's models."""
 
-    async def test_happy_path(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        """Films are sorted, duplicates and empty films dropped, versions mapped, starts aware in Paris."""
-        install_requests(monkeypatch, _page("showtimes_W0124.json"))
+    async def test_synthetic_happy_path(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        """Synthetic day: films sorted, duplicates and empty films dropped, versions mapped, starts aware in Paris."""
+        install_requests(monkeypatch, _page("showtimes_synthetic.json"))
 
         result = await AllocineProvider().async_get_day("W0124", DAY)
 
@@ -103,16 +107,16 @@ class TestConversion:
         ]
         assert result.films[0].showtimes[0].version is ShowtimeVersion.LOCAL
 
-    async def test_summer_time(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        """A summer date is at +02:00."""
+    async def test_synthetic_summer_time(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        """Synthetic day: a summer date is at +02:00."""
         install_requests(monkeypatch, _page("showtimes_summer.json"))
 
         result = await AllocineProvider().async_get_day("W0124", date(2026, 7, 14))
 
         assert result.films[0].showtimes[0].starts_at.isoformat() == "2026-07-14T21:45:00+02:00"
 
-    async def test_aware_start_is_converted(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        """An aware ``startsAt`` is converted to Paris time."""
+    async def test_synthetic_aware_start_is_converted(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        """Synthetic day: an aware ``startsAt`` is converted to Paris time."""
         install_requests(monkeypatch, _page("showtimes_aware.json"))
 
         result = await AllocineProvider().async_get_day("W0124", DAY)
@@ -120,16 +124,17 @@ class TestConversion:
         assert result.films[0].showtimes[0].starts_at.isoformat() == "2026-11-12T20:00:00+01:00"
 
     async def test_empty_day(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        """No showtime at all is valid data."""
-        install_requests(monkeypatch, _page("showtimes_empty.json"))
+        """No showtime at all is valid data (the reconstructed real shape: ``totalPages`` 0, one request)."""
+        fake = install_requests(monkeypatch, _page("showtimes_empty_real_shape.json"))
 
         result = await AllocineProvider().async_get_day("W0124", DAY)
 
         assert not result.films
         assert result.cinema_id == "W0124"
+        assert len(fake.calls) == 1
 
-    async def test_pagination(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        """Every page is requested and the results merged."""
+    async def test_synthetic_pagination(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        """Synthetic two pages: every page is requested and the results merged."""
         fake = install_requests(monkeypatch, _page("showtimes_two_pages_p1.json"), _page("showtimes_two_pages_p2.json"))
 
         result = await AllocineProvider().async_get_day("W0124", DAY)
@@ -140,10 +145,10 @@ class TestConversion:
         ]
         assert [film.title for film in result.films] == ["Film A", "Film B"]
 
-    async def test_null_movie_is_ignored(
+    async def test_synthetic_null_movie_is_ignored(
         self, monkeypatch: pytest.MonkeyPatch, caplog: pytest.LogCaptureFixture
     ) -> None:
-        """A non-film event (``movie: null``) is removed and the other films are kept."""
+        """Synthetic day: a non-film event (``movie: null``) is removed and the other films are kept."""
         install_requests(monkeypatch, _page("showtimes_null_movie.json"))
 
         with caplog.at_level(logging.DEBUG, logger=allocine.__name__):
@@ -152,10 +157,10 @@ class TestConversion:
         assert [film.title for film in result.films] == ["Film C"]
         assert "Ignored 1 non-film" in caplog.text
 
-    async def test_versions_and_single_warning(
+    async def test_synthetic_versions_and_single_warning(
         self, monkeypatch: pytest.MonkeyPatch, caplog: pytest.LogCaptureFixture
     ) -> None:
-        """Unknown versions are kept as ``UNKNOWN`` and warned about once per value."""
+        """Synthetic day: unknown versions are kept as ``UNKNOWN`` and warned about once per value."""
         install_requests(monkeypatch, _page("showtimes_original.json"))
         provider = AllocineProvider()
 
@@ -174,26 +179,34 @@ class TestConversion:
         assert "None" in warnings[1].getMessage()
 
     @pytest.mark.parametrize(
-        ("raw", "message"),
+        ("pages", "message"),
         [
-            ({"not": "a list"}, "Expected a list of films"),
-            (["film"], "Expected a film object"),
-            ([{"title": "", "showtimes": []}], "no usable title"),
-            ([{"title": None, "showtimes": []}], "no usable title"),
-            ([{"title": "A", "showtimes": "x"}], "no showtimes list"),
-            ([{"title": "A", "showtimes": ["x"]}], "is not an object"),
-            ([{"title": "A", "showtimes": [{"diffusionVersion": "LOCAL"}]}], "has no start"),
-            ([{"title": "A", "showtimes": [{"startsAt": "soon"}]}], "invalid start"),
+            ([{"results": {"not": "a list"}}], "Expected a list of results"),
+            ([{"results": ["film"]}], "Expected a result object"),
+            ([{"results": [{"movie": {"title": ""}, "showtimes": {}}]}], "no usable title"),
+            ([{"results": [{"movie": {"title": None}, "showtimes": {}}]}], "no usable title"),
+            ([{"results": [{"movie": {"title": "A"}, "showtimes": "x"}]}], "no showtimes object"),
+            ([{"results": [{"movie": {"title": "A"}, "showtimes": {"original": ["x"]}}]}], "is not an object"),
+            (
+                [{"results": [{"movie": {"title": "A"}, "showtimes": {"original": [{"diffusionVersion": "LOCAL"}]}}]}],
+                "has no start",
+            ),
+            (
+                [{"results": [{"movie": {"title": "A"}, "showtimes": {"original": [{"startsAt": "soon"}]}}]}],
+                "invalid start",
+            ),
         ],
     )
-    def test_malformed_conversion(self, raw: object, message: str) -> None:
-        """A shape the library should never return is a parse error."""
+    def test_malformed_conversion(self, pages: list[dict[str, Any]], message: str) -> None:
+        """A required part of a page with an unexpected shape is a parse error."""
         with pytest.raises(SourceParseError, match=message):
-            AllocineProvider()._convert_day("W0124", DAY, raw)
+            AllocineProvider()._convert_day("W0124", DAY, pages)
 
     def test_film_without_showtimes_is_dropped(self) -> None:
         """A film with an empty list of showtimes is left out."""
-        result = AllocineProvider()._convert_day("W0124", DAY, [{"title": "A", "showtimes": []}])
+        pages = [{"results": [{"movie": {"title": "A"}, "showtimes": {"original": []}}]}]
+
+        result = AllocineProvider()._convert_day("W0124", DAY, pages)
 
         assert not result.films
 
@@ -202,8 +215,8 @@ class TestRequest:
     """What is sent to allocine.fr."""
 
     async def test_only_the_user_agent_header(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        """The User-Agent is the only header sent."""
-        fake = install_requests(monkeypatch, _page("showtimes_W0124.json"))
+        """The User-Agent is the only header sent (synthetic day)."""
+        fake = install_requests(monkeypatch, _page("showtimes_synthetic.json"))
 
         await AllocineProvider().async_get_day("W0124", DAY)
 
@@ -223,7 +236,7 @@ class TestRequest:
     )
     def test_trailing_slash(self, monkeypatch: pytest.MonkeyPatch, path: str, expected: str) -> None:
         """A missing trailing slash is added to the path, the query string and the parameters untouched."""
-        fake = install_requests(monkeypatch, _page("showtimes_W0124.json"))
+        fake = install_requests(monkeypatch, _page("showtimes_synthetic.json"))
         params = {"page": 2}
 
         allocine._AllocineAPIWithTimeout(connect_timeout=1, read_timeout=1)._get_json_request(path, params)
@@ -232,8 +245,8 @@ class TestRequest:
         assert fake.calls[0][1]["params"] == params
 
     async def test_requested_urls_end_with_a_slash(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        """The URLs the library builds end up canonical."""
-        fake = install_requests(monkeypatch, _page("showtimes_W0124.json"))
+        """The URLs the library builds end up canonical (synthetic day)."""
+        fake = install_requests(monkeypatch, _page("showtimes_synthetic.json"))
 
         await AllocineProvider().async_get_day("W0124", DAY)
 
@@ -336,7 +349,7 @@ class TestExecution:
 
     async def test_request_timeouts_are_passed(self, monkeypatch: pytest.MonkeyPatch) -> None:
         """Every HTTP request carries a connect and a read timeout."""
-        fake = install_requests(monkeypatch, _page("showtimes_empty.json"))
+        fake = install_requests(monkeypatch, _page("showtimes_empty_real_shape.json"))
 
         await AllocineProvider().async_get_day("W0124", DAY)
         await AllocineProvider(connect_timeout=1.5, read_timeout=2.5).async_get_day("W0124", DAY)
@@ -349,7 +362,7 @@ class TestExecution:
 
         def _get(url: str, **kwargs: Any) -> FakeResponse:
             threads.append(threading.get_ident())
-            return _page("showtimes_empty.json")
+            return _page("showtimes_empty_real_shape.json")
 
         monkeypatch.setattr(requests, "get", _get)
 
@@ -364,7 +377,7 @@ class TestExecution:
 
         def _get(url: str, **kwargs: Any) -> FakeResponse:
             release.wait(5)
-            return _page("showtimes_empty.json")
+            return _page("showtimes_empty_real_shape.json")
 
         monkeypatch.setattr(requests, "get", _get)
 
@@ -440,7 +453,7 @@ class TestReferences:
 
     async def test_bad_id_raises_before_any_request(self, monkeypatch: pytest.MonkeyPatch) -> None:
         """A malformed id never reaches the network."""
-        fake = install_requests(monkeypatch, _page("showtimes_empty.json"))
+        fake = install_requests(monkeypatch, _page("showtimes_empty_real_shape.json"))
 
         with pytest.raises(InvalidCinemaRefError):
             await AllocineProvider().async_get_day("not an id", DAY)
@@ -449,7 +462,7 @@ class TestReferences:
 
     async def test_url_is_accepted_by_get_day(self, monkeypatch: pytest.MonkeyPatch) -> None:
         """A page URL is normalized, and the canonical id is requested and returned."""
-        fake = install_requests(monkeypatch, _page("showtimes_empty.json"))
+        fake = install_requests(monkeypatch, _page("showtimes_empty_real_shape.json"))
 
         result = await AllocineProvider().async_get_day(URL.lower(), DAY)
 
@@ -514,8 +527,9 @@ assert not loaded, loaded
 def test_start_on_the_morning_of_the_spring_clock_change() -> None:
     """A start before the 02:00 jump of the last Sunday of March is still at +01:00."""
     provider = AllocineProvider()
-    raw = [{"title": "A", "showtimes": [{"startsAt": "2026-03-29T01:30:00", "diffusionVersion": "LOCAL"}]}]
+    showtime = {"startsAt": "2026-03-29T01:30:00", "diffusionVersion": "LOCAL"}
+    pages = [{"results": [{"movie": {"title": "A"}, "showtimes": {"multiple": [showtime]}}]}]
 
-    result = provider._convert_day("W0124", date(2026, 3, 29), raw)
+    result = provider._convert_day("W0124", date(2026, 3, 29), pages)
 
     assert result.films[0].showtimes[0].starts_at.utcoffset() == timedelta(hours=1)

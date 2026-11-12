@@ -15,6 +15,13 @@ from .helpers import prefill, program_week, setup_entry, stored_data
 NOW = "2026-11-12T10:00:00+01:00"
 NOW_UTC = datetime(2026, 11, 12, 9, 0, tzinfo=UTC)
 
+UNKNOWN_FLAGS = {
+    "subtitled": None,
+    "hard_of_hearing_subtitles": None,
+    "disabled_access": None,
+    "audio_description": None,
+}
+
 
 async def test_diagnostics_after_a_refresh(hass: HomeAssistant, freezer: FrozenDateTimeFactory) -> None:
     """The report lists the source, the status of the last refresh and every day, unfiltered."""
@@ -45,9 +52,10 @@ async def test_diagnostics_after_a_refresh(hass: HomeAssistant, freezer: FrozenD
     assert today["fetched_at"] == "2026-11-12T09:00:00+00:00"
     assert today["films"][0] == {
         "title": "Film A",
+        "ref": None,
         "showtimes": [
-            {"starts_at": "2026-11-12T14:00:00+01:00", "version": "dubbed"},
-            {"starts_at": "2026-11-12T20:00:00+01:00", "version": "local"},
+            {"starts_at": "2026-11-12T14:00:00+01:00", "version": "dubbed", **UNKNOWN_FLAGS},
+            {"starts_at": "2026-11-12T20:00:00+01:00", "version": "local", **UNKNOWN_FLAGS},
         ],
     }
 

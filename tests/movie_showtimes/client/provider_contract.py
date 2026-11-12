@@ -9,12 +9,16 @@ from collections.abc import Callable
 from datetime import date
 import re
 from typing import ClassVar
+from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 from custom_components.movie_showtimes.client import (
     CinemaInfo,
     CinemaNotFoundError,
+    FilmDetails,
     InvalidCinemaRefError,
+    Showtime,
+    ShowtimeFormats,
     ShowtimesError,
     ShowtimesProvider,
     ShowtimeVersion,
@@ -29,6 +33,46 @@ from .helpers import no_network
 DAY = date(2026, 11, 12)
 
 type Arrange = Callable[[str], None]
+
+_FLAGS = ("subtitled", "hard_of_hearing_subtitles", "disabled_access", "audio_description", "preview", "weekly_outing")
+
+
+def _is_http_url(value: str | None) -> bool:
+    """Return whether an optional URL is absent or an absolute ``http(s)`` URL with a host."""
+    if value is None:
+        return True
+    parts = urlsplit(value)
+    return parts.scheme in {"http", "https"} and bool(parts.hostname)
+
+
+def _check_texts(values: tuple[str, ...]) -> None:
+    """Strings in tuples are non-empty and stripped."""
+    assert isinstance(values, tuple)
+    for value in values:
+        assert isinstance(value, str)
+        assert value
+        assert value == value.strip()
+
+
+def _check_details(details: FilmDetails | None) -> None:
+    """``details`` is ``None`` or a ``FilmDetails`` that is not all-default, with the model's invariants."""
+    if details is None:
+        return
+    assert isinstance(details, FilmDetails)
+    assert details != FilmDetails()
+    assert details.runtime is None or details.runtime > 0
+    assert _is_http_url(details.url)
+    assert _is_http_url(details.poster_url)
+    for name in ("genres", "countries", "languages", "directors", "cast", "related_tags", "flags"):
+        _check_texts(getattr(details, name))
+
+
+def _check_showtime_extras(showtime: Showtime) -> None:
+    """Check that the optional showtime fields keep the model's invariants."""
+    for name in _FLAGS:
+        assert getattr(showtime, name) is None or type(getattr(showtime, name)) is bool
+    assert showtime.formats is None or showtime.formats != ShowtimeFormats()
+    assert _is_http_url(showtime.ticket_url)
 
 
 class ProviderContract:
@@ -109,6 +153,8 @@ class ProviderContract:
             assert film.showtimes
             starts = [showtime.starts_at for showtime in film.showtimes]
             assert starts == sorted(starts)
+            assert film.ref is None or (isinstance(film.ref, str) and film.ref)
+            _check_details(film.details)
             for showtime in film.showtimes:
                 assert showtime.starts_at.tzinfo is not None
                 assert (
@@ -116,6 +162,7 @@ class ProviderContract:
                     == showtime.starts_at.astimezone(ZoneInfo(provider.source.time_zone)).utcoffset()
                 )
                 assert isinstance(showtime.version, ShowtimeVersion)
+                _check_showtime_extras(showtime)
 
     async def test_day_empty(self, provider: ShowtimesProvider, arrange: Arrange, canonical_id: str) -> None:
         """An empty day is valid data."""

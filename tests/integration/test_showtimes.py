@@ -2,6 +2,7 @@
 
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
+from typing import Any
 from unittest.mock import patch
 
 from custom_components.movie_showtimes import showtimes
@@ -21,6 +22,11 @@ from tests.fake_provider import make_day, make_film, paris
 from .helpers import TODAY, at, standard_day
 
 START = at(TODAY, 14)
+
+
+def _versions(film: dict[str, Any]) -> dict[str, Any]:
+    """Keep the title and the version lists of a ``films`` item."""
+    return {key: film[key] for key in ("title", "vf", "vo", "vost", "other") if key in film}
 
 
 def test_expiry_is_start_plus_grace() -> None:
@@ -87,7 +93,7 @@ def test_film_attributes_render_in_the_home_assistant_zone(
     set_time_zone(zone)
     film = make_film("A", (paris(2026, 11, 12, 20), ShowtimeVersion.LOCAL))
 
-    assert film_attributes(film) == {"title": "A", "vf": [expected], "vo": []}
+    assert _versions(film_attributes(film)) == {"title": "A", "vf": [expected], "vo": [], "vost": []}
 
 
 def test_film_attributes_split_versions_and_sort_by_instant() -> None:
@@ -100,14 +106,20 @@ def test_film_attributes_split_versions_and_sort_by_instant() -> None:
         (paris(2026, 11, 12, 16), ShowtimeVersion.UNKNOWN),
     )
 
-    assert film_attributes(film) == {"title": "A", "vf": ["14:00", "21:00"], "vo": ["18:00"], "other": ["16:00"]}
+    assert _versions(film_attributes(film)) == {
+        "title": "A",
+        "vf": ["14:00", "21:00"],
+        "vo": ["18:00"],
+        "vost": [],
+        "other": ["16:00"],
+    }
 
 
 def test_other_is_absent_without_unknown_versions() -> None:
     """``vf`` and ``vo`` are always there, ``other`` only when needed."""
     film = make_film("A", (START, ShowtimeVersion.ORIGINAL))
 
-    assert film_attributes(film) == {"title": "A", "vf": [], "vo": ["14:00"]}
+    assert _versions(film_attributes(film)) == {"title": "A", "vf": [], "vo": ["14:00"], "vost": []}
 
 
 FETCHED = datetime(2026, 11, 10, 12, 0, tzinfo=UTC)
