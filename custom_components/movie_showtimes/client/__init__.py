@@ -14,7 +14,7 @@ from .exceptions import (
     SourceTimeoutError,
     UnknownSourceError,
 )
-from .models import DayShowtimes, Film, Showtime, ShowtimeVersion
+from .models import Credit, DayShowtimes, Film, FilmDetails, Rating, Showtime, ShowtimeFormats, ShowtimeVersion
 from .provider import CinemaInfo, ShowtimesProvider, SourceInfo
 from .registry import PROVIDERS, create_provider, get_provider_class
 
@@ -22,10 +22,14 @@ __all__ = [
     "PROVIDERS",
     "CinemaInfo",
     "CinemaNotFoundError",
+    "Credit",
     "DayShowtimes",
     "Film",
+    "FilmDetails",
     "InvalidCinemaRefError",
+    "Rating",
     "Showtime",
+    "ShowtimeFormats",
     "ShowtimeVersion",
     "ShowtimesError",
     "ShowtimesProvider",

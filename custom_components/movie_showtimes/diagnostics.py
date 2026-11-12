@@ -1,16 +1,38 @@
 """Diagnostics of the Movie Showtimes integration."""
 
+from dataclasses import asdict
 from typing import Any, Final, cast
 
 from homeassistant.components.diagnostics import async_redact_data  # pyright: ignore[reportUnknownVariableType]
 from homeassistant.core import HomeAssistant
 from homeassistant.util import dt as dt_util
 
+from .client import Showtime
 from .coordinator import MovieShowtimesConfigEntry
-from .store import CachedDay
+from .store import CachedDay, film_catalogue
 
 # Nothing is secret today (no credentials; the cinema id and name are public): the one place to add a field.
 TO_REDACT: Final[set[str]] = set()
+
+
+def _showtime_diagnostics(showtime: Showtime) -> dict[str, Any]:
+    """Return one showtime, with its subtitle and accessibility flags.
+
+    Args:
+        showtime (Showtime): The showtime.
+
+    Returns:
+        dict[str, Any]: The start, the version and the four flags (``None`` when unknown).
+
+    """
+    return {
+        "starts_at": showtime.starts_at.isoformat(),
+        "version": showtime.version.value,
+        "subtitled": showtime.subtitled,
+        "hard_of_hearing_subtitles": showtime.hard_of_hearing_subtitles,
+        "disabled_access": showtime.disabled_access,
+        "audio_description": showtime.audio_description,
+    }
 
 
 def _day_diagnostics(cached: CachedDay) -> dict[str, Any]:
@@ -20,7 +42,7 @@ def _day_diagnostics(cached: CachedDay) -> dict[str, Any]:
         cached (CachedDay): The day and when it was fetched.
 
     Returns:
-        dict[str, Any]: The fetch time, the film count and every film with all its showtimes.
+        dict[str, Any]: The fetch time, the film count and every film with its ``ref`` and all its showtimes.
 
     """
     day = cached.showtimes
@@ -30,10 +52,8 @@ def _day_diagnostics(cached: CachedDay) -> dict[str, Any]:
         "films": [
             {
                 "title": film.title,
-                "showtimes": [
-                    {"starts_at": showtime.starts_at.isoformat(), "version": showtime.version.value}
-                    for showtime in film.showtimes
-                ],
+                "ref": film.ref,
+                "showtimes": [_showtime_diagnostics(showtime) for showtime in film.showtimes],
             }
             for film in day.films
         ],
@@ -51,7 +71,7 @@ async def async_get_config_entry_diagnostics(
         entry (MovieShowtimesConfigEntry): The entry of the cinema.
 
     Returns:
-        dict[str, Any]: The entry, the source, the coordinator's status and every fetched day.
+        dict[str, Any]: The entry, the source, the coordinator's status, the film catalogue and every fetched day.
 
     """
     coordinator = entry.runtime_data
@@ -69,6 +89,7 @@ async def async_get_config_entry_diagnostics(
             "restored_from_store": coordinator.restored_from_store,
             "data_age_seconds": (dt_util.utcnow() - last_refresh).total_seconds() if last_refresh is not None else None,
         },
+        "films": {ref: asdict(details) for ref, details in film_catalogue(data).items()},
         "days": {day.isoformat(): _day_diagnostics(data[day]) for day in sorted(data)},
     }
     return cast("dict[str, Any]", async_redact_data(diagnostics, TO_REDACT))
