@@ -331,9 +331,9 @@ async def test_grace_period_applies_at_setup(
     state = hass.states.get(TODAY_ID)
     assert state is not None
     assert state.state == "2"
-    assert state.attributes["films"] == [
-        {"title": "Film A", "vf": ["20:00"], "vo": []},
-        {"title": "Film B", "vf": [], "vo": ["14:10"]},
+    assert [{key: film[key] for key in ("title", "vf", "vo", "vost")} for film in state.attributes["films"]] == [
+        {"title": "Film A", "vf": ["20:00"], "vo": [], "vost": []},
+        {"title": "Film B", "vf": [], "vo": ["14:10"], "vost": []},
     ]
 
     await move_to(hass, freezer, "2026-11-12T14:24:59+01:00")

@@ -1,0 +1,61 @@
+{
+  "error": false,
+  "message": null,
+  "messageParam": null,
+  "nextDate": null,
+  "results": [
+    {
+      "movie": {
+        "internalId": 900100,
+        "title": "Invented Paged Film",
+        "originalTitle": "First Occurrence",
+        "languages": ["ENGLISH"]
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 101,
+            "startsAt": "2026-11-12T14:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": ["Showtime.Accessibility.Subtitled"]
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "title": "Invented No Id",
+        "languages": ["ENGLISH"]
+      },
+      "showtimes": {
+        "original": [
+          {
+            "startsAt": "2026-11-12T15:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": null,
+            "projection": ["DIGITAL"],
+            "tags": []
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    }
+  ],
+  "pagination": {
+    "page": "1",
+    "totalPages": 2,
+    "itemsPerPage": 15,
+    "totalItems": 2
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "error": false,
+  "message": null,
+  "messageParam": null,
+  "nextDate": null,
+  "results": [
+    {
+      "movie": {
+        "synopsis": "Un groupe de lycéens français part en voyage scolaire à Naples pour découvrir les ruines de Pompéi et ses corps pétrifiés par le Vésuve. C’est là que le vertige les saisit brutalement. L’un après l’autre, ils se laissent submerger par le désir et la colère jusqu’à s’y abandonner complètement.",
+        "internalId": 318225,
+        "poster": {
+          "url": "https://fr.web.img4.acsta.net/img/23/a7/23a7c2106f6141b87e1381da3beaf635.jpg"
+        },
+        "title": "La Gradiva",
+        "originalTitle": "La Gradiva",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 25min",
+        "genres": [
+          {
+            "translate": "Drame"
+          },
+          {
+            "translate": "Comédie"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.02,
+            "count": 1610
+          },
+          "userReview": {
+            "count": 228
+          },
+          "pressReview": {
+            "score": 4.45,
+            "count": 38
+          },
+          "metric": {
+            "hits": 777085,
+            "sessions": 362466
+          },
+          "wantToSeeCount": 2048
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-21",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "157596"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Atlan",
+              "firstName": "Marine"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Buresi",
+                  "firstName": "Antonia"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Quignard",
+                  "firstName": "Colas"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Gerin",
+                  "firstName": "Suzanne"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          },
+          {
+            "name": "Italy",
+            "localizedName": "Italie"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Naples"
+          },
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Ruines / Décombres / Débris"
+          },
+          {
+            "name": "Voyage"
+          },
+          {
+            "name": "Homosexualité / Gay"
+          },
+          {
+            "name": "Ecole / Collège / Lycée / Salle de cours"
+          },
+          {
+            "name": "Italie / Italien"
+          },
+          {
+            "name": "AFCAE : Label Recherche et Découverte"
+          },
+          {
+            "name": "Adolescent / Adolescence"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Un groupe de lycéens français part en voyage scolaire à Naples pour découvrir les ruines de Pompéi et ses corps pétrifiés par le Vésuve. C’est là que le vertige les saisit brutalement. L’un après l’autre, ils se laissent submerger par le désir et la colère jusqu’à s’y abandonner complètement.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 82662453071,
+            "startsAt": "2026-11-12T20:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W0124&gid_entity=movie.movie._.318225&tags=Showtime.Accessibility.Subtitled,Localization.Version.Original,Format.Projection.Digital&perfd=20261112&perft=20:30&code=VO; SUBTITLE"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    }
+  ],
+  "pagination": {
+    "page": "1",
+    "totalPages": 1,
+    "itemsPerPage": 15,
+    "totalItems": 1
+  }
+}

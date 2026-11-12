@@ -1,0 +1,5956 @@
+{
+  "error": false,
+  "message": null,
+  "messageParam": null,
+  "nextDate": null,
+  "results": [
+    {
+      "movie": {
+        "synopsis": "",
+        "internalId": 1000026918,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/9f/94/9f9441504c3da3a4469548e15ba9cb3d.jpg"
+        },
+        "title": "Ramayana : L'avènement d'une légende",
+        "originalTitle": "Ramayana: Rise Of A Legend",
+        "type": "FEATURE_FILM",
+        "runtime": "3h 15min",
+        "genres": [
+          {
+            "translate": "Action"
+          },
+          {
+            "translate": "Aventure"
+          },
+          {
+            "translate": "Fantastique"
+          }
+        ],
+        "languages": ["HINDI"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.92,
+            "count": 78
+          },
+          "userReview": {
+            "count": 18
+          },
+          "pressReview": null,
+          "metric": {
+            "hits": 146711,
+            "sessions": 71452
+          },
+          "wantToSeeCount": 255
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-06",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "UA",
+              "label": "Tout public avec avertissement"
+            },
+            "visaNumber": null
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Tiwari",
+              "firstName": "Nitesh"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Kapoor",
+                  "firstName": "Ranbir"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Pallavi",
+                  "firstName": "Sai"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Yash",
+                  "firstName": null
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "India",
+            "localizedName": "Inde"
+          }
+        ],
+        "relatedTags": [],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": false,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "synopsisFull": "<p class=\"bo-p\">Dans l’Inde antique, le destin du jeune prince Rama bascule lorsqu’il est contraint à l’exil, peu après son mariage avec la princesse Sita. Arrachés à leur royaume, les deux époux entament un périple légendaire qui les conduira à affronter les épreuves du destin et la menace du redoutable Ravana, puissant roi des démons. Marquée par l’amour, le devoir, la trahison et les rivalités divines, leur histoire donnera naissance à l’une des plus grandes épopées de tous les temps.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 84356528342,
+            "startsAt": "2026-11-11T13:15:00",
+            "service": null,
+            "experience": ["SCREEN_X", "PLF"],
+            "comfort": null,
+            "projection": ["F_3D"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Format.Projection.3d",
+              "Auditorium.Experience.ScreenX",
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Auditorium.Experience.PLF"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189369/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000026918&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Format.Projection.3d,Showtime.Accessibility.Accessible,Auditorium.Experience.ScreenX,Auditorium.Experience.PLF&perfd=20261111&perft=13:15&code=vost; 3d; pmr; screenx; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189369/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356527968,
+            "startsAt": "2026-11-11T13:45:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["F_3D", "IMAX"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Format.Projection.3d",
+              "Format.Projection.Imax",
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189347/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000026918&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Format.Projection.3d,Format.Projection.Imax,Showtime.Accessibility.Accessible&perfd=20261111&perft=13:45&code=vost; 3d; imax; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189347/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528392,
+            "startsAt": "2026-11-11T13:45:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189372/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000026918&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:45&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189372/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528651,
+            "startsAt": "2026-11-11T16:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189346/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000026918&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=16:00&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189346/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528721,
+            "startsAt": "2026-11-11T20:15:00",
+            "service": null,
+            "experience": ["SCREEN_X", "PLF"],
+            "comfort": null,
+            "projection": ["F_3D"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Format.Projection.3d",
+              "Auditorium.Experience.ScreenX",
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Auditorium.Experience.PLF"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189345/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000026918&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Format.Projection.3d,Showtime.Accessibility.Accessible,Auditorium.Experience.ScreenX,Auditorium.Experience.PLF&perfd=20261111&perft=20:15&code=vost; 3d; pmr; screenx; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189345/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356527998,
+            "startsAt": "2026-11-11T20:45:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189368/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000026918&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=20:45&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189368/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Une équipe de braqueurs filme ses hold-up en direct et devient viral. Mais leur célébrité grandissante attire l'attention d'un agent du FBI et d'une ingénieure informatique déterminés à les arrêter. Alors que cet improbable duo se rapproche dangereusement d’eux, le gang décide de tout miser sur le braquage le plus ambitieux de leur carrière.",
+        "internalId": 1000020289,
+        "poster": {
+          "url": "https://fr.web.img4.acsta.net/img/12/bb/12bb4f199e78e6b5d5d1bcbcbe702acb.jpg"
+        },
+        "title": "Comment braquer une banque",
+        "originalTitle": "How To Rob A Bank",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 01min",
+        "genres": [
+          {
+            "translate": "Action"
+          },
+          {
+            "translate": "Thriller"
+          },
+          {
+            "translate": "Policier"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 2.79,
+            "count": 7
+          },
+          "userReview": {
+            "count": 5
+          },
+          "pressReview": null,
+          "metric": {
+            "hits": 35758,
+            "sessions": 24958
+          },
+          "wantToSeeCount": 416
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": null,
+            "visaNumber": "168593"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Leitch",
+              "firstName": "David"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Hoult",
+                  "firstName": "Nicholas"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Davidson",
+                  "firstName": "Pete"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Kravitz",
+                  "firstName": "Zoë"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          }
+        ],
+        "relatedTags": [],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": true,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": false,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "synopsisFull": "<p class=\"bo-p\">Une équipe de braqueurs filme ses hold-up en direct et devient viral. Mais leur célébrité grandissante attire l'attention d'un agent du FBI et d'une ingénieure informatique déterminés à les arrêter. Alors que cet improbable duo se rapproche dangereusement d’eux, le gang décide de tout miser sur le braquage le plus ambitieux de leur carrière.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 84404334736,
+            "startsAt": "2026-11-11T16:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189353/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000020289&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=16:30&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189353/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          }
+        ],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84356528599,
+            "startsAt": "2026-11-11T13:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189313/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000020289&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:15&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189313/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528546,
+            "startsAt": "2026-11-11T19:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189354/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000020289&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=19:15&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189354/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528032,
+            "startsAt": "2026-11-11T22:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189355/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000020289&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=22:00&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189355/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Un gardien a disparu lors de sa première nuit dans un ancien hôpital psychiatrique. Les images de vidéosurveillance montrent des incidents inexplicables qui continuent de déconcerter les enquêteurs.",
+        "internalId": 1000048020,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/65/97/6597b4d07ce512c9eebe240fc67babd7.jpg"
+        },
+        "title": "Infirmary",
+        "originalTitle": "Infirmary",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 27min",
+        "genres": [
+          {
+            "translate": "Epouvante-horreur"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 2.03,
+            "count": 11
+          },
+          "userReview": {
+            "count": 11
+          },
+          "pressReview": {
+            "score": 2.5,
+            "count": 8
+          },
+          "metric": {
+            "hits": 15694,
+            "sessions": 10552
+          },
+          "wantToSeeCount": 135
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "-12",
+              "label": "Interdit - 12 ans"
+            },
+            "visaNumber": "168722"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Pineda",
+              "firstName": "Nicholas"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Syre",
+                  "firstName": "Paul"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Williams",
+                  "firstName": "Mark Anthony"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Kennedy",
+                  "firstName": "Danielle"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Found footage"
+          },
+          {
+            "name": "Gardien / Agent de sécurité"
+          },
+          {
+            "name": "Hôpital psychiatrique / Asile"
+          },
+          {
+            "name": "Surnaturel / Phénomène surnaturel / Paranormal"
+          },
+          {
+            "name": "Peur"
+          },
+          {
+            "name": "Frissons"
+          },
+          {
+            "name": "Adrénaline"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "synopsisFull": "<p class=\"bo-p\">Un gardien a disparu lors de sa première nuit dans un ancien hôpital psychiatrique. Les images de vidéosurveillance montrent des incidents inexplicables qui continuent de déconcerter les enquêteurs.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84356527945,
+            "startsAt": "2026-11-11T13:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189392/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000048020&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:15&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189392/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528406,
+            "startsAt": "2026-11-11T15:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189393/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000048020&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=15:15&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189393/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528004,
+            "startsAt": "2026-11-11T18:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189312/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000048020&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=18:00&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189312/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528039,
+            "startsAt": "2026-11-11T20:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189310/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000048020&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=20:00&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189310/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528637,
+            "startsAt": "2026-11-11T22:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189311/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000048020&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=22:30&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189311/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Pour changer son futur, Scrooge va revivre son passé.",
+        "internalId": 1000034007,
+        "poster": {
+          "url": "https://fr.web.img4.acsta.net/img/ee/1d/ee1d9a9f275b9d7332cf8dff0c5dfd27.jpg"
+        },
+        "title": "Scrooge",
+        "originalTitle": "Ebenezer",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 56min",
+        "genres": [
+          {
+            "translate": "Fantastique"
+          },
+          {
+            "translate": "Drame"
+          },
+          {
+            "translate": "Aventure"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.39,
+            "count": 37
+          },
+          "userReview": {
+            "count": 21
+          },
+          "pressReview": {
+            "score": 2.53,
+            "count": 15
+          },
+          "metric": {
+            "hits": 156469,
+            "sessions": 101359
+          },
+          "wantToSeeCount": 1000
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "UA",
+              "label": "Tout public avec avertissement"
+            },
+            "visaNumber": "168608"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "West",
+              "firstName": "Ti"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Depp",
+                  "firstName": "Johnny"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Grint",
+                  "firstName": "Rupert"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Ridley",
+                  "firstName": "Daisy"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          }
+        ],
+        "relatedTags": [],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": true,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": false,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "synopsisFull": "<p class=\"bo-p\">Pour changer son futur, Scrooge va revivre son passé.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 84404334713,
+            "startsAt": "2026-11-11T20:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189358/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000034007&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=20:00&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189358/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          }
+        ],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84356528173,
+            "startsAt": "2026-11-11T13:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189357/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000034007&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:30&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189357/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84352657972,
+            "startsAt": "2026-11-11T14:45:00",
+            "service": null,
+            "experience": ["E_4DX", "PLF"],
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Auditorium.Experience.4dx",
+              "Localization.Language.French",
+              "Auditorium.Experience.PLF",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189397/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000034007&tags=Localization.Language.French,Auditorium.Experience.4dx,Auditorium.Experience.PLF,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=14:45&code=vf; 4dx; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189397/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528152,
+            "startsAt": "2026-11-11T15:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189309/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000034007&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=15:30&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189309/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528363,
+            "startsAt": "2026-11-11T17:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189356/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000034007&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=17:30&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189356/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          },
+          {
+            "internalId": 84356528669,
+            "startsAt": "2026-11-11T22:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189359/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000034007&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=22:00&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189359/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "L'histoire de Paul Atreides, voué à connaître un destin hors du commun qui le dépasse totalement. Car s'il veut préserver l'avenir de sa famille et de son peuple, il devra se rendre sur la planète la plus dangereuse de l'univers.",
+        "internalId": 133392,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/pictures/21/08/10/12/20/4633954.jpg"
+        },
+        "title": "Dune",
+        "originalTitle": "Dune",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 36min",
+        "genres": [
+          {
+            "translate": "Science Fiction"
+          },
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2021
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.23,
+            "count": 35815
+          },
+          "userReview": {
+            "count": 2441
+          },
+          "pressReview": {
+            "score": 3.95,
+            "count": 40
+          },
+          "metric": {
+            "hits": 10451762,
+            "sessions": 4761277
+          },
+          "wantToSeeCount": 15595
+        },
+        "releases": [
+          {
+            "releaseDate": null,
+            "name": "Released",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "ReRelease",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "155420"
+          },
+          {
+            "releaseDate": {
+              "date": "2025-11-30",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2025-11-30",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-10-03",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-10-03",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-09-14",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-03-04",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-03-04",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-02-06",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-02-06",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-02-06",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-02-06",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2023-06-11",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2023-06-11",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-11-15",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-11-15",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-11-15",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-11-15",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-11-15",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-11-01",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-11-01",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-11-01",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-11-01",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-11-01",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-10-21",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-08-15",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-26",
+              "precision": "day"
+            },
+            "name": "BluRay",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-26",
+              "precision": "day"
+            },
+            "name": "BluRay",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-26",
+              "precision": "day"
+            },
+            "name": "BluRay",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-26",
+              "precision": "day"
+            },
+            "name": "Dvd",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-26",
+              "precision": "day"
+            },
+            "name": "Dvd",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-26",
+              "precision": "day"
+            },
+            "name": "BluRay",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-26",
+              "precision": "day"
+            },
+            "name": "BluRay",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-13",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-13",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-13",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-13",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-13",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-13",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2022-01-12",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2021-10-22",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2021-09-15",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "155420"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Villeneuve",
+              "firstName": "Denis"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Chalamet",
+                  "firstName": "Timothée"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Ferguson",
+                  "firstName": "Rebecca"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Isaac",
+                  "firstName": "Oscar"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Empereur / Impératrice"
+          },
+          {
+            "name": "Planètes"
+          },
+          {
+            "name": "Trahison"
+          },
+          {
+            "name": "Vengeance"
+          },
+          {
+            "name": "Anticipation / Futur / Avenir proche"
+          },
+          {
+            "name": "Espace / Astronaute / Cosmonaute"
+          },
+          {
+            "name": "Effets spéciaux / Trucages"
+          },
+          {
+            "name": "Alien / Extraterrestre"
+          },
+          {
+            "name": "Adaptation de roman"
+          },
+          {
+            "name": "Blockbusters / Superproductions"
+          },
+          {
+            "name": "Désert"
+          },
+          {
+            "name": "Space-Opera"
+          },
+          {
+            "name": "Monstre et monstre marin"
+          },
+          {
+            "name": "Parcours initiatique"
+          },
+          {
+            "name": "Écologie / Environnement"
+          },
+          {
+            "name": "Forces du bien contre les forces du mal"
+          },
+          {
+            "name": "Bataille / Champ de bataille"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": true,
+          "hasNews": true,
+          "hasOnlineProduct": true,
+          "hasOnlineRelease": true,
+          "hasPhysicalProduct": true,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": true,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "synopsisFull": "<p class=\"bo-p\">L'histoire de Paul Atreides, jeune homme aussi doué que brillant, voué à connaître un destin hors du commun qui le dépasse totalement. Car s'il veut préserver l'avenir de sa famille et de son peuple, il devra se rendre sur la planète la plus dangereuse de l'univers – la seule à même de fournir la ressource la plus précieuse au monde, capable de décupler la puissance de l'humanité. Tandis que des forces maléfiques se disputent le contrôle de cette planète, seuls ceux qui parviennent à dominer leur peur pourront survivre…</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 83940298493,
+            "startsAt": "2026-11-11T17:45:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["IMAX"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Format.Projection.Imax",
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S188130/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.133392&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Format.Projection.Imax,Showtime.Accessibility.Accessible&perfd=20261111&perft=17:45&code=vost; imax; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S188130/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          }
+        ],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84352657973,
+            "startsAt": "2026-11-11T17:30:00",
+            "service": null,
+            "experience": ["E_4DX", "PLF"],
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Auditorium.Experience.4dx",
+              "Localization.Language.French",
+              "Auditorium.Experience.PLF",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S188133/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.133392&tags=Localization.Language.French,Auditorium.Experience.4dx,Auditorium.Experience.PLF,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=17:30&code=vf; 4dx; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S188133/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Dans DUNE : DEUXIÈME PARTIE, Paul Atreides s’unit à Chani et aux Fremen pour mener la révolte contre ceux qui ont anéanti sa famille. Hanté par de sombres prémonitions, il se trouve confronté au plus grand des dilemmes : choisir entre l’amour de sa vie et le destin de l’univers.",
+        "internalId": 278742,
+        "poster": {
+          "url": "https://fr.web.img4.acsta.net/pictures/24/01/26/10/18/5392835.jpg"
+        },
+        "title": "Dune : Deuxième Partie",
+        "originalTitle": "Dune: Part Two",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 46min",
+        "genres": [
+          {
+            "translate": "Science Fiction"
+          },
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2024
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.43,
+            "count": 21263
+          },
+          "userReview": {
+            "count": 1867
+          },
+          "pressReview": {
+            "score": 4.18,
+            "count": 40
+          },
+          "metric": {
+            "hits": 4906985,
+            "sessions": 2187319
+          },
+          "wantToSeeCount": 7899
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "ReRelease",
+            "certificate": {
+              "code": "UA",
+              "label": "Tout public avec avertissement"
+            },
+            "visaNumber": "161284"
+          },
+          {
+            "releaseDate": {
+              "date": "2025-07-29",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2025-04-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2025-04-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2025-04-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2025-03-02",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2025-02-08",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2025-01-13",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-10-28",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-10-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-10-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-10-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-10-27",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-10-04",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-10-02",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-07-10",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-07-10",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-07-09",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-07-09",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-07-09",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-27",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-06-26",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2024-02-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "UA",
+              "label": "Tout public avec avertissement"
+            },
+            "visaNumber": "161284"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Villeneuve",
+              "firstName": "Denis"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Chalamet",
+                  "firstName": "Timothée"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Zendaya",
+                  "firstName": null
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Ferguson",
+                  "firstName": "Rebecca"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Oscars_2025"
+          },
+          {
+            "name": "Visions du futur / Prémonitions"
+          },
+          {
+            "name": "Effets spéciaux / Trucages"
+          },
+          {
+            "name": "Planètes"
+          },
+          {
+            "name": "Empereur / Impératrice"
+          },
+          {
+            "name": "Désert"
+          },
+          {
+            "name": "Galaxie"
+          },
+          {
+            "name": "Space-Opera"
+          },
+          {
+            "name": "Monstre et monstre marin"
+          },
+          {
+            "name": "Révolte"
+          },
+          {
+            "name": "Forces du bien contre les forces du mal"
+          },
+          {
+            "name": "Vengeance"
+          },
+          {
+            "name": "Alien / Extraterrestre"
+          },
+          {
+            "name": "Bataille / Champ de bataille"
+          },
+          {
+            "name": "Suite / Sequel"
+          },
+          {
+            "name": "Amour contrarié / Amour impossible"
+          },
+          {
+            "name": "Adaptation de roman"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": true,
+          "hasOnlineRelease": true,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": true,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "synopsisFull": "<p class=\"bo-p\">Dans DUNE : DEUXIÈME PARTIE, Paul Atreides s’unit à Chani et aux Fremen pour mener la révolte contre ceux qui ont anéanti sa famille. Hanté par de sombres prémonitions, il se trouve confronté au plus grand des dilemmes : choisir entre l’amour de sa vie et le destin de l’univers.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 84010590140,
+            "startsAt": "2026-11-11T21:00:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["IMAX"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Format.Projection.Imax",
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S188131/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.278742&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Format.Projection.Imax,Showtime.Accessibility.Accessible&perfd=20261111&perft=21:00&code=vost; imax; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S188131/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          }
+        ],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84352657974,
+            "startsAt": "2026-11-11T20:45:00",
+            "service": null,
+            "experience": ["E_4DX", "PLF"],
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Auditorium.Experience.4dx",
+              "Localization.Language.French",
+              "Auditorium.Experience.PLF",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S188132/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.278742&tags=Localization.Language.French,Auditorium.Experience.4dx,Auditorium.Experience.PLF,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=20:45&code=vf; 4dx; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S188132/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": true
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "La guerre a détruit le Japon. Godzilla a réduit ses ultimes espoirs à zéro. Deux ans ont passé. Alors que l’humanité commence enfin à renouer avec une paix difficilement acquise, une nouvelle menace surgit et anéantit tout espoir en un instant.",
+        "internalId": 1000014492,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/62/57/625799426a89e53445b5fb0b842cd241.jpg"
+        },
+        "title": "Godzilla Minus Zero",
+        "originalTitle": "Godzilla Minus Zero",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 15min",
+        "genres": [
+          {
+            "translate": "Science Fiction"
+          }
+        ],
+        "languages": ["JAPANESE"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.82,
+            "count": 667
+          },
+          "userReview": {
+            "count": 114
+          },
+          "pressReview": {
+            "score": 3.76,
+            "count": 25
+          },
+          "metric": {
+            "hits": 201645,
+            "sessions": 103314
+          },
+          "wantToSeeCount": 912
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-04",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "-12",
+              "label": "Interdit - 12 ans"
+            },
+            "visaNumber": "168778"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Yamazaki",
+              "firstName": "Takashi"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Kamiki",
+                  "firstName": "Ryûnosuke"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Hamabe",
+                  "firstName": "Minami"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Yuki",
+                  "firstName": "Yamada"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "Japan",
+            "localizedName": "Japon"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Démolition / Effondrement"
+          },
+          {
+            "name": "Godzilla"
+          },
+          {
+            "name": "Kaijû Eiga / Films de monstres japonais"
+          },
+          {
+            "name": "Ruines / Décombres / Débris"
+          },
+          {
+            "name": "Après-guerre"
+          },
+          {
+            "name": "Monstre et monstre marin"
+          },
+          {
+            "name": "Ambiance 40's - années 40"
+          },
+          {
+            "name": "Japon / Japonais"
+          },
+          {
+            "name": "Suite / Sequel"
+          },
+          {
+            "name": "Adrénaline"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">La guerre a détruit le Japon. Godzilla a réduit ses ultimes espoirs à zéro. Deux ans ont passé. Depuis, le pays se bat sans relâche pour se relever et retrouver peu à peu une vie quotidienne.</p><p class=\"bo-p\">Alors que l’humanité commence enfin à renouer avec une paix difficilement acquise, une nouvelle menace surgit et anéantit tout espoir en un instant.</p><p class=\"bo-p\">Il n’y aura pas de troisième fois. Tout s’achève ici.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 84356528668,
+            "startsAt": "2026-11-11T13:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189314/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000014492&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:15&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189314/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528604,
+            "startsAt": "2026-11-11T19:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189365/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000014492&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=19:00&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189365/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84356528090,
+            "startsAt": "2026-11-11T16:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189364/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000014492&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=16:00&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189364/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528608,
+            "startsAt": "2026-11-11T21:45:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189366/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000014492&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=21:45&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189366/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Au poste de police de Hope, Bum-seok et Sung-ae se démènent pour défendre leur village à la population vieillissante. Pendant ce temps, Sung-ki et ses amis partent à la poursuite de la bête dans la montagne mais se retrouvent eux-mêmes pris pour cible.",
+        "internalId": 314882,
+        "poster": {
+          "url": "https://fr.web.img2.acsta.net/img/37/eb/37eb88a0ce51e0295cac6fca4884a609.jpg"
+        },
+        "title": "Hope",
+        "originalTitle": "Hopeu",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 37min",
+        "genres": [
+          {
+            "translate": "Thriller"
+          },
+          {
+            "translate": "Science Fiction"
+          },
+          {
+            "translate": "Action"
+          }
+        ],
+        "languages": ["ENGLISH", "KOREAN"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.44,
+            "count": 1857
+          },
+          "userReview": {
+            "count": 364
+          },
+          "pressReview": {
+            "score": 4.06,
+            "count": 36
+          },
+          "metric": {
+            "hits": 763690,
+            "sessions": 413369
+          },
+          "wantToSeeCount": 2744
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "-12A",
+              "label": "Interdit - 12 ans avec avertissement"
+            },
+            "visaNumber": "168619"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Hong-jin",
+              "firstName": "Na"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Hwang",
+                  "firstName": "Jung-Min"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Zo",
+                  "firstName": "In-sung"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Ho-Yeon",
+                  "firstName": "Jung"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "South Korea",
+            "localizedName": "Corée du Sud"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Attaque / Invasion alien"
+          },
+          {
+            "name": "Corée / Coréen"
+          },
+          {
+            "name": "Course poursuite"
+          },
+          {
+            "name": "Alien / Extraterrestre"
+          },
+          {
+            "name": "Mystère"
+          },
+          {
+            "name": "Ville / Village"
+          },
+          {
+            "name": "Mystère"
+          },
+          {
+            "name": "Adrénaline"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": false
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Les renforts sont partis maîtriser des feux de forêt et toutes les communications sont coupées.</p><p class=\"bo-p\">Au poste de police de Hope, Bum-seok et Sung-ae se démènent pour défendre leur village à la population vieillissante.</p><p class=\"bo-p\">Pendant ce temps, Sung-ki et ses amis partent à la poursuite de la bête dans la montagne mais se retrouvent eux-mêmes pris pour cible. Le malheur émane de l’ignorance. Après des avis divergents, il se transforme en une catastrophe qui touche l’univers entier.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 84356528656,
+            "startsAt": "2026-11-11T13:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189320/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.314882&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:15&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189320/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528330,
+            "startsAt": "2026-11-11T17:00:00",
+            "service": null,
+            "experience": ["SCREEN_X", "PLF"],
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Auditorium.Experience.ScreenX",
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Auditorium.Experience.PLF",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189319/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.314882&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Auditorium.Experience.ScreenX,Auditorium.Experience.PLF,Format.Projection.Digital&perfd=20261111&perft=17:00&code=vost; pmr; screenx; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189319/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528705,
+            "startsAt": "2026-11-11T17:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189318/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.314882&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=17:30&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189318/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528336,
+            "startsAt": "2026-11-11T21:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189373/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.314882&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=21:15&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189373/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Star hollywoodienne en pleine ascension, Matt Hagen se retrouve atrocement défiguré par un baron du crime. Il se tourne vers un traitement expérimental qui lui rend miraculeusement son apparence… mais altère profondément sa perception de la réalité.",
+        "internalId": 1000016901,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/98/f1/98f14da258dd56c0ff1bcb12a4929e85.jpg"
+        },
+        "title": "Clayface",
+        "originalTitle": "Clayface",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 49min",
+        "genres": [
+          {
+            "translate": "Epouvante-horreur"
+          },
+          {
+            "translate": "Thriller"
+          },
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.8,
+            "count": 1265
+          },
+          "userReview": {
+            "count": 169
+          },
+          "pressReview": {
+            "score": 3.06,
+            "count": 17
+          },
+          "metric": {
+            "hits": 402344,
+            "sessions": 229976
+          },
+          "wantToSeeCount": 1286
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-21",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "-12A",
+              "label": "Interdit - 12 ans avec avertissement"
+            },
+            "visaNumber": "168558"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Watkins",
+              "firstName": "James"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Harries",
+                  "firstName": "Tom Rhys"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Ackie",
+                  "firstName": "Naomi"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Marsan",
+                  "firstName": "Eddie"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Gotham City"
+          },
+          {
+            "name": "Univers DC Warner"
+          },
+          {
+            "name": "Défiguré(e)"
+          },
+          {
+            "name": "Adaptation de comic-book DC Comics"
+          },
+          {
+            "name": "Transformation"
+          },
+          {
+            "name": "Méchant emblématique"
+          },
+          {
+            "name": "Vengeance"
+          },
+          {
+            "name": "Acteur / Actrice"
+          },
+          {
+            "name": "Expérience scientifique / Chercheur scientifique"
+          },
+          {
+            "name": "Jeunes adultes"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">L'ascension fulgurante de Matt Hagen, de gamin des rues de Gotham à star hollywoodienne, est brutalement interrompue lorsqu'un baron du crime le laisse atrocement défiguré. Abandonné de tous et n'ayant plus rien à perdre, Matt se tourne vers un traitement expérimental qui lui rend miraculeusement son apparence… mais altère profondément sa perception de la réalité. Il sombre alors dans une spirale destructrice, consumé par un irrépressible désir de vengeance.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 84356528667,
+            "startsAt": "2026-11-11T20:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189361/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000016901&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=20:00&code=vost; GRETA; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189361/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84356528213,
+            "startsAt": "2026-11-11T13:15:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189317/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000016901&tags=Localization.Language.French,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:15&code=vf; GRETA; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189317/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528597,
+            "startsAt": "2026-11-11T15:45:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189360/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000016901&tags=Localization.Language.French,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=15:45&code=vf; GRETA; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189360/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528623,
+            "startsAt": "2026-11-11T17:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189370/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000016901&tags=Localization.Language.French,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=17:30&code=vf; GRETA; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189370/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356527881,
+            "startsAt": "2026-11-11T19:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189362/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000016901&tags=Localization.Language.French,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=19:15&code=vf; GRETA; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189362/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528029,
+            "startsAt": "2026-11-11T22:15:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189363/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000016901&tags=Localization.Language.French,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=22:15&code=vf; GRETA; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189363/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Tandis qu’elles fêtent leur dernière soirée ensemble, deux meilleures amies tombent sur un portail mystérieux qui les emmène sur l’île fantastique de Nakali, peuplée de créatures féeriques et mythologiques, tout droit sorties des contes philippins de leur enfance.",
+        "internalId": 296642,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/56/7e/567e74d867a1c88b20897c5d7f92d4dd.jpg"
+        },
+        "title": "L'île des souvenirs",
+        "originalTitle": "Forgotten Island",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 48min",
+        "genres": [
+          {
+            "translate": "Animation"
+          },
+          {
+            "translate": "Comédie"
+          },
+          {
+            "translate": "Aventure"
+          },
+          {
+            "translate": "Famille"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.9,
+            "count": 452
+          },
+          "userReview": {
+            "count": 91
+          },
+          "pressReview": {
+            "score": 3.55,
+            "count": 11
+          },
+          "metric": {
+            "hits": 322013,
+            "sessions": 190370
+          },
+          "wantToSeeCount": 621
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-21",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "UA",
+              "label": "Tout public avec avertissement"
+            },
+            "visaNumber": "168430"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Crawford",
+              "firstName": "Joel"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          },
+          {
+            "person": {
+              "lastName": "Mercado",
+              "firstName": "Januel P."
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 2
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": {
+                  "lastName": "Bresch",
+                  "firstName": "Manon"
+                },
+                "originalVoiceActor": {
+                  "lastName": "H.E.R.",
+                  "firstName": null
+                },
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": {
+                  "lastName": "Rozam",
+                  "firstName": "Anaïde"
+                },
+                "originalVoiceActor": {
+                  "lastName": "Soberano",
+                  "firstName": "Liza"
+                },
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": {
+                  "lastName": "Lacaille",
+                  "firstName": "Xavier"
+                },
+                "originalVoiceActor": {
+                  "lastName": "Franco",
+                  "firstName": "Dave"
+                },
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Philippines / Philippin"
+          },
+          {
+            "name": "Passage à l'âge adulte"
+          },
+          {
+            "name": "Souvenirs"
+          },
+          {
+            "name": "Créatures fantastiques"
+          },
+          {
+            "name": "Île / Île déserte / Île paradisiaque"
+          },
+          {
+            "name": "À partir de 8 ans"
+          },
+          {
+            "name": "Ambiance 90's - années 90"
+          },
+          {
+            "name": "Duo / Tandem"
+          },
+          {
+            "name": "Evasion"
+          },
+          {
+            "name": "Adolescent / Adolescence"
+          },
+          {
+            "name": "Dessin animé et animation"
+          },
+          {
+            "name": "Amitié"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Jo et Raissa, deux meilleures amies depuis la primaire, viennent d'obtenir le baccalauréat. Elles s’apprêtent désormais à s’engager dans des voies différentes. Tandis qu’elles fêtent leur dernière soirée ensemble, elles tombent sur un portail mystérieux qui les emmène sur l’île fantastique de Nakali, peuplée de créatures féeriques et mythologiques, tout droit sorties des contes philippins de leur enfance. Si certaines de ces créatures sont bienveillantes, d’autres, au contraire, se révèlent de terribles ennemies. Avec l’aide de Raww, chien-garou aussi bien intentionné que malchanceux, et d’une bande de petits compagnons dotés de pouvoirs extraordinaires, Jo et Raissa doivent affronter la Redoutable Manananggal, la créature la plus terrifiante de l’île. Quand les deux jeunes filles comprennent qu’elles doivent renoncer à leurs souvenirs communs pour pouvoir rentrer chez elles, Jo et Raissa se lancent dans une course contre la montre pour quitter l’île avant qu’elles ne puissent même plus se rappeler s’être connues un jour…</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84356528197,
+            "startsAt": "2026-11-11T13:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189327/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.296642&tags=Localization.Language.French,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:15&code=vf; GRETA; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189327/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528344,
+            "startsAt": "2026-11-11T15:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189328/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.296642&tags=Localization.Language.French,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=15:15&code=vf; GRETA; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189328/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528720,
+            "startsAt": "2026-11-11T17:45:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189329/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.296642&tags=Localization.Language.French,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=17:45&code=vf; GRETA; KIDS; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189329/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528646,
+            "startsAt": "2026-11-11T20:00:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189350/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.296642&tags=Localization.Language.French,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=20:00&code=vf; GRETA; KIDS; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189350/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Mochy est un jeune chien au grand cœur… mais il n’a pas un physique facile… Ça ne l’empêche pas d’avoir un rêve : participer au concours du plus beau chien.",
+        "internalId": 1000013643,
+        "poster": {
+          "url": "https://fr.web.img4.acsta.net/img/2e/29/2e292d36aa0d7fc0efb2e1d08578357d.jpg"
+        },
+        "title": "Mochy",
+        "originalTitle": "Yugly",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 25min",
+        "genres": [
+          {
+            "translate": "Animation"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.25,
+            "count": 160
+          },
+          "userReview": {
+            "count": 40
+          },
+          "pressReview": {
+            "score": 3.19,
+            "count": 16
+          },
+          "metric": {
+            "hits": 342380,
+            "sessions": 227968
+          },
+          "wantToSeeCount": 191
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-14",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "160833"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Degruson",
+              "firstName": "Jérémie"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          },
+          {
+            "person": {
+              "lastName": "Belaid",
+              "firstName": "Yanis"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 2
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Auriant",
+                  "firstName": "Axel"
+                },
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Chauvel",
+                  "firstName": "Olivier"
+                },
+                "rank": 3
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Chelim",
+                  "firstName": "Fanny"
+                },
+                "rank": 4
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "Belgium",
+            "localizedName": "Belgique"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Concours"
+          },
+          {
+            "name": "Aventures animalières"
+          },
+          {
+            "name": "Chien"
+          },
+          {
+            "name": "Rire en famille"
+          },
+          {
+            "name": "À partir de 3 ans"
+          },
+          {
+            "name": "Dessin animé et animation"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": false,
+          "hasAwards": true,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Mochy est un jeune chien au grand cœur… mais il n’a pas un physique facile… Ça ne l’empêche pas d’avoir un rêve : participer au concours du plus beau chien. Défiant tous les obstacles, il va tout faire pour réaliser ce projet fou avec le secret espoir d’y trouver l’humain qui l’aimera pour la vie.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84356528375,
+            "startsAt": "2026-11-11T13:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "LOCAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189339/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000013643&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:15&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189339/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Dans le Paris d'aujourd'hui, Anastasia, jeune danseuse, intègre le prestigieux Opéra de Paris. Alors qu’elle répète l'Orpheus, un opéra maudit qui aurait été composé par le Fantôme de l'Opéra, elle tombe amoureuse d'un mystérieux pianiste.",
+        "internalId": 1000019622,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/9e/85/9e85825c32a9d2be8135074c9e45c870.jpg"
+        },
+        "title": "Le Fantôme de l'Opéra",
+        "originalTitle": "Le Fantôme de l'Opéra",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 14min",
+        "genres": [
+          {
+            "translate": "Drame"
+          },
+          {
+            "translate": "Romance"
+          },
+          {
+            "translate": "Fantastique"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.01,
+            "count": 831
+          },
+          "userReview": {
+            "count": 276
+          },
+          "pressReview": {
+            "score": 1.57,
+            "count": 7
+          },
+          "metric": {
+            "hits": 632711,
+            "sessions": 370770
+          },
+          "wantToSeeCount": 1192
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "161822"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Castagnetti",
+              "firstName": "Alexandre"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Cassel",
+                  "firstName": "Deva"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "De Saint-Jean",
+                  "firstName": "Julien"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Duris",
+                  "firstName": "Romain"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Cicatrice"
+          },
+          {
+            "name": "Répétition"
+          },
+          {
+            "name": "Défiguré(e)"
+          },
+          {
+            "name": "Ballet / Opéra"
+          },
+          {
+            "name": "Fantômes / Esprits"
+          },
+          {
+            "name": "Paris"
+          },
+          {
+            "name": "Danse / Danseuse / Danseur"
+          },
+          {
+            "name": "Amour contrarié / Amour impossible"
+          },
+          {
+            "name": "Romance"
+          },
+          {
+            "name": "Adaptation de roman"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Dans le Paris d'aujourd'hui, Anastasia, jeune danseuse, intègre le prestigieux Opéra de Paris. Alors qu’elle répète l'<i>Orpheus</i>, un opéra maudit qui aurait été composé par le Fantôme de l'Opéra, elle tombe amoureuse d'un mystérieux pianiste. À l’approche de la première représentation, entre accidents inexpliqués et révélations troublantes, Anastasia se trouve plongée dans une histoire d'amour impossible, à la frontière du réel et du fantastique.</p><p class=\"bo-p\"></p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84356528726,
+            "startsAt": "2026-11-11T13:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "LOCAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189333/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000019622&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:30&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189333/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356528048,
+            "startsAt": "2026-11-11T19:45:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "LOCAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189394/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000019622&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=19:45&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189394/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Lucy vit avec sa famille dans un village sur une petite île isolée. Ses dons extraordinaires suscitent le rejet des habitants. Lorsqu'elle rencontre Milly - une petite fille qu'elle seule peut voir - Lucy embarque dans une grande aventure pour percer le secret de ses mystérieux pouvoirs.",
+        "internalId": 1000012316,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/37/8b/378b27edb6f6e4af9118a32aa23bce23.jpg"
+        },
+        "title": "Le Mystère Lucy Lost",
+        "originalTitle": "Le Mystère Lucy Lost",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 29min",
+        "genres": [
+          {
+            "translate": "Animation"
+          },
+          {
+            "translate": "Famille"
+          },
+          {
+            "translate": "Aventure"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.47,
+            "count": 269
+          },
+          "userReview": {
+            "count": 73
+          },
+          "pressReview": {
+            "score": 3.85,
+            "count": 26
+          },
+          "metric": {
+            "hits": 192787,
+            "sessions": 106134
+          },
+          "wantToSeeCount": 753
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "163517"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Clert",
+              "firstName": "Olivier"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Rosenzweig",
+                  "firstName": "Charlie"
+                },
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Valentin-Dattas",
+                  "firstName": "Zach"
+                },
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": null,
+                "originalVoiceActor": {
+                  "lastName": "Monceau",
+                  "firstName": "Jessica"
+                },
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Pouvoirs surnaturels"
+          },
+          {
+            "name": "AFCAE : Label Jeune Public"
+          },
+          {
+            "name": "Île / Île déserte / Île paradisiaque"
+          },
+          {
+            "name": "Enfants"
+          },
+          {
+            "name": "Ville / Village"
+          },
+          {
+            "name": "À partir de 6 ans"
+          },
+          {
+            "name": "Dessin animé et animation"
+          },
+          {
+            "name": "Amitié"
+          },
+          {
+            "name": "Adaptation de roman"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Lucy vit avec sa famille dans un village sur une petite île isolée. Ses dons extraordinaires suscitent le rejet des habitants. Lorsqu'elle rencontre Milly - une petite fille qu'elle seule peut voir - Lucy embarque dans une grande aventure pour percer le secret de ses mystérieux pouvoirs.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84356528685,
+            "startsAt": "2026-11-11T13:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189342/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000012316&tags=Localization.Language.French,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:30&code=vf; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189342/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "C’est Halloween, et Ducobu revient pour une aventure pleine de rires et de mystères ! Le professeur Latouche et Mademoiselle Rateau emménagent dans une maison… hantée par le ​ fantôme d'Anatole, le plus grand cancre de l’histoire de l’école Saint-Potache.",
+        "internalId": 1000019249,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/54/16/54167f9b523fff67b07b2e80f5f9dd71.jpg"
+        },
+        "title": "Ducobu et le fantôme de Saint-Potache",
+        "originalTitle": "Ducobu et le fantôme de Saint-Potache",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Comédie"
+          },
+          {
+            "translate": "Famille"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 2.27,
+            "count": 304
+          },
+          "userReview": {
+            "count": 74
+          },
+          "pressReview": {
+            "score": 2.45,
+            "count": 11
+          },
+          "metric": {
+            "hits": 426019,
+            "sessions": 239638
+          },
+          "wantToSeeCount": 397
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-07",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "165348"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Semoun",
+              "firstName": "Elie"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Naslin",
+                  "firstName": "Charlie Garnier"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Semoun",
+                  "firstName": "Elie"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Caen",
+                  "firstName": "Émilie"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          },
+          {
+            "name": "Belgium",
+            "localizedName": "Belgique"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Ducobu"
+          },
+          {
+            "name": "Halloween"
+          },
+          {
+            "name": "Maison hantée"
+          },
+          {
+            "name": "Fantômes / Esprits"
+          },
+          {
+            "name": "Frissons en famille"
+          },
+          {
+            "name": "Rire en famille"
+          },
+          {
+            "name": "Suite / Sequel"
+          },
+          {
+            "name": "À partir de 6 ans"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">C’est Halloween, et Ducobu revient pour une aventure pleine de rires et de mystères ! Le professeur Latouche et Mademoiselle Rateau emménagent dans une maison… hantée par le ​ fantôme d'Anatole, le plus grand cancre de l’histoire de l’école Saint-Potache. Ce fantôme farceur va entraîner Ducobu, Léonie, leurs parents et Kitrish dans une série de péripéties ​ aussi drôles qu’inattendues. Mais attention : à Halloween, tout peut arriver…</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84356528126,
+            "startsAt": "2026-11-11T13:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Language.French",
+              "Showtime.Accessibility.Greta",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "LOCAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189399/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.1000019249&tags=Localization.Language.French,Showtime.Accessibility.Greta,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=13:30&code=vf; GRETA; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189399/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Shizuku, 14 ans, est une collégienne passionnée de lecture et de musique. Un jour, elle découvre qu’un mystérieux inconnu emprunte systématiquement les mêmes livres qu’elle à la bibliothèque. Intriguée, elle se lance à sa recherche et rencontre Seiji.",
+        "internalId": 182758,
+        "poster": {
+          "url": "https://fr.web.img2.acsta.net/img/f2/50/f25038579f01cc4535859388b6048558.jpg"
+        },
+        "title": "Si tu tends l'oreille",
+        "originalTitle": "Mimi wo sumaseba",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 50min",
+        "genres": [
+          {
+            "translate": "Drame"
+          },
+          {
+            "translate": "Animation"
+          },
+          {
+            "translate": "Romance"
+          }
+        ],
+        "languages": ["JAPANESE"],
+        "data": {
+          "productionYear": 1995
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.13,
+            "count": 1611
+          },
+          "userReview": {
+            "count": 93
+          },
+          "pressReview": {
+            "score": 4.5,
+            "count": 6
+          },
+          "metric": {
+            "hits": 379358,
+            "sessions": 247985
+          },
+          "wantToSeeCount": 1038
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2027-02-05",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2027-02-05",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2027-02-05",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2027-02-05",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2026-11-04",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "160695"
+          },
+          {
+            "releaseDate": {
+              "date": "2026-07-31",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2025-09-05",
+              "precision": "day"
+            },
+            "name": "Svod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2025-06-21",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2021-03-04",
+              "precision": "day"
+            },
+            "name": "Vodest",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2021-03-04",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          },
+          {
+            "releaseDate": {
+              "date": "2021-03-04",
+              "precision": "day"
+            },
+            "name": "Vod",
+            "certificate": null,
+            "visaNumber": null
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Kondo",
+              "firstName": "Yoshifumi"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": {
+                  "lastName": "Marot",
+                  "firstName": "Kelly"
+                },
+                "originalVoiceActor": {
+                  "lastName": "Honna",
+                  "firstName": "Youko"
+                },
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": {
+                  "lastName": "Brunswick",
+                  "firstName": "Hugo"
+                },
+                "originalVoiceActor": {
+                  "lastName": "Takahashi",
+                  "firstName": "Issey"
+                },
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": null,
+                "voiceActor": {
+                  "lastName": "Victor",
+                  "firstName": "Alexis"
+                },
+                "originalVoiceActor": {
+                  "lastName": "Tachibana",
+                  "firstName": "Takashi"
+                },
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "Japan",
+            "localizedName": "Japon"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Ghibli"
+          },
+          {
+            "name": "Passion / Hobbies"
+          },
+          {
+            "name": "Adaptation de manga"
+          },
+          {
+            "name": "Livres / Lecture"
+          },
+          {
+            "name": "Récit d'apprentissage"
+          },
+          {
+            "name": "Rencontre"
+          },
+          {
+            "name": "À partir de 8 ans"
+          },
+          {
+            "name": "Emotion en famille"
+          },
+          {
+            "name": "Ambiance 90's - années 90"
+          },
+          {
+            "name": "Adolescent / Adolescence"
+          },
+          {
+            "name": "Amitié"
+          },
+          {
+            "name": "Rire et pleurer"
+          },
+          {
+            "name": "Famille"
+          },
+          {
+            "name": "AFCAE : Label Patrimoine et Répertoire"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": true,
+          "hasOnlineRelease": true,
+          "hasPhysicalProduct": true,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": true,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Shizuku, 14 ans, est une collégienne passionnée de lecture et de musique.</p><p class=\"bo-p\">Un jour, elle découvre qu’un mystérieux inconnu emprunte systématiquement les mêmes livres qu’elle à la bibliothèque. Intriguée, elle se lance à sa recherche et rencontre Seiji, un jeune luthier en herbe déterminé à réaliser son rêve.</p><p class=\"bo-p\">Entre Tokyo et les collines verdoyantes de la campagne japonaise, leur amitié se transforme en une belle histoire d’amour et de persévérance.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 84356528553,
+            "startsAt": "2026-11-11T15:30:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189338/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.182758&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=15:30&code=vost; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189338/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84356527936,
+            "startsAt": "2026-11-11T22:15:00",
+            "service": null,
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Localization.Version.Original",
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Accessible",
+              "Format.Projection.Digital"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://s.pathe.fr/en/V3168S189398/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "en"
+                },
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=W7520&gid_entity=movie.movie._.182758&tags=Localization.Version.Original,Showtime.Accessibility.Subtitled,Showtime.Accessibility.Accessible,Format.Projection.Digital&perfd=20261111&perft=22:15&code=vost; KIDS; pmr; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://s.pathe.fr/fr/V3168S189398/booking?utm_source=allocine&utm_medium=allocine&utm_campaign=partenaire-allocine&partenaire=allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    }
+  ],
+  "pagination": {
+    "page": "1",
+    "totalPages": 2,
+    "itemsPerPage": 15,
+    "totalItems": 26
+  }
+}

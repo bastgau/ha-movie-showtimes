@@ -111,7 +111,13 @@ def stored_data(  # pylint: disable=too-many-arguments
                 ],
             }
         )
-    return {"source": source, "cinema_id": cinema_id, "last_refresh": last_refresh.isoformat(), "days": days}
+    return {
+        "source": source,
+        "cinema_id": cinema_id,
+        "last_refresh": last_refresh.isoformat(),
+        "films": {},
+        "days": days,
+    }
 
 
 def prefill(hass_storage: dict[str, Any], data: dict[str, Any], *, version: int = 1, minor_version: int = 1) -> None:

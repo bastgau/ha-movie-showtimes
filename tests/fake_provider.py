@@ -10,8 +10,10 @@ from custom_components.movie_showtimes.client import (
     CinemaInfo,
     DayShowtimes,
     Film,
+    FilmDetails,
     InvalidCinemaRefError,
     Showtime,
+    ShowtimeFormats,
     ShowtimesError,
     ShowtimesProvider,
     ShowtimeVersion,
@@ -27,14 +29,47 @@ def paris(year: int, month: int, day: int, hour: int = 0, minute: int = 0) -> da
     return datetime(year, month, day, hour, minute, tzinfo=PARIS)
 
 
-def make_film(title: str, *showtimes: tuple[datetime, ShowtimeVersion]) -> Film:
-    """Build a film."""
+def make_showtime(  # pylint: disable=too-many-arguments
+    starts_at: datetime,
+    version: ShowtimeVersion,
+    *,
+    subtitled: bool | None = None,
+    hard_of_hearing_subtitles: bool | None = None,
+    disabled_access: bool | None = None,
+    audio_description: bool | None = None,
+    formats: ShowtimeFormats | None = None,
+    preview: bool | None = None,
+    weekly_outing: bool | None = None,
+    ticket_url: str | None = None,
+) -> Showtime:
+    """Build a showtime; every optional field defaults to unknown."""
+    return Showtime(
+        starts_at=starts_at,
+        version=version,
+        subtitled=subtitled,
+        hard_of_hearing_subtitles=hard_of_hearing_subtitles,
+        disabled_access=disabled_access,
+        audio_description=audio_description,
+        formats=formats,
+        preview=preview,
+        weekly_outing=weekly_outing,
+        ticket_url=ticket_url,
+    )
+
+
+def make_film(
+    title: str,
+    *showtimes: tuple[datetime, ShowtimeVersion] | Showtime,
+    ref: str | None = None,
+    details: FilmDetails | None = None,
+) -> Film:
+    """Build a film from ``(start, version)`` pairs or ready showtimes, sorted by start."""
+    built = [item if isinstance(item, Showtime) else Showtime(starts_at=item[0], version=item[1]) for item in showtimes]
     return Film(
         title=title,
-        showtimes=tuple(
-            Showtime(starts_at=starts_at, version=version)
-            for starts_at, version in sorted(showtimes, key=lambda s: s[0])
-        ),
+        showtimes=tuple(sorted(built, key=lambda showtime: showtime.starts_at)),
+        ref=ref,
+        details=details,
     )
 
 
