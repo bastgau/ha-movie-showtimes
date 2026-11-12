@@ -22,7 +22,7 @@ from .client import (
 )
 from .const import CONF_CINEMA_ID, DAYS_FETCHED, DOMAIN, RETRY_AFTER_CONNECTION_ERROR, UPDATE_INTERVAL
 from .showtimes import day_data_expiry, is_day_usable, showtime_expiry
-from .store import CachedDay, ShowtimesStore, StoredSnapshot
+from .store import CachedDay, ShowtimesStore, StoredSnapshot, unify_film_details
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -232,6 +232,9 @@ class MovieShowtimesCoordinator(DataUpdateCoordinator[ShowtimesData]):
             cached = previous.get(day)
             if cached is not None and is_day_usable(cached, now):
                 result[day] = cached
+
+        # A refetched film's details replace the older ones on the days kept from before, so memory and store agree.
+        result, _ = unify_film_details(result)
 
         if self.config_entry.state in (ConfigEntryState.SETUP_IN_PROGRESS, ConfigEntryState.LOADED):
             # Not while unloading or removing: it would recreate the file the removal just deleted.
