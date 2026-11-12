@@ -16,6 +16,7 @@ Rules:
 - **Home Assistant side:** config flow with a unique id, `DataUpdateCoordinator`, `entry.runtime_data`, `has_entity_name = True`, translation keys rather than hard-coded strings, `ConfigEntryNotReady` / `UpdateFailed` (and `ConfigEntryAuthFailed` only when there is authentication).
 - **Restarts.** A restart must not trigger calls the persisted data makes unnecessary: implement the design's `Store` persistence (save after each successful refresh, load at setup, skip the first refresh while the data is fresh, fall back to it when a refresh fails, delete it when the entry is removed). Never keep time-dependent state only in a timer: re-create timers and listeners at setup and compute entity values from the data and the current time.
 - **Dependencies.** A new one → exact pin in `manifest.json` `requirements`, added to `pyproject.toml` so the tests can import it, then `uv lock`. Say so in your report: it changes `uv.lock`.
+- **Attribute keys.** Keys of entity attributes and of any dictionary exposed to the user are English `snake_case`; values coming from the source keep the source's language.
 - **Quality.** Type everything (pyright must pass); Google-style docstrings with every argument documented (docstring-linter is strict).
 - **Scope.** Keep changes to the task. Do not edit template-managed files (`scripts/`, `.github/workflows/`, `.pre-commit-config.yaml`, `.copier-answers.yml`).
 - Always `uv run --no-sync …`: a sync uninstalls the packages a local Home Assistant needs.

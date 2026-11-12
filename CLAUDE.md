@@ -7,8 +7,8 @@ The repository was generated from the `ha-dev-environment` Copier template (`.co
 ## Data source: `allocine-seances` (one source, France only)
 
 - PyPI `allocine-seances` (import: `from allocineAPI.allocineAPI import allocineAPI`), MIT, by lefevre-dev. Scrapes allocine.fr; it is not an official API and may break when the site changes.
-- API: `get_top_villes()`, `get_departements()`, `get_circuit()` return location ids (`ville-…`, `departement-…`, `circuit-…`); `get_cinema(id_location)` returns `{id, name, address}`; `get_showtime(id_cinema, "YYYY-MM-DD")` returns `[{title, showtimes: [{startsAt, diffusionVersion}]}]`, where `diffusionVersion` is `ORIGINAL`, `DUBBED` or `LOCAL` (French-language film, counted as VF); the README's `{duration, VF, VO}` shape is outdated. `get_movies(id_cinema, date_str)` exists too.
-- Unknown cinema id → bare `Exception("Error 404")`; a known cinema with nothing that day → `[]`. An item whose `movie` is null crashes the call (`TypeError`).
+- API: `get_top_villes()`, `get_departements()`, `get_circuit()` return location ids (`ville-…`, `departement-…`, `circuit-…`); `get_cinema(id_location)` returns `{id, name, address}`; `get_showtime(id_cinema, "YYYY-MM-DD")` returns `[{title, showtimes: [{startsAt, diffusionVersion}]}]`, where `diffusionVersion` is `ORIGINAL`, `DUBBED` or `LOCAL`; the README's `{duration, VF, VO}` shape is outdated. **We call neither `get_showtime` nor `get_movies`** (design D25): the provider paginates itself through `URLs.showtime_url` + `_get_json_request` and reads the whole JSON document, because `get_showtime` keeps only the title and the times and `get_movies` is fragile and would double the requests. The labels vary by cinema (a French film is `LOCAL` at W7520, `DUBBED` at C0159, `ORIGINAL` in `original_st` for La Gradiva at W0124): see D2 / D26 in docs/architecture.md.
+- Unknown cinema id → bare `Exception("Error 404")`; a known cinema with nothing that day → `[]`. An item whose `movie` is null crashes the library's call (`TypeError`); our parser ignores it.
 - **It is synchronous** (`requests.get`, **no timeout**) and depends on `requests` without declaring it (Home Assistant ships `requests`). Consequences, which are not negotiable:
   - Never call it on the event loop: always in an executor job.
   - Enforce a timeout in our wrapper (it has none of its own).
@@ -16,16 +16,17 @@ The repository was generated from the `ha-dev-environment` Copier template (`.co
 - AlloCiné is the only source in v1, implemented as one provider of the client's source abstraction (see docs/architecture.md, D13). The coordinator, entities, config flow and Store depend only on that abstraction; adding a source means adding a provider.
 - No authentication: `ConfigEntryAuthFailed` and reauth flows do not apply.
 - Showtimes come back as naive ISO datetimes in French local time: convert them to aware datetimes in `Europe/Paris` inside the client. Entities display them as `HH:MM` in Home Assistant's configured time zone.
-- It is scraping: expect the HTML to change. A parsing failure must surface as a clear client exception (and `UpdateFailed`), never as a crash or as silently empty data.
-- Be gentle with allocine.fr: one cinema per config entry, a refresh interval of hours rather than minutes, no request per entity.
+- It is scraping: expect the HTML to change. A parsing failure must surface as a clear client exception (and `UpdateFailed`), never as a crash or as silently empty data. The exception is the enrichment fields (runtime, genres, ratings…): an unreadable one becomes `None` with a debug log and never raises `SourceParseError` (D28).
+- Be gentle with allocine.fr: one cinema per config entry, a refresh interval of hours rather than minutes, no request per entity. The film and showtime details come from the same pages: no extra request for them (no film page, no cinema page, no `nextDate`; D24).
 
 ## Project-specific review points
 
 On top of the agents' generic checklists:
 
-- Every `allocineAPI` call goes through the client, in an executor, under a timeout.
+- Every `allocineAPI` call goes through the client, in an executor, under a timeout. Never `get_showtime` / `get_movies`: only `_get_json_request` + `URLs.showtime_url`, under the signature guard.
+- Every new sensor attribute lives under `films` (excluded from the recorder), never at the top level. Attribute keys are English `snake_case`; values from the source stay as they are.
 - Datetimes are aware (`Europe/Paris`); "today" is computed in Home Assistant's time zone, not UTC.
-- VF / VO showtimes are both kept and distinguishable.
+- VF / VO / VOST showtimes are all kept and distinguishable (`other` for an unknown version).
 - An empty showtime list (cinema closed that day) is valid data, not an error.
 
 ## Architecture
@@ -45,9 +46,9 @@ Always `uv run --no-sync …` (a sync would uninstall the `default_config` packa
 
 ## Conventions
 
-- Python 3.14, ruff `select = ["ALL"]`, pylint, pyright, docstring-linter (Google style, every argument documented, no `Returns:` for `None`). Code, docstrings and commits in English.
+- Python 3.14, ruff `select = ["ALL"]`, pylint, pyright, docstring-linter (Google style, every argument documented, no `Returns:` for `None`). Code, docstrings and commits in English. Keys of entity attributes and of any dictionary exposed to the user are English `snake_case` (values coming from a source keep the source's language).
 - Follow the Home Assistant integration quality scale: config flow with unique ids, `ConfigEntryNotReady` / `UpdateFailed` on errors, `runtime_data` on the config entry, `has_entity_name`, translations for every user-facing string, no blocking I/O in the event loop.
-- Tests never hit the network: mock `allocineAPI` (client tests) or our client (integration tests). Use recorded fixtures under `tests/**/fixtures/`.
+- Tests never hit the network: mock `allocineAPI` (client tests) or our client (integration tests). Use recorded fixtures under `tests/**/fixtures/`: real ones are trimmed only by removing keys, invented ones are named as such.
 - Conventional commits (checked by commitlint). Work on branches off `develop`; PRs target `develop`.
 
 ## Agents (`.claude/agents/`)
