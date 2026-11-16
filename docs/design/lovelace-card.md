@@ -152,11 +152,7 @@ ignored). The key is the colour option: `age_12` (also 10), `age_16`, `age_18`
 **Ignored lines.** `umcLineIsIgnored(index, template, text)`: lines 1..6 whose resolved text is empty and that are not
 an explicit `$empty` (the reference's `match("empty")` rule) emit no tspan at all, so no space is reserved in any engine,
 and `neededUnits` / the viewBox growth count only the drawn lines. A badge line with nothing to show is ignored the
-same way. Line 0 (the title) keeps the reference's handling. The base copy `card/upcoming-media-card.js` has the same rule (`umcLineIsIgnored`, same comment adapted to the
-reference), as a three-line hunk after `resolveText` in its "Replace keywords in lines" loop.
-Another announced change of the base copy: with the generic token regex an unknown `$word` now resolves to nothing and
-drops its part, where the reference printed it literally. Measured before the change: in Chromium an empty tspan
-already took no vertical space, so heights and positions are identical; only the empty tspan element is gone.
+same way. Line 0 (the title) keeps the reference's handling.
 
 ## Accessibility marks in the popover (done)
 
@@ -233,10 +229,7 @@ Accessibility marks: see the next section.
 
 `entry_point` (default `films`) is the name of the sensor attribute holding the list of films: `filmsToItems`,
 `sensorProblem` (so the day chips) and the editor's token names read it. A missing or non-list attribute is "no film":
-the usual unavailable message, no error. The same option exists in the base card (`card/upcoming-media-card.js`,
-default `shows`), where the displayed items still come from `attributes.data` and `attributes[entry_point]` is the raw
-list the dynamic tokens read: item n of `data` is paired with element n - 1 when both have the same length, once per
-sensor state, before any sort or filter (`umcPairItems`); otherwise there is no pairing and dynamic tokens are empty.
+the usual unavailable message, no error.
 
 ## Tooltip text
 
