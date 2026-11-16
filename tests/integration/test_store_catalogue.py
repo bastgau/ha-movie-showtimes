@@ -17,6 +17,7 @@ from custom_components.movie_showtimes.store import (
     snapshot_to_dict,
     unify_film_details,
 )
+from freezegun import freeze_time
 from freezegun.api import FrozenDateTimeFactory
 import pytest
 
@@ -219,8 +220,14 @@ def test_reference_films_round_trip() -> None:
 
 
 def _stored() -> dict[str, Any]:
-    """Return valid stored data with film X (ref "1") on today."""
-    return json.loads(json.dumps(snapshot_to_dict("fake", "C1", _snapshot(_cached(TODAY, _film("X", TODAY, "1"))))))
+    """Return valid stored data with film X (ref "1") on today.
+
+    Called at collection time too (parametrize), when the autouse clock is not frozen yet: freeze it here, or the
+    serialisation drops the days before the real today.
+    """
+    with freeze_time("2026-11-12T10:00:00+01:00"):
+        snapshot = _snapshot(_cached(TODAY, _film("X", TODAY, "1")))
+        return json.loads(json.dumps(snapshot_to_dict("fake", "C1", snapshot)))
 
 
 def test_orphan_reference_is_tolerated(caplog: pytest.LogCaptureFixture) -> None:
