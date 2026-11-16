@@ -28,11 +28,13 @@ On top of the agents' generic checklists:
 - Datetimes are aware (`Europe/Paris`); "today" is computed in Home Assistant's time zone, not UTC.
 - VF / VO / VOST showtimes are all kept and distinguishable (`other` for an unknown version).
 - An empty showtime list (cinema closed that day) is valid data, not an error.
+- The Lovelace card (`frontend/movie-showtimes-card.js`, design in docs/design/lovelace-card.md) is a near-verbatim copy of the reference card (header: licences, forked commit): keep its SVG / DOM / CSS / `umc-*` classes untouched, and any change explainable (BetaSeries removed, or one of the documented steps). It makes no request of its own (it only reads the cinema's day sensor from `hass`). The reference puts text in `innerHTML`; that was deliberately kept, so source text goes through the adapter (`filmsToItems`: `<` `>` stripped, `http(s)` URLs only) first. Day selector, VF/VO/VOST, accessibility, i18n are postponed.
 
 ## Architecture
 
 - `custom_components/movie_showtimes/client/` — the bundled client: the source abstraction (`provider.py`, `registry.py`), source-neutral models and exceptions, and one module per source in `providers/` (`providers/allocine.py`, a wrapper around `allocineAPI`). **It must not import `homeassistant`**: its tests run without Home Assistant. A provider converts its source's raw data into our models and its errors into our exceptions; nothing outside its provider module touches `allocineAPI`.
 - `custom_components/movie_showtimes/*.py` — the Home Assistant side: config flow (choose a location, then a cinema), a `DataUpdateCoordinator` per config entry, entities, diagnostics, translations (`strings.json` + `translations/en.json`, `fr.json`).
+- `custom_components/movie_showtimes/card.py` + `frontend/movie-showtimes-card.js` — the Lovelace card, one ES module served and registered by the integration (`async_setup`, once per run). JS tests: Node's built-in runner (Node ≥ 22, no npm packages) via `tests/card/test_card_js.py`..
 - Design notes and decisions live in `docs/` (start with `docs/architecture.md`).
 
 ## Commands
