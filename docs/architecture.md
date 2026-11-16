@@ -7,6 +7,13 @@ Status: implemented (v1 + film enrichment D24–D31; client 403 tests, integrati
 [`docs/design/film-enrichment.md`](design/film-enrichment.md). The sections it changes (§1, §2, §3.2, §3.3,
 §3.5, §5.3, §7, §8, §10, §11, §12, §13.3, Appendix A) carry a short note that points there instead of repeating it.
 
+**Lovelace card (D32–D41)**, served and registered by the integration, is designed in
+[`docs/design/lovelace-card.md`](design/lovelace-card.md) (a near-verbatim copy of the reference card
+`bastgau/ha-betaseries` `card/upcoming-media-card.js` plus an adapter, in three phase-1 steps). **Phase 1
+supersedes D35, D39-D41: the card was restarted from the reference copy; D32 (delivery) and D33 (binding by
+device) stay.** D34, D36-D38 describe the earlier rewrite and are to be re-read against the short design.
+It touches §1, §3 (module tree), §10 and §11 here.
+
 ## 1. Goal and scope
 
 Show, in Home Assistant, what is on at one AlloCiné cinema over the next seven days.
@@ -40,7 +47,7 @@ Show, in Home Assistant, what is on at one AlloCiné cinema over the next seven 
 | Filters (VF / VO only, favourite films)                          | User decision. Templates can do it from the attributes.                                                                                                                                                                                                                                                                            |
 | Calling `get_movies` (film metadata)                             | Not needed: the film data is read from the document our pagination already receives, at no extra request (D24, D25). Calling `get_movies` as well would double the load (≈ +16 requests a day), and it is fragile: `UnboundLocalError` when `releases` is empty, `KeyError` when `poster` or `flags` is missing, a bare `except:`. |
 | `timeBeforeStart`, `nextDate`, `editorialReviews`                | `timeBeforeStart` is unreliable; `nextDate`'s role is unverified; editorial reviews dropped by the user (design doc §1.3).                                                                                                                                                                                                         |
-| Lovelace card, calendar entity                                   | User decision.                                                                                                                                                                                                                                                                                                                     |
+| Calendar entity                                                  | User decision. (The Lovelace card, first left out too, is now in scope: D32–D41, `docs/design/lovelace-card.md`.)                                                                                                                                                                                                                  |
 | Options flow, reconfigure flow                                   | Nothing to configure after setup. The name can be changed in the UI (entry title / device name). To change the cinema, the user adds a new entry.                                                                                                                                                                                  |
 | Reauthentication                                                 | The source has no authentication. `ConfigEntryAuthFailed` is never raised.                                                                                                                                                                                                                                                         |
 | Repair issues (e.g. a cinema removed from AlloCiné)              | Rare. v1 shows the failure as unavailable entities plus a logged, translated `UpdateFailed`. Could be added later.                                                                                                                                                                                                                 |
@@ -141,7 +148,11 @@ and the live endpoint.
 
 ```
 custom_components/movie_showtimes/
-├── __init__.py          setup / unload / remove (store), midnight listener; gets the provider from the registry (D13)
+├── __init__.py          setup / unload / remove (store), midnight listener; gets the provider from the registry (D13);
+│                        (D32) CONFIG_SCHEMA + async_setup → card.async_register_card, once per run
+├── card.py              (D32) serves frontend/movie-showtimes-card.js and adds it with add_extra_js_url (?v=hash)
+├── frontend/movie-showtimes-card.js   (D32–D41) the Lovelace card + editor, one vanilla ES module, no build;
+│                        forked from the reference upcoming-media-card (MIT notices in its header, D39)
 ├── const.py             DOMAIN, CONF_SOURCE, CONF_CINEMA_ID, intervals, day counts, attribute names, storage constants
 ├── config_flow.py       user step (source; skipped with one source) → cinema step (D13)
 ├── coordinator.py       MovieShowtimesCoordinator, MovieShowtimesConfigEntry, CachedDay
@@ -1169,12 +1180,87 @@ C0159 and W7520, design doc §0; D24–D31 are user decisions except where noted
   description" is an **assumption**, not confirmed by AlloCiné. The `relay` URL's `code=` (`AUDIO`, `SME`,
   `GRETA`) is not used: redundant at W7520, unreliable at C0159 (design doc §4.7).
 
+**Phase 1 supersedes D35, D39-D41: card restarted from the reference copy; D32 delivery and D33 binding stay.**
+Lovelace card (design: `docs/design/lovelace-card.md`, revision 3; delivery, one cinema per card, local search + day
+selector, i18n, the fork of the reference card and per-line field choice are user decisions; the rest are the
+architect's choices on them). Revision 3 status of each entry: D32, D33, D36, D37, D38 **kept**; D34 **kept**
+(reference look); D35 **partly superseded** by D40 / D41.
+
+- **D32 — Card served and registered by the integration:** one ES module,
+  `custom_components/movie_showtimes/frontend/movie-showtimes-card.js`, served at
+  `/movie_showtimes/movie-showtimes-card.js` (`StaticPathConfig`, cache headers on) and loaded on every frontend
+  page with `frontend.add_extra_js_url(hass, url + "?v=<sha256[:8] of the file>")`. No Lovelace resource, so it
+  works with storage and `resource_mode: yaml` dashboards alike and leaves nothing to clean up. Registered once per
+  run from `async_setup` (+ `CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)`), never from
+  `async_setup_entry`. `manifest.json` gets `"after_dependencies": ["frontend", "http"]`, **not** `dependencies`
+  (CI has no `home-assistant-frontend` package; without those components the card is skipped with a debug line and
+  the sensors work). `hacs.json`: only `"homeassistant": "2026.10.0"` added; category unchanged.
+- **D33 — One cinema per card, bound by device:** `device_id` from a device selector filtered on
+  `movie_showtimes` (YAML may give `entity`, any of the cinema's sensors, instead). The 7 day sensors are resolved in
+  the browser from `hass.entities` by `device_id`, `platform` and `translation_key` (`today`, `tomorrow`,
+  `day_N`), never by entity id or unique id, with no request. A Python test pins those translation keys.
+- **D34 — Day selector and search, local only:** chips over the resolved sensors, selection kept by date (stays on
+  the chosen day across midnight, falls back to today when it is past). The search is a substring AND match,
+  case- and accent-insensitive, over `title`, `original_title`, `genres`, `directors`, `details.cast`; no request,
+  render debounced by 100 ms, nothing persisted. (Revision 3: drawn with the reference's search bar markup and CSS;
+  the reference's own matching and catalogue search are not kept.)
+- **D35 — Field catalogue** (kept): the catalogue (24 keys: `title` … `url`) is taken from the real `films[]`
+  attributes; an absent value renders nothing; unknown field keys are dropped with a warning. Source HTML
+  (`synopsis_full`) is turned into text, never injected; links only `http(s)`. _Superseded in revision 3:_ the
+  `rows: [{fields, label?, icon?}]` model (→ D40) and `show_poster` (→ D41).
+- **D36 — The card has no clock and re-renders by identity:** past showtimes and the midnight rollover come from the
+  sensors (D5, D11, §4.4); the card renders the state as it is, compares its sensors' state objects by identity
+  (no serialisation of the ≈ 127 KB `films`), and handles unavailable sensors, closed days (valid data) and a
+  missing cinema with translated messages.
+- **D37 — Card strings in the module:** `en` and `fr` dictionaries with identical keys, language from
+  `hass.locale.language` (base-language then English fallback); times shown verbatim (`HH:MM`, HA time zone, D6);
+  source values never translated.
+- **D38 — JS tests with Node's built-in runner, run from pytest:** no npm dependency, no `package.json`; the
+  module's pure functions are exported and tested (`tests/card/*.mjs`), the DOM classes are guarded so the module
+  loads in Node. `tests/card/test_card_js.py` runs `node --check`, `node --test` and a backend/card contract on a
+  snapshot of real sensor states; it skips locally without Node ≥ 22 and fails in CI. Template gaps (workflow path
+  filters ignore `.js` / `.mjs`; `scripts/lint` Prettier globs omit JS) are flagged for an upstream change.
+  (Revision 3: the contract and the exports it uses keep their names and shapes; `card.test.mjs` adapted and a
+  source-hygiene test added: no request API, `innerHTML` only from upper-case constants, no BetaSeries leftovers.)
+  In revision 3 the card's layout bullet of D36 (getCardSize / grid, own CSS) is replaced by the reference's
+  formulas and stylesheet (D39); the identity re-render, no clock and messages stay.
+- **D39 — Fork of the reference card** (user decision): the file is the reference
+  `bastgau/ha-betaseries` `card/upcoming-media-card.js` (MIT, itself from `custom-cards/upcoming-media-card`, MIT),
+  forked once and not tracked afterwards; its look, layout options (`max`, `collapse`, `overflow`, `overflow_fit`,
+  `max_columns`) and appearance options (`corner_radius`, `line_size`, `line_color`, `accent_color`, `border_color`,
+  `flag_color`, `flag`, `enable_transparency`, `box_shadows`, `text_shadows`, `disable_hyperlinks`) are kept; every
+  BetaSeries part (watched, add / remove, catalogue, `device_betaseries`), trailers, filters, dates / clock and
+  `$token` templates are removed. **Kept on the user's request (revision 3.1):** tooltips (`enable_tooltips`,
+  `tooltip_delay`, default 500 ms: the synopsis, a node of the card's own shadow root, text only, cleaned up on
+  re-render and disconnect) and sorting (`sort_by` over `title` default / `first_showtime` / `runtime` /
+  `user_rating` / `press_rating`, `sort_ascending` default `true`, a film with no value last whatever the direction). Rendered into a shadow root with static `mst-` classes, a
+  constant stylesheet fed by `--mst-*` custom properties set with `style.setProperty` (never CSS built from config),
+  DOM built with `textContent` (the reference's `innerHTML` of decoded source text is not kept). Element names stay
+  `movie-showtimes-card` / `movie-showtimes-card-editor`. Both MIT notices and the forked commit are in the JS
+  file's header (the only part shipped); README "Credits". The file is Prettier-formatted and passes the same
+  minimal ESLint config, with only the browser globals it uses added.
+- **D40 — Lines, configurable one by one** (user decision; replaces revision 2's rows and the reference's
+  `title_text` / `line1_text` … `line4_text`): `lines: [{fields: [...], size?, color?}]` (bare lists accepted), any
+  number; line 0 has the reference's title treatment; size `large` 18 px / `medium` 14 px / `small` 12 px, default
+  by position as the reference (0 large, 1 medium, then `line_size` or small); colour: line, `line_color`, style
+  default. Inline fields joined by " · " and ellipsised; block fields wrap. A line with nothing to render is not
+  drawn. Default lines = title / runtime · genres · certificate / showtimes. Edited with an object selector
+  (fields, size, colour) in an expandable "Lines" section.
+- **D41 — `image_style`: `none` (default), `poster`, `fanart`:** keeps the user's "posters opt-in" decision (the only
+  outside request the card can cause, the browser loading posters from AlloCiné's CDN). `none` is the reference's
+  poster item without its image column (frame, colours, flag, lines kept), not an empty poster column; `fanart` uses
+  the poster cropped (there is no backdrop in the data). Films without a poster fall back to `none`.
+
 ## 11. Open questions for the user
 
 D1–D23: none left. Film enrichment: the remaining questions (Q2, Q8–Q11, Q13–Q16, Q18) are in
 `docs/design/film-enrichment.md` §11. Answered by the user: Q1 (editorial reviews dropped), Q3 (every free field),
 Q4 (codes), Q5 (exactly `["FRENCH"]`), Q6 (one DESKTOP link), Q7 (accessibility in scope, SME apart from `vost`),
 Greta (D31), Q17 (fixtures indented).
+
+Lovelace card (D32–D41): nothing blocking. Decided by the user: fork the reference card (D39), lines configurable
+one by one (D40), 24 h times only, search fields as D34, posters opt-in (kept as `image_style: none` by default, D41:
+the one default worth confirming). Listed in `docs/design/lovelace-card.md` §12.
 
 ## 12. Persistence and restarts (D12) — implementation delta
 
