@@ -1,6 +1,7 @@
 {
   "domain": "movie_showtimes",
   "name": "Movie Showtimes",
+  "after_dependencies": ["frontend", "http"],
   "codeowners": ["@bastgau"],
   "config_flow": true,
   "documentation": "https://github.com/bastgau/ha-movie-showtimes",

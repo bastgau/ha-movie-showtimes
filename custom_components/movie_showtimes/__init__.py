@@ -5,15 +5,36 @@ from typing import Final
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryError
+from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.event import async_track_time_change
+from homeassistant.helpers.typing import ConfigType
 
+from .card import async_register_card
 from .client import UnknownSourceError, create_provider
 from .const import CONF_SOURCE, DOMAIN
 from .coordinator import MovieShowtimesConfigEntry, MovieShowtimesCoordinator
 from .store import ShowtimesStore
 
 PLATFORMS: Final = [Platform.SENSOR]
+
+# Home Assistant looks this name up; hassfest requires it next to ``async_setup``.
+CONFIG_SCHEMA: Final = cv.config_entry_only_config_schema(DOMAIN)  # pylint: disable=invalid-name  # pyright: ignore[reportUnknownVariableType, reportUnknownMemberType]
+
+
+async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:  # noqa: ARG001
+    """Serve the Lovelace card, once per Home Assistant run whatever the number of entries.
+
+    Args:
+        hass (HomeAssistant): The Home Assistant instance.
+        config (ConfigType): The YAML configuration, unused: the integration is set up from the UI.
+
+    Returns:
+        bool: ``True`` always.
+
+    """
+    await async_register_card(hass)
+    return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: MovieShowtimesConfigEntry) -> bool:
