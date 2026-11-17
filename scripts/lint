@@ -130,6 +130,16 @@ run_pylint() {
   fi
 }
 
+# Prints a tool's captured output, framed by one blank line, or nothing when
+# there is none (a quiet success must not leave two blank lines in a row).
+# npx chatter is noise; the tool's own findings are not.
+show_output() {
+  local text
+  text=$(printf '%s\n' "$1" | grep -vE "^npm (notice|warn)" | grep -v "^$")
+  [ -z "$text" ] || printf '\n%s\n' "$text"
+  return 0
+}
+
 # prettier is not a Python tool: scripts/setup installs it globally, pinned to
 # the version .pre-commit-config.yaml uses, so this script and the hook cannot
 # drift apart. npx is the fallback where setup has not run.
@@ -156,7 +166,7 @@ run_prettier() {
   local flag=(--write)
   [ "$mode" = "check" ] && flag=(--check)
 
-  echo -e "\n${YELLOW}> Format with Prettier :${NC}\n"
+  echo -e "\n${YELLOW}> Format with Prettier :${NC}"
 
   local runner=(npx --yes "prettier@${PRETTIER_VERSION}")
   if [ "$(prettier --version 2> /dev/null)" = "$PRETTIER_VERSION" ]; then
@@ -170,8 +180,7 @@ run_prettier() {
   local output status
   output=$("${runner[@]}" "${flag[@]}" --log-level warn "${globs[@]}" 2>&1)
   status=$?
-  # npx chatter is noise here; prettier's own findings are not.
-  echo "$output" | grep -vE "^npm (notice|warn)" | grep -v "^$"
+  show_output "$output"
 
   if [ $status -eq 0 ]; then
     echo -e "\n${BLUE}[Format with Prettier]${NC} ${GREEN}✓ Done.${NC} ${PURPLE}(${scope_name})${NC}"
@@ -202,11 +211,12 @@ run_js_checks() {
     return
   fi
 
-  echo -e "\n${YELLOW}> Check the JavaScript syntax with node :${NC}\n"
-  local file failed=0
+  echo -e "\n${YELLOW}> Check the JavaScript syntax with node :${NC}"
+  local file failed=0 check_output=""
   for file in "${files[@]}"; do
-    node --check "$file" || failed=1
+    check_output+="$(node --check "$file" 2>&1)"$'\n' || failed=1
   done
+  show_output "$check_output"
   if [ $failed -eq 0 ]; then
     echo -e "\n${BLUE}[node --check]${NC} ${GREEN}✓ Done.${NC} ${PURPLE}(${scope_name})${NC}"
   else
@@ -214,11 +224,11 @@ run_js_checks() {
     exit_code=1
   fi
 
-  echo -e "\n${YELLOW}> Lint with ESLint :${NC}\n"
+  echo -e "\n${YELLOW}> Lint with ESLint :${NC}"
   local output status
   output=$(npx --yes "eslint@${ESLINT_VERSION}" --config eslint.config.mjs "${files[@]}" 2>&1)
   status=$?
-  echo "$output" | grep -vE "^npm (notice|warn)" | grep -v "^$"
+  show_output "$output"
   if [ $status -eq 0 ]; then
     echo -e "\n${BLUE}[Lint with ESLint]${NC} ${GREEN}✓ Done.${NC} ${PURPLE}(${scope_name})${NC}"
   else
@@ -271,5 +281,7 @@ if [ $exit_code -eq 0 ]; then
 else
   echo -e "${RED}✗ Some checks failed${NC} (${scopes[*]})"
 fi
+
+echo ""
 
 exit $exit_code
