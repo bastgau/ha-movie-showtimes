@@ -34,14 +34,14 @@ On top of the agents' generic checklists:
 
 - `custom_components/movie_showtimes/client/` — the bundled client: the source abstraction (`provider.py`, `registry.py`), source-neutral models and exceptions, and one module per source in `providers/` (`providers/allocine.py`, a wrapper around `allocineAPI`). **It must not import `homeassistant`**: its tests run without Home Assistant. A provider converts its source's raw data into our models and its errors into our exceptions; nothing outside its provider module touches `allocineAPI`.
 - `custom_components/movie_showtimes/*.py` — the Home Assistant side: config flow (choose a location, then a cinema), a `DataUpdateCoordinator` per config entry, entities, diagnostics, translations (`strings.json` + `translations/en.json`, `fr.json`).
-- `custom_components/movie_showtimes/card.py` + `frontend/movie-showtimes-card.js` — the Lovelace card, one ES module served and registered by the integration (`async_setup`, once per run). JS tests: Node's built-in runner (Node ≥ 22, no npm packages) via `tests/card/test_card_js.py`..
+- `custom_components/movie_showtimes/card.py` + `frontend/movie-showtimes-card.js` — the Lovelace card, one ES module served and registered by the integration (`async_setup`, once per run). JS tests: Node's built-in runner (Node ≥ 22, no npm packages) via `tests/card/test_card_js.py`; JS lint: `scripts/lint js` (`node --check`, ESLint, Prettier check).
 - Design notes and decisions live in `docs/` (start with `docs/architecture.md`).
 
 ## Commands
 
 Always `uv run --no-sync …` (a sync would uninstall the `default_config` packages).
 
-- Lint, like CI: `scripts/lint` (scopes: `client`, `integration`, `tests`, `repo`, `src`, `all`). The `repo` scope rewrites json/yaml/md with Prettier.
+- Lint, like CI: `scripts/lint` (scopes: `client`, `integration`, `tests`, `repo`, `src`, `all`, plus `js` for the card). The `repo` scope rewrites json/yaml/md with Prettier.
 - Tests with coverage gates, like CI: `scripts/test` (scopes: `client`, `integration`). **Each scope must reach 95 % on its own**: client code must be covered by `tests/movie_showtimes/client/`, not by the Home Assistant tests.
 - One test, no gate: `uv run --no-sync pytest tests/path/test_x.py -q`.
 - Run Home Assistant locally against `./config`: `scripts/develop`.
