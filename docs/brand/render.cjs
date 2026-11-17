@@ -33,7 +33,10 @@ const jobs = [
       `<style>html,body{margin:0;background:transparent}svg{display:block;width:100vw;height:100vh}</style>${svg}`,
     );
     // omitBackground keeps the PNG transparent
-    fs.writeFileSync(path.join(dir, out), await page.screenshot({ omitBackground: true }));
+    fs.writeFileSync(
+      path.join(dir, out),
+      await page.screenshot({ omitBackground: true }),
+    );
     await page.close();
   }
   await browser.close();

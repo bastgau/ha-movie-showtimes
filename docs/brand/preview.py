@@ -5,8 +5,9 @@ Each sub-directory of <proposals_dir> must hold the PNG set made by render.cjs.
 Writes <proposals_dir>/preview.png (one row per proposal, light then dark).
 """
 
-import sys
+# ruff: noqa: INP001  (a script run by path from docs/brand, not part of a package)
 from pathlib import Path
+import sys
 
 from PIL import Image
 
@@ -17,10 +18,11 @@ def build(root: Path) -> Path:
     """Compose the preview sheet.
 
     Args:
-        root: Directory holding one sub-directory per proposal.
+        root (Path): Directory holding one sub-directory per proposal.
 
     Returns:
-        Path of the written preview image.
+        Path: Path of the written preview image.
+
     """
     names = sorted(p.name for p in root.iterdir() if (p / "icon@2x.png").exists())
     sheet = Image.new("RGB", (CELL_W * 2, CELL_H * len(names)), "white")
@@ -39,4 +41,4 @@ def build(root: Path) -> Path:
 
 
 if __name__ == "__main__":
-    print(build(Path(sys.argv[1])))
+    sys.stdout.write(f"{build(Path(sys.argv[1]))}\n")
