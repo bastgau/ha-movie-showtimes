@@ -57,7 +57,8 @@ exit_code=0
 for scope in "${scopes[@]}"; do
   echo -e "\n${YELLOW}> Running the ${scope} tests with coverage :${NC}\n"
 
-  # -o addopts replaces the project-wide options so they do not leak into a scoped run; "-p no:respx" is the one pytest-homeassistant needs.
+  # -o addopts replaces the project-wide options so they do not leak into a scoped run; "-p no:respx" is the
+  # one pytest-homeassistant needs.
   case "$scope" in
     client)
       [ -n "$CLIENT_PACKAGE" ] || { echo "No client in this repository." >&2; exit 2; }
