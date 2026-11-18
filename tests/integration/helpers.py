@@ -6,7 +6,7 @@ from typing import Any
 from custom_components.movie_showtimes.client import DayShowtimes, ShowtimeVersion
 from custom_components.movie_showtimes.const import DOMAIN
 from freezegun.api import FrozenDateTimeFactory
-from pytest_homeassistant_custom_component.common import MockConfigEntry, async_fire_time_changed
+from pytest_homeassistant.common import MockConfigEntry, async_fire_time_changed
 
 from homeassistant.core import HomeAssistant
 from tests.fake_provider import FakeProvider, make_day, make_film, paris
