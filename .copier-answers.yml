@@ -10,7 +10,7 @@ coverage_fail_under: 95
 description: A Home Assistant integration that shows movie showtimes for your favourite
     theaters as sensors.
 github_owner: bastgau
-ha_minimum_version: 2026.10.0
+ha_minimum_version: 2026.11.0
 has_card: false
 integration_domain: movie_showtimes
 integration_name: Movie Showtimes

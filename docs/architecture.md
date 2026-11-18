@@ -1,6 +1,6 @@
 # Movie Showtimes — architecture (v1)
 
-Status: implemented (v1 + film enrichment D24–D31; client 403 tests, integration 212, 99 % each). Pinned Home Assistant: `2026.10.1`
+Status: implemented (v1 + film enrichment D24–D31; client 403 tests, integration 212, 99 % each). Pinned Home Assistant: `2026.11.2` (minimum `2026.11.0`, both tested in CI)
 (`pyproject.toml`). Data source: `allocine-seances==0.0.14`.
 
 **Film enrichment, VO / VOST and accessibility (D2 revised, D24–D31)** is designed in
