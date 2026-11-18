@@ -1,7 +1,7 @@
 # Film enrichment, VO / VOST and accessibility (D2 revised, D24–D31)
 
 Status: **implemented** (revision 5 describes the code in `client/providers/allocine.py`; client tests 403,
-integration tests 212, 99 % coverage each, no xfail). Pinned Home Assistant `2026.10.1`, `allocine-seances==0.0.14`.
+integration tests 212, 99 % coverage each, no xfail). Pinned Home Assistant `2026.11.2`, `allocine-seances==0.0.14`.
 Builds on `docs/architecture.md` (§2, §3.3, §5.3, §12, §13, Appendix A); that document points here for
 everything below instead of repeating it.
 
