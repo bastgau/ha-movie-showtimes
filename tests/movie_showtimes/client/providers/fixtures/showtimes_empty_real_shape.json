@@ -1,0 +1,16 @@
+{
+  "error": true,
+  "message": "no.showtime.error",
+  "messageParam": {
+    "day": "2026-11-12",
+    "page": 1
+  },
+  "nextDate": null,
+  "results": [],
+  "pagination": {
+    "page": "1",
+    "totalPages": 0,
+    "itemsPerPage": 15,
+    "totalItems": 0
+  }
+}

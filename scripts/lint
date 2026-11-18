@@ -1,0 +1,287 @@
+#!/bin/bash
+
+# Runs the same five checks as .github/workflows/lint.yml, over the same
+# scopes, so that a green run here predicts a green run there - plus prettier,
+# which the workflow does not run (the pre-commit hook is what enforces it).
+#
+# Usage: scripts/lint [scope ...]
+#
+#   client        the bundled API client (only if CLIENT_PACKAGE is set)
+#   integration   the Home Assistant side (never descends into the client)
+#   tests         the whole test suite
+#   repo          prettier over the repo's json/yaml/markdown/js, then eslint and node --check over the js
+#   js            prettier --check, node --check and eslint over the js alone (what CI runs; no writing)
+#   src           shorthand for: client integration
+#   all           every scope (the default)
+#
+#   scripts/lint --list-scopes   the CI scopes, as a JSON array (for the workflow matrix)
+#   scripts/lint --paths SCOPE   the paths a scope covers
+#
+# `repo` sits apart from the Python scopes on purpose: it is the one check here
+# that writes (--write), so a commit is not rejected by the hook for a
+# reformat the author could not have predicted.
+
+# shellcheck source=scripts/_common
+source "$(dirname "$0")/_common"
+
+# Resolved from the project variables, never hard-coded: this file is shared by
+# every integration.
+scope_paths() {
+  case "$1" in
+    client)
+      [ -n "$CLIENT_PACKAGE" ] || return 1
+      echo "custom_components/${INTEGRATION_DOMAIN}/${CLIENT_PACKAGE}" ;;
+    # The glob is what separates this from the client scope: it matches the
+    # integration's own flat modules and never descends into the client.
+    integration) echo "custom_components/${INTEGRATION_DOMAIN}/*.py" ;;
+    tests)
+      [ -d tests ] || return 1
+      echo tests ;;
+    *) return 1 ;;
+  esac
+}
+
+ci_scopes() {
+  local scope scopes=()
+  for scope in client integration tests; do
+    scope_paths "$scope" > /dev/null && scopes+=("$scope")
+  done
+  printf '%s\n' "${scopes[@]}"
+}
+
+case "$1" in
+  --list-scopes)
+    ci_scopes | python3 -c 'import json, sys; print(json.dumps(sys.stdin.read().split()))'
+    exit 0
+    ;;
+  --paths)
+    scope_paths "$2" || { echo "Unknown or unavailable scope '$2'." >&2; exit 2; }
+    exit 0
+    ;;
+esac
+
+requested=("$@")
+[ ${#requested[@]} -eq 0 ] && requested=(all)
+
+# What `all` and `src` expand to, one scope per line. Read with mapfile rather
+# than $(...), which the shell would split and glob.
+mapfile -t all_scopes < <(ci_scopes)
+mapfile -t src_scopes < <(ci_scopes | grep -v '^tests$')
+
+scopes=()
+for arg in "${requested[@]}"; do
+  case "$arg" in
+    all) scopes+=(repo "${all_scopes[@]}") ;;
+    src) scopes+=("${src_scopes[@]}") ;;
+    client | integration | tests)
+      scope_paths "$arg" > /dev/null || { echo -e "${RED}Scope '$arg' does not exist in this repository.${NC}" >&2; exit 2; }
+      scopes+=("$arg") ;;
+    repo | js) scopes+=("$arg") ;;
+    *)
+      echo -e "${RED}Unknown scope '$arg'.${NC} Expected: client, integration, tests, repo, js, src or all." >&2
+      exit 2
+      ;;
+  esac
+done
+
+exit_code=0
+
+# Runs one tool over one scope, printing the usual banner and recording the
+# failure without stopping: one invocation reports every problem at once, like
+# the workflow does.
+run_check() {
+  local label="$1" scope_name="$2"
+  shift 2
+
+  echo -e "\n${YELLOW}> ${label} :${NC}\n"
+  "$@"
+  local status=$?
+
+  if [ $status -eq 0 ]; then
+    echo -e "\n${BLUE}[${label}]${NC} ${GREEN}✓ Done.${NC} ${PURPLE}(${scope_name})${NC}"
+  else
+    echo -e "\n${BLUE}[${label}]${NC} ${RED}✗ Failed.${NC} ${PURPLE}(${scope_name})${NC}"
+    exit_code=1
+  fi
+}
+
+# pylint's score is worth surfacing, so it gets its own wrapper.
+run_pylint() {
+  local scope_name="$1"
+  shift
+
+  echo -e "\n${YELLOW}> Lint with Pylint :${NC}"
+
+  local output status score rating
+  output=$(run pylint "$@" 2>&1)
+  status=$?
+  echo "$output" | grep -v "^-\{10,\}$"
+  rating=$(echo "$output" | grep "Your code has been rated")
+  score=""
+  if [ -n "$rating" ]; then
+    score=$(echo "$rating" | grep -oP '\d+\.\d+/\d+' | head -1)
+  fi
+
+  if [ $status -eq 0 ]; then
+    echo -e "\n${BLUE}[Lint with Pylint]${NC} Score: ${score} ${GREEN}✓ Done.${NC} ${PURPLE}(${scope_name})${NC}"
+  else
+    echo -e "\n${BLUE}[Lint with Pylint]${NC} Score: ${score} ${RED}✗ Failed.${NC} ${PURPLE}(${scope_name})${NC}"
+    exit_code=1
+  fi
+}
+
+# Prints a tool's captured output, framed by one blank line, or nothing when
+# there is none (a quiet success must not leave two blank lines in a row).
+# npx chatter is noise; the tool's own findings are not.
+show_output() {
+  local text
+  text=$(printf '%s\n' "$1" | grep -vE "^npm (notice|warn)" | grep -v "^$")
+  [ -z "$text" ] || printf '\n%s\n' "$text"
+  return 0
+}
+
+# prettier is not a Python tool: scripts/setup installs it globally, pinned to
+# the version .pre-commit-config.yaml uses, so this script and the hook cannot
+# drift apart. npx is the fallback where setup has not run.
+#
+# Deliberately WITHOUT prettier-plugin-sort-json, even though the hook lists it
+# in additional_dependencies: nothing there passes --plugin and there is no
+# .prettierrc, so the hook never loads it. Enabling it here would sort every
+# JSON key alphabetically and scramble strings.json, whose block order Home
+# Assistant relies on. Matching the hook's real behaviour beats matching its
+# declaration.
+PRETTIER_VERSION="3.6.2"
+# .copier-answers.yml is written by Copier; reformatting it would make every
+# `copier update` fight Prettier over quotes and indentation.
+# card/ is a vendored third-party card and bruno/ folders are generated API collections.
+PRETTIER_GLOBS=("**/*.{json,yaml,yml,md,js,mjs}" "!.copier-answers.yml" "!card/**" "!**/bruno/**")
+
+# $1 is the scope name, $2 the mode (write by default, "check" to only report),
+# the rest the globs (PRETTIER_GLOBS by default).
+run_prettier() {
+  local scope_name="$1" mode="${2:-write}"
+  shift 2 2> /dev/null || shift $#
+  local globs=("$@")
+  [ ${#globs[@]} -gt 0 ] || globs=("${PRETTIER_GLOBS[@]}")
+  local flag=(--write)
+  [ "$mode" = "check" ] && flag=(--check)
+
+  echo -e "\n${YELLOW}> Format with Prettier :${NC}"
+
+  local runner=(npx --yes "prettier@${PRETTIER_VERSION}")
+  if [ "$(prettier --version 2> /dev/null)" = "$PRETTIER_VERSION" ]; then
+    runner=(prettier)
+  elif ! command -v npx > /dev/null 2>&1; then
+    echo "Neither prettier nor npx found - run scripts/setup (the pre-commit hook is unaffected)."
+    echo -e "\n${BLUE}[Format with Prettier]${NC} ${YELLOW}- Skipped.${NC} ${PURPLE}(${scope_name})${NC}"
+    return
+  fi
+
+  local output status
+  output=$("${runner[@]}" "${flag[@]}" --log-level warn "${globs[@]}" 2>&1)
+  status=$?
+  show_output "$output"
+
+  if [ $status -eq 0 ]; then
+    echo -e "\n${BLUE}[Format with Prettier]${NC} ${GREEN}✓ Done.${NC} ${PURPLE}(${scope_name})${NC}"
+  else
+    echo -e "\n${BLUE}[Format with Prettier]${NC} ${RED}✗ Failed.${NC} ${PURPLE}(${scope_name})${NC}"
+    exit_code=1
+  fi
+}
+
+# The JavaScript a repository ships (a Lovelace card and its tests), if any. No
+# package.json and no node_modules: eslint comes from a pinned `npx`, and
+# eslint.config.mjs imports nothing. Skipped when there is no JavaScript or no
+# node/npx, like prettier.
+ESLINT_VERSION="9.39.5"
+
+run_js_checks() {
+  local scope_name="$1"
+  local files=()
+  mapfile -t files < <(find custom_components tests \( -name '*.js' -o -name '*.mjs' \) -not -path '*/node_modules/*' 2> /dev/null | sort)
+
+  if [ ${#files[@]} -eq 0 ]; then
+    return
+  fi
+  if ! command -v node > /dev/null 2>&1 || ! command -v npx > /dev/null 2>&1; then
+    echo -e "\n${YELLOW}> Lint with ESLint :${NC}\n"
+    echo "node or npx not found - the JavaScript is not checked here."
+    echo -e "\n${BLUE}[Lint with ESLint]${NC} ${YELLOW}- Skipped.${NC} ${PURPLE}(${scope_name})${NC}"
+    return
+  fi
+
+  echo -e "\n${YELLOW}> Check the JavaScript syntax with node :${NC}"
+  local file failed=0 check_output=""
+  for file in "${files[@]}"; do
+    check_output+="$(node --check "$file" 2>&1)"$'\n' || failed=1
+  done
+  show_output "$check_output"
+  if [ $failed -eq 0 ]; then
+    echo -e "\n${BLUE}[node --check]${NC} ${GREEN}✓ Done.${NC} ${PURPLE}(${scope_name})${NC}"
+  else
+    echo -e "\n${BLUE}[node --check]${NC} ${RED}✗ Failed.${NC} ${PURPLE}(${scope_name})${NC}"
+    exit_code=1
+  fi
+
+  echo -e "\n${YELLOW}> Lint with ESLint :${NC}"
+  local output status
+  output=$(npx --yes "eslint@${ESLINT_VERSION}" --config eslint.config.mjs "${files[@]}" 2>&1)
+  status=$?
+  show_output "$output"
+  if [ $status -eq 0 ]; then
+    echo -e "\n${BLUE}[Lint with ESLint]${NC} ${GREEN}✓ Done.${NC} ${PURPLE}(${scope_name})${NC}"
+  else
+    echo -e "\n${BLUE}[Lint with ESLint]${NC} ${RED}✗ Failed.${NC} ${PURPLE}(${scope_name})${NC}"
+    exit_code=1
+  fi
+}
+
+for scope in "${scopes[@]}"; do
+  if [ "$scope" = "js" ]; then
+    echo -e "\n${YELLOW}==================== scope: js ====================${NC}\n"
+    # Prettier fails when its glob matches nothing: only run it when there is JavaScript.
+    if [ -n "$(find custom_components tests \( -name '*.js' -o -name '*.mjs' \) -not -path '*/node_modules/*' 2> /dev/null | head -n 1)" ]; then
+      run_prettier "js" check "**/*.{js,mjs}" "!card/**" "!**/node_modules/**"
+    else
+      echo "No JavaScript in this repository: nothing to check."
+    fi
+    run_js_checks "js"
+    continue
+  fi
+
+  if [ "$scope" = "repo" ]; then
+    echo -e "\n${YELLOW}==================== scope: repo ====================${NC}\n"
+    printf "%s\n" "json/yaml/markdown/js (excluding: card/, bruno/), then eslint and node --check on the js"
+    run_prettier "repo"
+    run_js_checks "repo"
+    continue
+  fi
+
+  paths=$(scope_paths "$scope")
+
+  echo -e "\n${YELLOW}==================== scope: ${scope} ====================${NC}\n"
+  # shellcheck disable=SC2086
+  printf "%s\n" $paths
+
+  # Word splitting is wanted: a scope is a path or a glob.
+  # shellcheck disable=SC2086
+  {
+    run_check "Lint with Ruff" "$scope" run ruff check $paths
+    run_check "Format with Ruff" "$scope" run ruff format --check $paths
+    run_pylint "$scope" $paths
+    run_check "Lint with Pyright" "$scope" run pyright $paths
+    run_check "Lint with docstring-linter" "$scope" run docstring-linter $paths
+  }
+done
+
+echo
+if [ $exit_code -eq 0 ]; then
+  echo -e "${GREEN}✓ All checks passed${NC} (${scopes[*]})"
+else
+  echo -e "${RED}✗ Some checks failed${NC} (${scopes[*]})"
+fi
+
+echo ""
+
+exit $exit_code

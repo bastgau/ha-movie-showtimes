@@ -1,0 +1,3827 @@
+{
+  "error": false,
+  "message": null,
+  "messageParam": null,
+  "nextDate": null,
+  "results": [
+    {
+      "movie": {
+        "internalId": 900200,
+        "title": "Broken runtime int",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": 145,
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002000,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900201,
+        "title": "Broken genres not a list",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": "Drame",
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002001,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900202,
+        "title": "Broken genre without translate",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "name": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002002,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900203,
+        "title": "Broken stats null",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": null,
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002003,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900204,
+        "title": "Broken userRating score string",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": "4",
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002004,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900205,
+        "title": "Broken userRating score bool",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": true,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002005,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900206,
+        "title": "Broken userRating score 7",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 7,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002006,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900207,
+        "title": "Broken hits negative",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": -1,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002007,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900208,
+        "title": "Broken hits string",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": "777",
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002008,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900209,
+        "title": "Broken poster null",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": null,
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002009,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900210,
+        "title": "Broken poster javascript",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "javascript:alert(1)"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002010,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900211,
+        "title": "Broken certificate null",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": null,
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002011,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900212,
+        "title": "Broken type int",
+        "originalTitle": "Invented",
+        "type": 42,
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002012,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900213,
+        "title": "Broken data null",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": null,
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002013,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900214,
+        "title": "Broken productionYear string",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": "2026"
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002014,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900215,
+        "title": "Broken synopsisFull object",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": {}
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002015,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900216,
+        "title": "Broken cast missing",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002016,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900217,
+        "title": "Broken cast edges null",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": null
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002017,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900218,
+        "title": "Broken credit without person",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002018,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900219,
+        "title": "Broken relatedTags object",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": {
+          "name": "x"
+        },
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002019,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900220,
+        "title": "Broken customFlags null",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": null,
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002020,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900221,
+        "title": "Broken flags missing",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002021,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900222,
+        "title": "Broken flags list",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": ["hasTrailer"],
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002022,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900223,
+        "title": "Broken projection string",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002023,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": "DIGITAL",
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900224,
+        "title": "Broken comfort object",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002024,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": {},
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900225,
+        "title": "Broken service int",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002025,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": 42,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": 900226,
+        "title": "Broken tags null",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002026,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": null,
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "title": "Broken internalId missing",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002027,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "internalId": "abc",
+        "title": "Broken internalId letters",
+        "originalTitle": "Invented",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 30min",
+        "genres": [
+          {
+            "translate": "Drame"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.5,
+            "count": 10
+          },
+          "userReview": {
+            "count": 2
+          },
+          "pressReview": {
+            "score": 4.0,
+            "count": 3
+          },
+          "metric": {
+            "hits": 100,
+            "sessions": 50
+          },
+          "wantToSeeCount": 7
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-11",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "100000"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "firstName": "Ann",
+              "lastName": "Example"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            }
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "firstName": "Bob",
+                  "lastName": "Sample"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Invented tag"
+          }
+        ],
+        "flags": {
+          "hasTrailer": true,
+          "isPlayingNow": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": true
+        },
+        "poster": {
+          "url": "https://example.invalid/poster.jpg"
+        },
+        "synopsis": "Invented.",
+        "synopsisFull": "<p>Invented.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [
+          {
+            "internalId": 9002028,
+            "startsAt": "2026-11-12T20:00:00",
+            "diffusionVersion": "ORIGINAL",
+            "service": ["DISABLED_ACCESS"],
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "experience": null,
+            "comfort": null,
+            "tags": [
+              "Showtime.Accessibility.Subtitled",
+              "Showtime.Accessibility.Greta"
+            ],
+            "isPreview": false,
+            "isWeeklyMovieOuting": true,
+            "data": {
+              "ticketing": [
+                {
+                  "urls": ["https://example.invalid/book"],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            }
+          }
+        ],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    }
+  ],
+  "pagination": {
+    "page": "1",
+    "totalPages": 1,
+    "itemsPerPage": 15,
+    "totalItems": 29
+  }
+}

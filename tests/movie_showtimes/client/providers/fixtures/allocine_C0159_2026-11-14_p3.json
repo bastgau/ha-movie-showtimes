@@ -1,0 +1,1373 @@
+{
+  "error": false,
+  "message": null,
+  "messageParam": null,
+  "nextDate": null,
+  "results": [
+    {
+      "movie": {
+        "synopsis": "Nichée à 1 600 mètres d’altitude dans le minuscule hameau de La Gurraz (35 habitants), en Haute Tarentaise, se trouve la plus petite école de France : huit élèves, de la maternelle au CM2, un seul lieu de savoir et de vie.",
+        "internalId": 1000005161,
+        "poster": {
+          "url": "https://fr.web.img2.acsta.net/img/54/a7/54a7b09464573f6df8a94e9ca2cd629e.jpg"
+        },
+        "title": "Ma toute petite école",
+        "originalTitle": "Ma toute petite école",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 28min",
+        "genres": [
+          {
+            "translate": "Documentaire"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.94,
+            "count": 54
+          },
+          "userReview": {
+            "count": 13
+          },
+          "pressReview": {
+            "score": 3.08,
+            "count": 13
+          },
+          "metric": {
+            "hits": 69098,
+            "sessions": 36455
+          },
+          "wantToSeeCount": 191
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-11-04",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "163297"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Plisson",
+              "firstName": "Pascal"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": []
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Collines, roches et montagnes"
+          },
+          {
+            "name": "Relation élève / professeur"
+          },
+          {
+            "name": "Professeur / Enseignant"
+          },
+          {
+            "name": "Ecole / Collège / Lycée / Salle de cours"
+          },
+          {
+            "name": "Elève / Ecolier / Etudiant"
+          },
+          {
+            "name": "France"
+          },
+          {
+            "name": "Ville / Village"
+          },
+          {
+            "name": "Comprendre le monde"
+          },
+          {
+            "name": "À partir de 6 ans"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Nichée à 1 600 mètres d’altitude dans le minuscule hameau de La Gurraz (35 habitants), en Haute Tarentaise, se trouve la plus petite école de France : huit élèves, de la maternelle au CM2, un seul lieu de savoir et de vie. Le film s’invite dans la vie de ces enfants, de leur unique enseignante et de leurs familles qui, chaque année, font face à la même question : faute d’un nombre suffisant d’élèves, l’école fermera-t-elle ?</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359922199,
+            "startsAt": "2026-11-14T17:50:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000005161&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=17:50&code=SME; AUDIO; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855630&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Septembre 1940, le régime de Pétain se met en place. Henri Marre, 49 ans, débarque à Vichy sans le sou, sans contact, loin de sa femme et ses enfants. Il voit dans la nouvelle administration l’opportunité de trouver enfin la place qu’il mérite. Dans sa valise, son traité politique édité à compte d’auteur, Notre Salut, où il défend ses convictions patriotiques et ses méthodes d'ingénieur. Son credo : « gagner en efficacité » pour relever la France de la débâcle. Mais peut-être qu’Henri cherche avant tout à fuir sa propre débâcle…",
+        "internalId": 1000007388,
+        "poster": {
+          "url": "https://fr.web.img4.acsta.net/img/b7/ac/b7acc48dac20e8329866a199e0ff78e8.jpg"
+        },
+        "title": "Notre salut",
+        "originalTitle": "Notre salut",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 39min",
+        "genres": [
+          {
+            "translate": "Drame"
+          },
+          {
+            "translate": "Historique"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.7,
+            "count": 3302
+          },
+          "userReview": {
+            "count": 513
+          },
+          "pressReview": {
+            "score": 4.49,
+            "count": 43
+          },
+          "metric": {
+            "hits": 1592472,
+            "sessions": 765201
+          },
+          "wantToSeeCount": 3490
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-09-30",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "158084"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Marre",
+              "firstName": "Emmanuel"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Arlaud",
+                  "firstName": "Swann"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Blancke",
+                  "firstName": "Sandrine"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Guit",
+                  "firstName": "Harpo"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          },
+          {
+            "name": "Belgium",
+            "localizedName": "Belgique"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Histoire vraie pendant la guerre"
+          },
+          {
+            "name": "Occupation allemande"
+          },
+          {
+            "name": "Collaboration et résistance"
+          },
+          {
+            "name": "Monde du travail"
+          },
+          {
+            "name": "Ambiance 40's - années 40"
+          },
+          {
+            "name": "Seconde Guerre mondiale"
+          },
+          {
+            "name": "Ecrivain / Scénariste"
+          },
+          {
+            "name": "France"
+          },
+          {
+            "name": "AFCAE : Label Recherche et Découverte"
+          },
+          {
+            "name": "Art et essai"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": true,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Septembre 1940, le régime de Pétain se met en place. Henri Marre, 49 ans, débarque à Vichy sans le sou, sans contact, loin de sa femme et ses enfants. Il voit dans la nouvelle administration l’opportunité de trouver enfin la place qu’il mérite. Dans sa valise, son traité politique édité à compte d’auteur, Notre Salut, où il défend ses convictions patriotiques et ses méthodes d'ingénieur. Son credo : « gagner en efficacité » pour relever la France de la débâcle. Mais peut-être qu’Henri cherche avant tout à fuir sa propre débâcle…</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359922082,
+            "startsAt": "2026-11-14T18:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000007388&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=18:00&code=SME; AUDIO; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855726&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359921937,
+            "startsAt": "2026-11-14T21:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000007388&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=21:15&code=SME; AUDIO; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855729&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Dans le Paris d'aujourd'hui, Anastasia, jeune danseuse, intègre le prestigieux Opéra de Paris. Alors qu’elle répète l'Orpheus, un opéra maudit qui aurait été composé par le Fantôme de l'Opéra, elle tombe amoureuse d'un mystérieux pianiste.",
+        "internalId": 1000019622,
+        "poster": {
+          "url": "https://fr.web.img6.acsta.net/img/9e/85/9e85825c32a9d2be8135074c9e45c870.jpg"
+        },
+        "title": "Le Fantôme de l'Opéra",
+        "originalTitle": "Le Fantôme de l'Opéra",
+        "type": "FEATURE_FILM",
+        "runtime": "2h 14min",
+        "genres": [
+          {
+            "translate": "Drame"
+          },
+          {
+            "translate": "Romance"
+          },
+          {
+            "translate": "Fantastique"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.01,
+            "count": 831
+          },
+          "userReview": {
+            "count": 276
+          },
+          "pressReview": {
+            "score": 1.57,
+            "count": 7
+          },
+          "metric": {
+            "hits": 632711,
+            "sessions": 370770
+          },
+          "wantToSeeCount": 1192
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "161822"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Castagnetti",
+              "firstName": "Alexandre"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Cassel",
+                  "firstName": "Deva"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "De Saint-Jean",
+                  "firstName": "Julien"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Duris",
+                  "firstName": "Romain"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Cicatrice"
+          },
+          {
+            "name": "Répétition"
+          },
+          {
+            "name": "Défiguré(e)"
+          },
+          {
+            "name": "Ballet / Opéra"
+          },
+          {
+            "name": "Fantômes / Esprits"
+          },
+          {
+            "name": "Paris"
+          },
+          {
+            "name": "Danse / Danseuse / Danseur"
+          },
+          {
+            "name": "Amour contrarié / Amour impossible"
+          },
+          {
+            "name": "Romance"
+          },
+          {
+            "name": "Adaptation de roman"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Dans le Paris d'aujourd'hui, Anastasia, jeune danseuse, intègre le prestigieux Opéra de Paris. Alors qu’elle répète l'<i>Orpheus</i>, un opéra maudit qui aurait été composé par le Fantôme de l'Opéra, elle tombe amoureuse d'un mystérieux pianiste. À l’approche de la première représentation, entre accidents inexpliqués et révélations troublantes, Anastasia se trouve plongée dans une histoire d'amour impossible, à la frontière du réel et du fantastique.</p><p class=\"bo-p\"></p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359921949,
+            "startsAt": "2026-11-14T18:40:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000019622&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=18:40&code=SME; AUDIO; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855568&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359921967,
+            "startsAt": "2026-11-14T21:35:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000019622&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=21:35&code=SME; AUDIO; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855561&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "À 27 ans, Nicolas n’a presque aucun souvenir de son enfance et n’a jamais connu son père. Décidé à le retrouver, il récupère son dossier de l’Aide sociale à l’enfance et se lance sur sa trace.",
+        "internalId": 1000051934,
+        "poster": {
+          "url": "https://fr.web.img2.acsta.net/img/2d/5b/2d5be7939e2b342391de951db5694ca7.jpg"
+        },
+        "title": "Papa où t'es ?",
+        "originalTitle": "Papa où t'es ?",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 41min",
+        "genres": [
+          {
+            "translate": "Documentaire"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 4.33,
+            "count": 589
+          },
+          "userReview": {
+            "count": 320
+          },
+          "pressReview": {
+            "score": 3.15,
+            "count": 13
+          },
+          "metric": {
+            "hits": 450551,
+            "sessions": 255706
+          },
+          "wantToSeeCount": 495
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "U",
+              "label": "Tout public"
+            },
+            "visaNumber": "167020"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Monnot",
+              "firstName": "Basile"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          },
+          {
+            "person": {
+              "lastName": "Bouyssié",
+              "firstName": "Samy"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 2
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Trouvé",
+                  "firstName": "Nicolas"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Aide sociale à l'enfance"
+          },
+          {
+            "name": "Sénégal"
+          },
+          {
+            "name": "Abandon / Enfant abandonné"
+          },
+          {
+            "name": "Documentaire sur un contexte social"
+          },
+          {
+            "name": "Parcours initiatique"
+          },
+          {
+            "name": "Quête"
+          },
+          {
+            "name": "Famille / Relation familiale"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": false,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">À 27 ans, Nicolas n’a presque aucun souvenir de son enfance et n’a jamais connu son père. Séparé de sa mère à l’âge de trois ans, il a grandi placé entre familles d’accueil et foyers. Décidé à retrouver ce père qui l’a abandonné à la naissance, Nicolas récupère son dossier de l’Aide sociale à l’enfance et se lance sur sa trace. Une enquête qui va le mener jusqu’au Sénégal, à la rencontre de sa famille et d’une histoire qu’il connaît à peine.</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84359922221,
+            "startsAt": "2026-11-14T19:40:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000051934&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=19:40&code=PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855445&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          },
+          {
+            "internalId": 84359922006,
+            "startsAt": "2026-11-14T22:00:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000051934&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=22:00&code=PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855438&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Margot débute son internat aux urgences, où elle peine à s’adapter. Très vite, elle fait face à des patients de son âge aux symptômes inexpliqués. La récurrence de ces cas exceptionnels l’interroge, d’autant qu’elle observe, sur son propre corps, des manifestations de plus en plus inquiétantes…",
+        "internalId": 1000023600,
+        "poster": {
+          "url": "https://fr.web.img3.acsta.net/img/cb/93/cb93a3a86bd02e7b49e976435d28d3fb.jpg"
+        },
+        "title": "Sanguine",
+        "originalTitle": "Sanguine",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 43min",
+        "genres": [
+          {
+            "translate": "Epouvante-horreur"
+          }
+        ],
+        "languages": ["FRENCH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.13,
+            "count": 347
+          },
+          "userReview": {
+            "count": 64
+          },
+          "pressReview": {
+            "score": 3.11,
+            "count": 27
+          },
+          "metric": {
+            "hits": 156754,
+            "sessions": 92524
+          },
+          "wantToSeeCount": 622
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-10-28",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "-16",
+              "label": "Interdit - 16 ans"
+            },
+            "visaNumber": "164090"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Le Corroller",
+              "firstName": "Marion"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Taquin",
+                  "firstName": "Mara"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Viard",
+                  "firstName": "Karin"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Higelin",
+                  "firstName": "Kim"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "France",
+            "localizedName": "France"
+          },
+          {
+            "name": "Belgium",
+            "localizedName": "Belgique"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "CANNES_2026"
+          },
+          {
+            "name": "Transformation"
+          },
+          {
+            "name": "Infirmière / Infirmier"
+          },
+          {
+            "name": "Gore"
+          },
+          {
+            "name": "Hôpitaux / Médecins / Cabinet médical"
+          },
+          {
+            "name": "Malade et maladie"
+          },
+          {
+            "name": "Enquête"
+          },
+          {
+            "name": "Premier film"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": true,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Margot débute son internat aux urgences, où elle peine à s’adapter. Très vite, elle fait face à des patients de son âge aux symptômes inexpliqués. La récurrence de ces cas exceptionnels l’interroge, d’autant qu’elle observe, sur son propre corps, des manifestations de plus en plus inquiétantes…</p>"
+      },
+      "showtimes": {
+        "original": [],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [
+          {
+            "internalId": 84401964176,
+            "startsAt": "2026-11-14T22:05:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Version.French",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "DUBBED",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000023600&tags=Showtime.Accessibility.Accessible,Localization.Version.French,Format.Projection.Digital&perfd=20261114&perft=22:05&code=SME; AUDIO; PMR; 2D; VF; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855746&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    },
+    {
+      "movie": {
+        "synopsis": "Bryan, coursier médical, s'engage dans une course effrénée pour survivre, alors qu'autour de lui le monde s'enfonce dans un chaos total.",
+        "internalId": 1000018854,
+        "poster": {
+          "url": "https://fr.web.img4.acsta.net/img/1d/65/1d653b3f832f0f7ca7016e650207798f.jpg"
+        },
+        "title": "Resident Evil",
+        "originalTitle": "Resident Evil",
+        "type": "FEATURE_FILM",
+        "runtime": "1h 37min",
+        "genres": [
+          {
+            "translate": "Science Fiction"
+          },
+          {
+            "translate": "Epouvante-horreur"
+          },
+          {
+            "translate": "Thriller"
+          }
+        ],
+        "languages": ["ENGLISH"],
+        "data": {
+          "productionYear": 2026
+        },
+        "stats": {
+          "userRating": {
+            "score": 3.77,
+            "count": 3590
+          },
+          "userReview": {
+            "count": 638
+          },
+          "pressReview": {
+            "score": 3.82,
+            "count": 17
+          },
+          "metric": {
+            "hits": 968710,
+            "sessions": 525800
+          },
+          "wantToSeeCount": 1948
+        },
+        "releases": [
+          {
+            "releaseDate": {
+              "date": "2026-09-16",
+              "precision": "day"
+            },
+            "name": "Released",
+            "certificate": {
+              "code": "-12A",
+              "label": "Interdit - 12 ans avec avertissement"
+            },
+            "visaNumber": "168141"
+          }
+        ],
+        "credits": [
+          {
+            "person": {
+              "lastName": "Cregger",
+              "firstName": "Zach"
+            },
+            "position": {
+              "name": "DIRECTOR"
+            },
+            "rank": 1
+          }
+        ],
+        "cast": {
+          "edges": [
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Abrams",
+                  "firstName": "Austin"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 1
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Hauser",
+                  "firstName": "Paul Walter"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 2
+              }
+            },
+            {
+              "node": {
+                "actor": {
+                  "lastName": "Cherry",
+                  "firstName": "Zach"
+                },
+                "voiceActor": null,
+                "originalVoiceActor": null,
+                "rank": 3
+              }
+            }
+          ]
+        },
+        "countries": [
+          {
+            "name": "USA",
+            "localizedName": "U.S.A."
+          },
+          {
+            "name": "Germany",
+            "localizedName": "Allemagne"
+          }
+        ],
+        "relatedTags": [
+          {
+            "name": "Resident Evil"
+          },
+          {
+            "name": "Adaptation de jeu vidéo"
+          },
+          {
+            "name": "Zombie / Mort-vivant / Contaminés"
+          },
+          {
+            "name": "Survival"
+          },
+          {
+            "name": "Peur"
+          },
+          {
+            "name": "Frissons"
+          },
+          {
+            "name": "Adrénaline"
+          },
+          {
+            "name": "Jeunes adultes"
+          }
+        ],
+        "flags": {
+          "hasDvdRelease": false,
+          "hasNews": true,
+          "hasOnlineProduct": false,
+          "hasOnlineRelease": false,
+          "hasPhysicalProduct": false,
+          "hasPreview": false,
+          "hasShowtime": true,
+          "hasSoundtrack": false,
+          "hasTheaterRelease": true,
+          "hasTrivia": true,
+          "hasAwards": false,
+          "isLesIndes": false,
+          "isIncontestable": false,
+          "isClubApproved": [],
+          "hasClubNews": [],
+          "isComingSoon": false,
+          "isPlayingNow": true,
+          "tvRelease": false,
+          "hasTeaser": true,
+          "hasTrailer": true
+        },
+        "customFlags": {
+          "isPremiere": false,
+          "weeklyOuting": false
+        },
+        "synopsisFull": "<p class=\"bo-p\">Bryan, coursier médical, s'engage dans une course effrénée pour survivre, alors qu'autour de lui le monde s'enfonce dans un chaos total.</p>"
+      },
+      "showtimes": {
+        "original": [
+          {
+            "internalId": 84359923765,
+            "startsAt": "2026-11-14T22:15:00",
+            "service": ["DISABLED_ACCESS"],
+            "experience": null,
+            "comfort": null,
+            "projection": ["DIGITAL"],
+            "picture": null,
+            "sound": null,
+            "tags": [
+              "Showtime.Accessibility.Accessible",
+              "Localization.Subtitle.French",
+              "Localization.Version.Original",
+              "Format.Projection.Digital",
+              "Theater.Service.DisabledAccess"
+            ],
+            "diffusionVersion": "ORIGINAL",
+            "data": {
+              "ticketing": [
+                {
+                  "urls": [
+                    "https://relay.mvtx.us/ticketing/dbz?code_theater=C0159&gid_entity=movie.movie._.1000018854&tags=Showtime.Accessibility.Accessible,Localization.Subtitle.French,Localization.Version.Original,Format.Projection.Digital&perfd=20261114&perft=22:15&code=SME; AUDIO; PMR; 2D; VO; "
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "relay"
+                },
+                {
+                  "urls": [
+                    "https://www.ugc.fr/reservationSeances.html?id=330171855660&part=all&mtm_source=allocine&mtm_medium=affiliate&mtm_campaign=site_allocine"
+                  ],
+                  "type": "DESKTOP",
+                  "provider": "default"
+                }
+              ]
+            },
+            "isPreview": false,
+            "isWeeklyMovieOuting": false
+          }
+        ],
+        "original_st": [],
+        "original_sme": [],
+        "multiple": [],
+        "multiple_st": [],
+        "multiple_sme": []
+      }
+    }
+  ],
+  "pagination": {
+    "page": "3",
+    "totalPages": 3,
+    "itemsPerPage": 15,
+    "totalItems": 36
+  }
+}
