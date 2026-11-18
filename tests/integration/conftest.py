@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo
 from custom_components.movie_showtimes.client import registry
 import pytest
 
+from homeassistant.core import HomeAssistant
 from homeassistant.util import dt as dt_util
 from tests.fake_provider import FakeProvider, FakeProvider2
 
@@ -57,10 +58,11 @@ def set_time_zone_fixture() -> Iterator[Callable[[str], None]]:
 
 
 @pytest.fixture(autouse=True)
-def paris_time_zone(set_time_zone: Callable[[str], None]) -> None:
+def paris_time_zone(hass: HomeAssistant, set_time_zone: Callable[[str], None]) -> None:
     """Use Europe/Paris unless a test chooses another zone.
 
     Args:
+        hass (HomeAssistant): Requested first, since it sets the time zone when created.
         set_time_zone (Callable[[str], None]): Sets Home Assistant's time zone.
 
     """

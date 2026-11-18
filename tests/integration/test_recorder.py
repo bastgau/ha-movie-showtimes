@@ -6,7 +6,7 @@ import json
 
 from freezegun.api import FrozenDateTimeFactory
 import pytest
-from pytest_homeassistant_custom_component.components.recorder.common import async_wait_recording_done
+from pytest_homeassistant.components.recorder.common import async_wait_recording_done
 
 from homeassistant.components.recorder import Recorder
 from homeassistant.components.recorder.history import get_significant_states
@@ -21,8 +21,12 @@ NOW = "2026-11-12T10:00:00+01:00"
 
 
 @pytest.fixture(autouse=True)
-def auto_enable_custom_integrations(recorder_db_url: str, enable_custom_integrations: None) -> None:
-    """Prepare the recorder's database before Home Assistant starts, then enable the integration."""
+def paris_time_zone(recorder_db_url: str, paris_time_zone: None) -> None:  # pylint: disable=redefined-outer-name
+    """Prepare the recorder's database before ``hass`` exists, then set the time zone as every other test.
+
+    The conftest's autouse fixture of the same name is the one requested here: it creates ``hass``, which the
+    recorder's database fixture refuses to follow.
+    """
 
 
 async def test_films_are_not_recorded(

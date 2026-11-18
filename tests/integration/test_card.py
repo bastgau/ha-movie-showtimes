@@ -12,7 +12,7 @@ from custom_components.movie_showtimes.const import DOMAIN
 from custom_components.movie_showtimes.sensor import SENSOR_DESCRIPTIONS
 from freezegun.api import FrozenDateTimeFactory
 import pytest
-from pytest_homeassistant_custom_component.typing import ClientSessionGenerator
+from pytest_homeassistant.typing import ClientSessionGenerator
 
 from homeassistant.components.http import StaticPathConfig  # pyright: ignore[reportPrivateImportUsage]
 from homeassistant.config_entries import ConfigEntryState
