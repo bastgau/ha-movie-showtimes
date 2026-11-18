@@ -954,20 +954,33 @@ function umcTooltipZone(container, view, x, y) {
 
 // ── Rating badges (`$user_rating_badge`, `$press_rating_badge`) ─────────────
 // The rating of a film (`key`: user_rating or press_rating) as a badge { key, value, label, title }
-// or null: only a finite number above 0 is a rating (the sensor leaves missing ones out). The label
+// or null for a film that is not an object: only a finite number above 0 is a rating, anything else
+// gives the "★ --" placeholder (`missing: true`). The label
 // is "★ 4.1" (one decimal, a dot, like the `$user_rating` text); the title says it in the language.
 function umcRatingBadge(film, key, lang) {
   if (!film || typeof film !== "object") return null;
   if (key !== "user_rating" && key !== "press_rating") return null;
   const value = film[key];
-  if (typeof value !== "number" || !Number.isFinite(value) || value <= 0)
-    return null;
+  const rated =
+    typeof value === "number" && Number.isFinite(value) && value > 0;
   const french = umcBadgeText(lang) === UMC_BADGE_TEXT.fr;
+  const user = key === "user_rating";
+  // No rating: the badge is still there, "★ --", so the row looks the same for every film.
+  if (!rated)
+    return {
+      key,
+      value: null,
+      missing: true,
+      label: "★ --",
+      text: "--",
+      title: french
+        ? `${user ? "Note des spectateurs" : "Note de la presse"} : aucune note`
+        : `${user ? "Spectators' rating" : "Press rating"}: no rating`,
+    };
   const number = new Intl.NumberFormat(umcLocale(lang), {
     minimumFractionDigits: 1,
     maximumFractionDigits: 1,
   }).format(value);
-  const user = key === "user_rating";
   return {
     key,
     value,
@@ -979,6 +992,9 @@ function umcRatingBadge(film, key, lang) {
       : `${user ? "Spectators' rating" : "Press rating"}: ${number} out of 5`,
   };
 }
+
+// The text of a rating badge in a text line: the number, nothing for the "--" placeholder.
+const umcRatingText = (badge) => (badge && !badge.missing ? badge.text : null);
 
 // How far the line after a badge row is moved down (in svg units): what the row is taller than its
 // slot, and 4 more when that line is a badge row too, so two pill rows in a row do not touch
@@ -1078,6 +1094,25 @@ function umcExplain(element, text, options) {
   return element;
 }
 
+// A star as an inline SVG of 1em (the same size in every browser, unlike the "★" glyph).
+function umcStarIcon(color) {
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("aria-hidden", "true");
+  svg.style.width = "1em";
+  svg.style.height = "1em";
+  svg.style.verticalAlign = "-0.12em";
+  const path = document.createElementNS(ns, "path");
+  path.setAttribute(
+    "d",
+    "M12 1.8l3.2 6.9 7.5.9-5.5 5.2 1.4 7.4L12 18.4 5.4 22.2l1.4-7.4L1.3 9.6l7.5-.9z",
+  );
+  path.style.fill = color;
+  svg.appendChild(path);
+  return svg;
+}
+
 // The badge row, an HTML element for a foreignObject of the card's svg (its size is in the svg's
 // units, so it scales with the card). `items`, in the order of the line: { type: "text", text } (a
 // span), or { type: "badge", kind, ... } with kind "showtimes" (one pill button per version group,
@@ -1126,9 +1161,9 @@ function umcBuildBadgeRow(items, options) {
       const span = document.createElement("span");
       span.style.whiteSpace = "nowrap";
       span.style.fontVariantNumeric = "tabular-nums";
-      const star = document.createElement("span");
-      star.textContent = "★";
-      star.style.color = options.star || "#f0b429";
+      // An inline SVG, not the "★" glyph: Firefox draws that one from a fallback font, much smaller
+      // than in Chrome.
+      const star = umcStarIcon(options.star || "#f0b429");
       const number = document.createElement("span");
       number.textContent = " " + rating.text;
       span.append(star, number);
@@ -3518,12 +3553,12 @@ class MovieShowtimesCard extends HTMLElement {
         $showtimes_badge: umcShowtimesText(item("_filmObj")) || null,
         $certificate_badge:
           (umcCertificateBadge(item("_filmObj"), lang) || {}).label || null,
-        $user_rating_badge:
-          (umcRatingBadge(item("_filmObj"), "user_rating", lang) || {}).text ||
-          null,
-        $press_rating_badge:
-          (umcRatingBadge(item("_filmObj"), "press_rating", lang) || {}).text ||
-          null,
+        $user_rating_badge: umcRatingText(
+          umcRatingBadge(item("_filmObj"), "user_rating", lang),
+        ),
+        $press_rating_badge: umcRatingText(
+          umcRatingBadge(item("_filmObj"), "press_rating", lang),
+        ),
         $empty: "",
       };
 
@@ -5788,6 +5823,7 @@ export {
   umcBadgeFallbackText,
   umcBadgeItems,
   umcRatingBadge,
+  umcRatingText,
   umcTooltipZone,
   umcLineIsIgnored,
   umcBadgeRowExtra,

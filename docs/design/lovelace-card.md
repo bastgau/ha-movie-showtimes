@@ -114,8 +114,10 @@ age and rating pills lets clicks through to the item's film link.
 `{key, value, label: "★ 4.1", text: "4.1", title}` (the text is that of `$user_rating`, one decimal and a dot; the title uses
 `Intl.NumberFormat`: "Note des spectateurs : 4,1 sur 5"). In the row it is **plain text, not a pill**, in the look of the reference's own rating: the number in the line's colour and
 only the star recoloured with the reference's `adjustedStar` (passed to the slot as `star`; there are no colour options for
-the ratings). In texts the
-badge tokens are the text (`$user_rating_badge` = `$user_rating`), or nothing.
+the ratings). The star is an inline SVG of `1em` (`umcStarIcon`), not the `★` glyph: Firefox draws the glyph from a
+fallback font, much smaller than Chrome. A film without that rating still gets the badge, `★ --`
+(`missing: true`, title "no rating"), so the row looks the same for every film; only a non-object film gives `null`. In
+texts the badge tokens are the text (`$user_rating_badge` = `$user_rating`), or nothing for the placeholder.
 
 **Hover tips and forwarded clicks.** A native `title` does not show reliably in a foreignObject under the item's click
 area, so the age pill, the rating items and the version pills have `pointer-events: auto` (the row and foreignObject stay

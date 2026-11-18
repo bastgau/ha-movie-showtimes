@@ -2251,13 +2251,24 @@ test("the rating badge: label, title, which values count", () => {
   );
   assert.equal(r({ user_rating: 5 }, "user_rating", "en").label, "★ 5.0");
   assert.equal(r({ user_rating: 0.04 }, "user_rating", "en").label, "★ 0.0");
-  for (const value of [0, -1, NaN, Infinity, "4.1", null, undefined, {}, [4]])
-    assert.equal(
-      r({ user_rating: value }, "user_rating", "en"),
-      null,
-      String(value),
-    );
-  assert.equal(r({}, "user_rating", "en"), null);
+  for (const value of [0, -1, NaN, Infinity, "4.1", null, undefined, {}, [4]]) {
+    const missing = r({ user_rating: value }, "user_rating", "en");
+    assert.equal(missing.label, "★ --", String(value));
+    assert.equal(missing.missing, true);
+    assert.equal(card.umcRatingText(missing), null);
+  }
+  assert.equal(
+    r({}, "press_rating", "fr").title,
+    "Note de la presse : aucune note",
+  );
+  assert.equal(
+    r({}, "user_rating", "en").title,
+    "Spectators' rating: no rating",
+  );
+  assert.equal(
+    card.umcRatingText(r({ user_rating: 4 }, "user_rating", "en")),
+    "4.0",
+  );
   assert.equal(r(null, "user_rating", "en"), null);
   assert.equal(
     r({ user_rating: 4 }, "title", "en"),
@@ -2273,7 +2284,7 @@ test("the rating badge: label, title, which values count", () => {
         r(film, "press_rating", "en").text,
         line("$press_rating", film),
       );
-    else assert.equal(r(film, "press_rating", "en"), null);
+    else assert.equal(r(film, "press_rating", "en").missing, true);
   }
 });
 
@@ -2378,11 +2389,11 @@ test("badge items: each token on its own, text kept or dropped, nothing at all",
   );
   assert.deepEqual(
     kinds(items("$user_rating_badge $press_rating_badge", { user_rating: 3 })),
-    ["user_rating"],
+    ["user_rating", "press_rating"],
   );
   assert.deepEqual(
     kinds(items("$user_rating_badge $press_rating_badge", { press_rating: 3 })),
-    ["press_rating"],
+    ["user_rating", "press_rating"],
   );
   // Text segments: resolved by the caller's function, dropped when empty.
   assert.deepEqual(kinds(items("Séances: $showtimes_badge", full)), [
@@ -2407,7 +2418,9 @@ test("badge items: each token on its own, text kept or dropped, nothing at all",
     }),
     [],
   );
-  assert.deepEqual(items("$certificate_badge $user_rating_badge", {}), []);
+  assert.deepEqual(kinds(items("$certificate_badge $user_rating_badge", {})), [
+    "user_rating",
+  ]);
   assert.deepEqual(items("$certificate_badge", null), []);
   // Text around badges that all vanish: the line is empty.
   assert.deepEqual(
