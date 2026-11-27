@@ -2464,6 +2464,52 @@ test("the synopsis tooltip zone: the poster and the title only", () => {
   assert.equal(card.umcTooltipZone(fanart, "fanart", 50, 60), false);
 });
 
+test("the line tooltip: the full text of a cut line, only over that line", () => {
+  const rect = (left, top, right, bottom) => ({ left, top, right, bottom });
+  // An item whose svg spans x 100-300, with a title (line 0) and a line 2.
+  const make = (boxes) => ({
+    querySelector: () => ({
+      getBoundingClientRect: () => rect(100, 0, 300, 150),
+      querySelector: (selector) => {
+        const index = /_line(\d)_/.exec(selector)[1];
+        return boxes[index] && { getBoundingClientRect: () => boxes[index] };
+      },
+    }),
+  });
+  const lines = [];
+  lines[0] = { text: "The Extraordinarily Long Title", cut: true };
+  lines[2] = { text: "Drame, Thriller", cut: false };
+  const item = make({ 0: rect(112, 5, 290, 20), 2: rect(112, 40, 200, 52) });
+  const at = (x, y) => card.umcLineTextAt(item, lines, "a_to", "poster", x, y);
+  assert.equal(at(150, 12), "The Extraordinarily Long Title");
+  assert.equal(
+    at(295, 12),
+    "The Extraordinarily Long Title",
+    "rest of the row",
+  );
+  assert.equal(at(150, 46), null, "kept whole and inside the svg");
+  assert.equal(at(150, 30), null, "between lines");
+  assert.equal(at(50, 12), null, "left of the text");
+  // A line truncate() kept whole but that runs past the svg's right edge is cut too.
+  const clipped = make({ 2: rect(112, 40, 340, 52) });
+  assert.equal(
+    card.umcLineTextAt(clipped, lines, "a_to", "poster", 150, 46),
+    "Drame, Thriller",
+  );
+  // No svg (nothing drawn yet): no tooltip.
+  assert.equal(
+    card.umcLineTextAt(
+      { querySelector: () => null },
+      lines,
+      "a_to",
+      "poster",
+      150,
+      12,
+    ),
+    null,
+  );
+});
+
 test("the rating badge text: the star is drawn apart, the number is the plain text", () => {
   const french = card.umcRatingBadge(
     { user_rating: 4.11 },
