@@ -58,7 +58,7 @@ const UMC_PLATFORM = "movie_showtimes";
 // `customElements.get("movie-showtimes-card").build`. CARD_BUILD is the UTC date and time of the
 // last edit of this file: bump it with every change.
 const CARD_VERSION = "1.0.0";
-const CARD_BUILD = "2026-11-16 14:07";
+const CARD_BUILD = "2026-11-27 19:59";
 
 // The console banner: version, build, and the `v` hash of the url the module was loaded with (the
 // cache-busting query added by the integration at Home Assistant's start; "none" without).
@@ -950,6 +950,28 @@ function umcTooltipZone(container, view, x, y) {
   return (
     y >= row.top - 4 && y <= row.bottom + 4 && x >= box.left && x <= box.right
   );
+}
+
+// The full text of the cut line under the pointer (x, y), or null. `container` is the item, `lines`
+// the full text of each of its lines by index ({ text, cut }, see the line loop of the card); a
+// line is cut when truncate() shortened it or when it runs past the right edge of its svg. The
+// lines sit under the item's clickable overlay and never get the pointer events themselves: the
+// test is done on their boxes.
+function umcLineTextAt(container, lines, service, view, x, y) {
+  const svg = container.querySelector('svg[class*="_svg_"]');
+  if (!svg) return null;
+  const svgRect = svg.getBoundingClientRect();
+  for (let i = 0; i < lines.length; i++) {
+    const entry = lines[i];
+    if (!entry) continue;
+    const tspan = svg.querySelector(`.${service}_line${i}_${view}`);
+    if (!tspan) continue;
+    const rect = tspan.getBoundingClientRect();
+    if (y < rect.top || y > rect.bottom || x < rect.left || x > svgRect.right)
+      continue;
+    return entry.cut || rect.right > svgRect.right + 1 ? entry.text : null;
+  }
+  return null;
 }
 
 // ── Rating badges (`$user_rating_badge`, `$press_rating_badge`) ─────────────
@@ -3591,6 +3613,8 @@ class MovieShowtimesCard extends HTMLElement {
         line6_color,
       ];
       const badgeSlots = [];
+      // Full text of each text line, by index: { text, cut } (see umcLineTextAt).
+      const lineFull = [];
 
       // Replace keywords in lines
       for (let i = 0; i < line.length; i++) {
@@ -3677,19 +3701,25 @@ class MovieShowtimesCard extends HTMLElement {
             i == 0 ? `x="12" y="${y}" dy="1.3em" ` : `x="12" dy="${lineDy}" `;
 
         // Build lines HTML or empty line
-        line[i] =
-          line[i].match("empty") || slot
-            ? `<tspan class="${service}_line${i}_${view}"${slot ? ` data-umc-badges="${i}"` : ""} style="fill:transparent;text-shadow:0 0 transparent;" ${svgshift}>.</tspan>`
-            : `<tspan class="${service}_line${i}_${view}" ${svgshift}>${truncate(
-                text,
-                char[i],
-                i === 0,
-              )
-                .replace(/,\s[^,]*\.\.\.$/g, "")
-                .replace(
-                  /★(?=\s*\d)/g,
-                  `<tspan fill="${adjustedStar}">★</tspan>`,
-                )}</tspan>`;
+        if (line[i].match("empty") || slot) {
+          line[i] =
+            `<tspan class="${service}_line${i}_${view}"${slot ? ` data-umc-badges="${i}"` : ""} style="fill:transparent;text-shadow:0 0 transparent;" ${svgshift}>.</tspan>`;
+        } else {
+          const shown = truncate(text, char[i], i === 0).replace(
+            /,\s[^,]*\.\.\.$/g,
+            "",
+          );
+          // The full text, for the tooltip of a cut line (see umcLineTextAt); a line truncate()
+          // kept whole can still be clipped by the svg's width: that is checked on hover.
+          const full = umcHtmlText(text);
+          if (full)
+            lineFull[i] = { text: full, cut: umcHtmlText(shown) !== full };
+          line[i] =
+            `<tspan class="${service}_line${i}_${view}" ${svgshift}>${shown.replace(
+              /★(?=\s*\d)/g,
+              `<tspan fill="${adjustedStar}">★</tspan>`,
+            )}</tspan>`;
+        }
       }
 
       let l4FOData = null;
@@ -3731,6 +3761,8 @@ class MovieShowtimesCard extends HTMLElement {
             ? `text-shadow:${txtshdw} rgba(0,0,0,0.9);`
             : "";
           line[4] = line[4].replace("<tspan ", "<tspan data-umc-l4 ");
+          // Drawn as HTML over the tspan (see applyLine4FO): no line tooltip.
+          lineFull[4] = undefined;
           l4FOData = {
             l4Html,
             foX,
@@ -3851,11 +3883,13 @@ class MovieShowtimesCard extends HTMLElement {
 
       if (view == "poster") {
         let containerDiv = document.createElement("div");
-        if (this.config.enable_tooltips) {
-          this.addTooltipHandlers(containerDiv, tooltipText, (x, y) =>
-            umcTooltipZone(containerDiv, view, x, y),
-          );
-        }
+        // The synopsis needs enable_tooltips; the full text of a cut line does not.
+        this.addTooltipHandlers(
+          containerDiv,
+          tooltipText,
+          (x, y) => umcTooltipZone(containerDiv, view, x, y),
+          (x, y) => umcLineTextAt(containerDiv, lineFull, service, view, x, y),
+        );
         containerDiv.id = "main";
         containerDiv.className = `${service}_${view}`;
         containerDiv.style.cssText = top;
@@ -3925,11 +3959,14 @@ class MovieShowtimesCard extends HTMLElement {
         applyBadges(containerDiv);
       } else {
         let fanartContainerDiv = document.createElement("div");
-        if (this.config.enable_tooltips) {
-          this.addTooltipHandlers(fanartContainerDiv, tooltipText, (x, y) =>
-            umcTooltipZone(fanartContainerDiv, view, x, y),
-          );
-        }
+        // The synopsis needs enable_tooltips; the full text of a cut line does not.
+        this.addTooltipHandlers(
+          fanartContainerDiv,
+          tooltipText,
+          (x, y) => umcTooltipZone(fanartContainerDiv, view, x, y),
+          (x, y) =>
+            umcLineTextAt(fanartContainerDiv, lineFull, service, view, x, y),
+        );
         fanartContainerDiv.className = `${service}_${view}`;
         fanartContainerDiv.style.cssText = `${top} ${shiftimg}background-image:url('${image}');background-position:100% center;`;
         fanartContainerDiv.style.setProperty("--background-size", "53% auto");
@@ -4647,8 +4684,12 @@ class MovieShowtimesCard extends HTMLElement {
   // Tooltip feature
   // `inZone(x, y)` (optional) tells whether the pointer is where the tooltip may show (the poster
   // and the title); elsewhere, the other tooltips of the item (badges) stay visible.
-  addTooltipHandlers(element, summary, inZone = () => true) {
-    if (!summary) return;
+  // `textAt(x, y)` (optional) returns a text that takes precedence at that point, in or out of the
+  // zone (the full text of a cut line, see umcLineTextAt), or null to fall back to the summary.
+  addTooltipHandlers(element, summary, inZone = () => true, textAt = null) {
+    if (!summary && !textAt) return;
+    const textFor = (x, y) =>
+      (textAt && textAt(x, y)) || (summary && inZone(x, y) ? summary : null);
     element.style.webkitTapHighlightColor = "transparent";
     element.style.webkitUserSelect = "none";
     element.style.userSelect = "none";
@@ -4702,11 +4743,18 @@ class MovieShowtimesCard extends HTMLElement {
       }
       return { finalX, finalY };
     };
+    let shownText = null;
     const showTooltip = (x, y, isTouch = false) => {
       clearTimeout(removalTimeoutId);
       if (tooltipTimeoutId) clearTimeout(tooltipTimeoutId);
+      const text = textFor(x, y);
+      // Moving onto another text (or onto none) drops the bubble at once instead of leaving the
+      // previous one up for the whole delay.
+      if (tooltip && text !== shownText) removeTooltip();
+      if (!text) return;
       tooltipTimeoutId = setTimeout(
         () => {
+          shownText = text;
           if (tooltip) removeTooltip();
           // Not while a badge popover is open.
           if (this._popoverOpen || this._pillHover) return;
@@ -4745,7 +4793,7 @@ class MovieShowtimesCard extends HTMLElement {
           tooltip.style.color = "white";
           tooltip.style.backdropFilter = "blur(4px)";
           const tooltipText = document.createElement("div");
-          tooltipText.textContent = summary;
+          tooltipText.textContent = text;
           tooltip.appendChild(tooltipText);
           tooltip.style.left = `-9999px`;
           tooltip.style.top = `-9999px`;
@@ -4760,7 +4808,9 @@ class MovieShowtimesCard extends HTMLElement {
             tooltip.style.fontSize = "12px";
             tooltip.style.lineHeight = "1.45";
             tooltip.style.maxWidth = "min(340px, calc(100vw - 32px))";
-            tooltip.style.minWidth = "min(240px, calc(100vw - 32px))";
+            // A summary gets a readable paragraph width; a line fits its text.
+            if (text === summary)
+              tooltip.style.minWidth = "min(240px, calc(100vw - 32px))";
             tooltip.style.borderRadius = "8px";
             requestAnimationFrame(() => {
               const rect = tooltip.getBoundingClientRect();
@@ -4794,7 +4844,7 @@ class MovieShowtimesCard extends HTMLElement {
       if (tooltip) removalTimeoutId = setTimeout(removeTooltip, 300);
     };
     const handleMouseMove = (e) =>
-      inZone(e.clientX, e.clientY)
+      textFor(e.clientX, e.clientY)
         ? showTooltip(e.clientX, e.clientY)
         : hideTooltip();
     const listeners = {
@@ -4814,7 +4864,7 @@ class MovieShowtimesCard extends HTMLElement {
         listeners._touchX = e.touches[0].pageX;
         listeners._touchY = e.touches[0].pageY;
         listeners._touchCancelled = false;
-        if (inZone(e.touches[0].clientX, e.touches[0].clientY))
+        if (textFor(e.touches[0].clientX, e.touches[0].clientY))
           showTooltip(e.touches[0].clientX, e.touches[0].clientY, true);
       },
       touchmove: (e) => {
@@ -5825,6 +5875,7 @@ export {
   umcRatingBadge,
   umcRatingText,
   umcTooltipZone,
+  umcLineTextAt,
   umcLineIsIgnored,
   umcBadgeRowExtra,
   umcCertificateBadge,

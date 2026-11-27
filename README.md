@@ -334,6 +334,10 @@ bubble. Text such as `&amp;` or `&#39;` in the source is shown as the character.
 film (for example a film without a synopsis), that film has no bubble. The bubble is at most 340 px wide and is not
 truncated.
 
+**Cut lines.** A text line too long for the card (title, genres, directors...) is shortened. Resting the pointer on such a
+line shows its full text in the same bubble, whatever `enable_tooltips` says; over a cut title it replaces the synopsis.
+A line that fits has no bubble of its own, and badge lines keep their own tips.
+
 ```yaml
 enable_tooltips: true
 tooltip_text: |
